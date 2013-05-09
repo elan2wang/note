@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
 <section class="content">
   {{ content }}
 </section>
@@ -12,6 +11,6 @@ layout: default
       <a href="https://github.com/elan2wang">{{ site.author }}</a>
     </span>
     <span class="time">
-      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+      <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
     </span>
 </section>
