@@ -13,11 +13,11 @@ title: Learning note
     {% if paginator.previous_page == 1 %}
 	  <a href="{{ site.url }}" class="previous"> << </a>
 	{% else %}
-      <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="previous"> << </a>
+      <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="previous"> &laquo; </a>
 	{% endif %}
   {% endif %}
   <span class="page_number ">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="next"> >> </a>
+    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="next"> &raquo; </a>
   {% endif %}
 </div>
