@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thinkings about filter design3
-categories: Lucene
+tags: Lucene
 ---
 
 Lucene的TokenFilter设计中，数据流经过多个Filter时，只需要遍历一遍数据流，和Java API中的字符串过滤器原理相似。特点是，所有的Filter都以word为基本单位进行处理。

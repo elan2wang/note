@@ -1,7 +1,23 @@
 ---
 layout: default
 ---
+<section class="tags">
+{% if page.tags %}
+  {% for tag in page.tags %}
+  <span class="tag"><a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a></span>
+  {% end for %}
+{% endif %}
+</section>
 
-<section>
+<section class="content">
   {{ content }}
+</section>
+
+<section class="meta">
+    <span class="author">
+      <a href="https://github.com/elan2wang">{{ site.author }}</a>
+    </span>
+    <span class="time">
+      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    </span>
 </section>

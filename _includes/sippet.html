@@ -1,8 +1,5 @@
 <article>
   <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-  <section>
-    {{ post.content }}
-  </section>
   <section class="meta">
     <span class="author">
       <a href="https://github.com/elan2wang">{{ site.author }}</a>
@@ -11,5 +8,7 @@
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
     </span>
   </section>
-  <hl/>
+  <section>
+    {{ post.content }}
+  </section>
 </article>
