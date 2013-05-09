@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: Math for text analysis
 categories: Math
 ---
