@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<!-- post tags -->
 <section class="tags">
 {% if page.tags %}
   {% for tag in page.tags %}
@@ -9,10 +10,12 @@ layout: default
 {% endif %}
 </section>
 
+<!-- post content -->
 <section class="content">
   {{ content }}
 </section>
 
+<!-- post meta info -->
 <section class="meta">
     <span class="author">
       <a href="https://github.com/elan2wang">{{ site.author }}</a>
@@ -20,4 +23,13 @@ layout: default
     <span class="time">
       <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
     </span>
+</section>
+
+<section>
+  {% if page.previous.url %}
+  <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+  {% endif %}
+  {% if page.next.url %}
+  <a class="basic-alignment right" href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
+  {% endif %}
 </section>
