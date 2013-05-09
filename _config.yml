@@ -1,2 +1,4 @@
 paginate: 5
 author: Elan Wang
+permalink: /:year/:month/:day/:title/
+url: http://elan2wang.github.io/note
