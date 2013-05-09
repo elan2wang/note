@@ -1,4 +1,6 @@
 paginate: 5
+pagination_dir: /
+
 author: Elan Wang
 permalink: /:year/:month/:day/:title/
 base: http://elan2wang.github.io
