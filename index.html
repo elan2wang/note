@@ -12,7 +12,7 @@ layout: blog
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    {% if paginator.previous_page = 1 %}
+    {% if paginator.previous_page == 1 %}
 	  <a href="{{ site.url }}" class="previous"> << </a>
 	{% else %}
       <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="previous"> << </a>
