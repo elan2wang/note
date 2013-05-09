@@ -1,13 +1,7 @@
 ---
 layout: default
 ---
-<section class="tags">
-{% if page.tags %}
-  {% for tag in page.tags %}
-  <span class="tag"><a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a></span>
-  {% end for %}
-{% endif %}
-</section>
+
 
 <section class="content">
   {{ content }}
