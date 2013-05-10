@@ -44,17 +44,6 @@ h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-siz
 h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;}
 h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1em;color:#333;}
 
-a {
-	color:#dd0000;
-	text-decoration:none;
-}
-
-a:hover {
-	color:#999;
-	text-decoration:none;
-	border-bottom:1px dashed #bbb;
-}
-
 #container {
 	width:600px;
 	margin:2em auto;
@@ -72,4 +61,15 @@ a:hover {
 	display:block;
 	margin:4px auto;
 	box-shadow:#999 1px 1px 4px;
+}
+
+.content a {
+	color:#dd0000;
+	text-decoration:none;
+}
+
+.content a:hover {
+	color:#999;
+	text-decoration:none;
+	border-bottom:1px dashed #bbb;
 }
