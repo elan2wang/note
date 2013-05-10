@@ -5,8 +5,25 @@ body {
 	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
 }
 
+#sidebar {
+	height: 100%;
+	width: 100px;
+	float: left;
+	position: fixed;
+	border-right: 1px dashed #c7c7c7;
+	text-align: center;
+	padding-top: 5.5em;
+}
+
+#main {
+	height:auto;
+	width:600px;
+	float:right;
+	margin:2em auto;
+	padding:0 2em;
+}
+
 header {
-	padding:.5em 0;
 	border-bottom: 1px solid #cccccc;
 }
 
@@ -16,7 +33,6 @@ footer {
 
 footer p {
 	color:#999;
-	font-size:0.8em;
 	text-align: center;
 }
 
@@ -66,12 +82,11 @@ nav a:hover{
 }
 
 .content a {
-	color:#dd0000;
 	text-decoration:none;
 }
 
 .content a:hover {
-	color:#999;
+	color:#f9f9f9;
 	text-decoration:none;
 	border-bottom:1px dashed #bbb;
 }
