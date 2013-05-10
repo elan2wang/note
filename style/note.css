@@ -1,4 +1,6 @@
 body {
+	width:750px;
+	margin:0 auto;
 	font-size:14px;
 	color:#000000;
 	background-color:#ffffff;
@@ -20,7 +22,7 @@ body {
 	width:600px;
 	float:right;
 	margin:2em auto;
-	padding:0 2em;
+	padding:0 25px;
 }
 
 header {
