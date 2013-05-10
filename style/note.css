@@ -124,17 +124,23 @@ a:hover {
 	padding:5px 0;
 }
 
+.post .meta {
+	text-align:right;
+	padding:5px 5px;
+	font-size:10px;
+}
+
 .post .prev-next {
 	margin-top:20px;
 	padding:5px 0;
 	font-size:12px;
 }
 
-.post .prev-next left {
+.post .prev-next .left {
 	float:left;
 }
 
-.post .prev-next right {
+.post .prev-next .right {
 	float:right;
 }
 
