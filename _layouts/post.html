@@ -18,7 +18,11 @@ layout: default
 <!-- post meta info -->
 <section class="meta">
     <span class="author">
-      <a href="https://github.com/elan2wang">{{ site.author }}</a>
+	{% if page.author %}
+      <a href="{{ page.author-url }}">{{ page.author }}</a>
+	{% else %}
+	  <a href="https://github.com/elan2wang">{{ site.author }}</a>
+	{% endif %}
     </span>
     <span class="time">
       <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
