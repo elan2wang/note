@@ -90,8 +90,7 @@ footer p {
 	padding-left:30px;
 }
 
-#blog-index header {
-	margin:0;
+#blog-index .title {
 	line-height:30px;
 	padding-left:25px;
 	border-left:#b9221f solid 5px;
@@ -104,4 +103,4 @@ footer p {
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;}
 h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;}
 h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;}
-h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1em;color:#333;}
+h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.0em;color:#333;}
