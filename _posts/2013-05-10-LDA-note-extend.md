@@ -17,4 +17,4 @@ categories:
 LDA模型假设文档的所包含的主题顺序是可交换的，但是实际上，文档的顺序会反映主题的演化过程，如：新闻文章、邮件等，因此本文提出了一种动态的主题模型。  
 ![Dynamic Topic Model](/note/images/dynamic-topic-model.png)  
 在动态主题模型中，文档集被分割成$t$个时间切片，每个切片的文档都用包含$K$个主题的主题模型建模，并且，与切片$t$关联的topic-word分布$\beta_t$是由与$t-1$切片关联的topic-word分布$\beta_{t-1}$演化而来的，$\beta_{t,k}$表示时间$t$时主题$k$对应的topic-word分布向量。  
-参数评估时由于后验分布无法直接求解，所以论文中采用了-Variational Kalman Filter-和-Variational Wavelet Regression-这两种方法来做近似推理。
+参数评估时由于后验分布无法直接求解，所以论文中采用了_Variational Kalman Filter_和_Variational Wavelet Regression_这两种方法来做近似推理。
