@@ -1,5 +1,5 @@
 body {
-	width:750px;
+	width:800px;
 	margin:0 auto;
 	font-size:14px;
 	color:#000000;
@@ -9,7 +9,7 @@ body {
 
 #sidebar {
 	height: 100%;
-	width: 100px;
+	width: 150px;
 	float: left;
 	position: fixed;
 	border-right: 1px dashed #c7c7c7;
@@ -26,6 +26,9 @@ body {
 }
 
 header {
+	font-size:30px;
+	font-weight:700;
+	line-height:60px;
 	border-bottom: 1px solid #cccccc;
 }
 
@@ -35,7 +38,7 @@ footer {
 
 footer p {
 	color:#999;
-	text-align: center;
+	text-align:left;
 }
 
 nav {
