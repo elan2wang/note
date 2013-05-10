@@ -1,5 +1,5 @@
 body {
-	width:770px;
+	width:780px;
 	margin:0 auto;
 	font-size:14px;
 	color:#000000;
@@ -12,9 +12,21 @@ body {
 	width: 150px;
 	float: left;
 	position: fixed;
-	border-right: 1px dashed #c7c7c7;
+	font-size:1.4em;
+	text-align:right;
 	text-align: center;
 	padding-top: 5.5em;
+	text-transform:uppercase;
+	border-right: 1px dashed #c7c7c7;
+	font-family:"Electrolize",sans-serif;
+}
+
+#sidebar a{
+	display:block;
+	color:#000000;
+	padding:.7em 1em;
+	border-radius:5px;
+	text-decoration:none;
 }
 
 #main {
@@ -34,6 +46,7 @@ header {
 }
 
 footer {
+	padding-left:30px;
 	margin-top:30px;
 }
 
