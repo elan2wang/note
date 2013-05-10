@@ -1,4 +1,4 @@
-.label {
+.label a {
 	font-size:11.25px;
 	font-weight:700;
 	color:#fff;
@@ -7,6 +7,7 @@
 	border-radius:3px;
 	padding:1px 3px 2px;
 	margin-right:4px;
+	text-decoration:none;
 }
 
 .label-important {
@@ -23,10 +24,6 @@
 
 .label-info {
 	background-color:#3a87ad;
-}
-
-.label a {
-	text-decoration:none;
 }
 
 .label a:hover {
