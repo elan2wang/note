@@ -143,12 +143,12 @@ a:hover {
 	border:0;
 }
 
-.left {
+.post .prev-next .left {
 	display:block;
 	float:left;
 }
 
-.right {
+.post .prev-next .right {
 	display:block;
 	float:right;
 }

@@ -32,10 +32,10 @@ layout: default
     
     <section class="prev-next">
       {% if page.previous.url %}
-      <a class="prev-next left" href="{{ site.url }}/{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+      <a class="left" href="{{ site.url }}/{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
       {% endif %}
       {% if page.next.url %}
-      <a class="prev-next right" href="{{ site.url }}/{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
+      <a class="right" href="{{ site.url }}/{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
       {% endif %}
     </section>
 </div>
