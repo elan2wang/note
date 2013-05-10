@@ -3,31 +3,27 @@ layout: default
 ---
 <div class="post">
     <!-- post tags -->
-    <section class="tags">
-    {% if page.tags %}
-      {% for tag in page.tags %}
-      <span class="label">{{ tag }}</span>
-      {% endfor %}
-    {% endif %}
-    </section>
-    
-    <!-- post content -->
-    <section class="content">
-      {{ content }}
-    </section>
-    
-    <!-- post meta info -->
     <section class="meta">
-        <span class="author">
+      {% if page.tags %}
+        {% for tag in page.tags %}
+        <span class="label">{{ tag }}</span>
+        {% endfor %}
+      {% endif %}
+      <span class="label label-important">
         {% if page.author %}
           <a href="{{ page.author-url }}">{{ page.author }}</a>
         {% else %}
           <a href="https://github.com/elan2wang">{{ site.author }}</a>
         {% endif %}
-        </span>
-        <span class="time">
-          <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
-        </span>
+      </span>
+      <span class="label label-info">
+        <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+      </span>
+    </section>
+    
+    <!-- post content -->
+    <section class="content">
+      {{ content }}
     </section>
     
     <section class="pre-next">

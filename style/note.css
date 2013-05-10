@@ -3,6 +3,7 @@ body {
 	margin:0 auto;
 	font-size:14px;
 	color:#000000;
+	line-height: 2.5em;
 	background-color:#ffffff;
 	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
 }
@@ -119,9 +120,8 @@ a:hover {
 	border-bottom:1px dashed #c7c7c7;
 }
 
-.post .tags {
+.post .meta {
 	padding:5px 0;
-	margin:0;
 }
 
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;}
