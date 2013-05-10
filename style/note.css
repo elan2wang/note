@@ -132,16 +132,15 @@ a:hover {
 
 .post .prev-next {
 	margin-top:20px;
-	padding:5px 0;
 	font-size:12px;
 }
 
 .post .prev-next .left {
-	text-align:left
+	float:left;
 }
 
 .post .prev-next .right {
-	text-align:right;
+	float:right;
 }
 
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;}
