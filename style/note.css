@@ -140,6 +140,12 @@ a:hover {
 
 .post .prev-next a {
 	color:#999;
+	text-decoration:none;
+}
+
+.post .prev-next a:hover {
+	color:#999;
+	text-decoration:underline;
 }
 
 .post .prev-next .left {
