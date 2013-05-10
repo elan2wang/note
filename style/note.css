@@ -14,8 +14,7 @@ body {
 	position: fixed;
 	font-size:1.4em;
 	text-align:right;
-	text-align: center;
-	padding-top: 5.5em;
+	padding-top: 6em;
 	text-transform:uppercase;
 	border-right: 1px dashed #c7c7c7;
 	font-family:"Electrolize",sans-serif;
@@ -27,6 +26,14 @@ body {
 	padding:.7em 1em;
 	border-radius:5px;
 	text-decoration:none;
+}
+
+#sidebar a:hover{
+	color:#f9f9f9;
+	font-weight:600;
+	text-align:center;
+	text-decoration:none;
+	background-color:#b9221f;
 }
 
 #main {
