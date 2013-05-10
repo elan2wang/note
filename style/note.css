@@ -44,10 +44,32 @@ h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-siz
 h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;}
 h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1em;color:#333;}
 
-a{color:#dd0000;text-decoration:none;}
-a:hover{color:#333333;text-decoration:underline;}
+a {
+	color:#dd0000;
+	text-decoration:none;
+}
 
-#container{width:600px;margin:2em auto;display:block;padding:0 2em;}
-.content{font-size:12px;line-height:24px;}
-.content h1{padding:.5em 0;}
-.content img{max-width:600px;display:block;margin:4px auto;-webkit-box-shadow:#999 1px 1px 4px;-moz-box-shadow:#999 1px 1px 4px;box-shadow:#999 1px 1px 4px;}
+a:hover {
+	color:#999;
+	text-decoration:none;
+	border-bottom:1px dashed #bbb;
+}
+
+#container {
+	width:600px;
+	margin:2em auto;
+	display:block;
+	padding:0 2em;
+}
+
+.content {
+	font-size:12px;
+	line-height:24px;
+}
+
+.content img {
+	max-width:600px;
+	display:block;
+	margin:4px auto;
+	box-shadow:#999 1px 1px 4px;
+}
