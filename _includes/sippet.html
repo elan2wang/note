@@ -2,7 +2,11 @@
   <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
   <section class="meta">
     <span class="author">
-      <a href="https://github.com/elan2wang">{{ site.author }}</a>
+      {% if page.author %}
+      <a href="{{ page.author-url }}">{{ page.author }}</a>
+	  {% else %}
+	  <a href="https://github.com/elan2wang">{{ site.author }}</a>
+	  {% endif %}
     </span>
     <span class="time">
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>

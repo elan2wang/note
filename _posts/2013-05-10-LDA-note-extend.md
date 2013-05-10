@@ -3,7 +3,6 @@ layout: post
 title: LDA学习笔记(4)-扩展模型
 tags: LDA Extend
 categories: 
-author: Elan Wang
 ---
 本文是[LDA学习笔记](http://elan2wang.github.io/note/2013/05/09/LDA-note/)系列文章的第4部分，主要介绍一些比较常见的LDA的扩展模型  
 ##4. LDA扩展
