@@ -79,11 +79,13 @@ footer p {
 	padding:8px 0;
 }
 
-article {
-	
+#blog-index article {
+	padding-left:30px;
 }
 
-article h2 {
-	border-left:#b9221f solid 5px;
+#blog-index article h2 {
+	margin:0;
 	padding-left:25px;
+	line-height:50px;
+	border-left:#b9221f solid 5px;
 }
