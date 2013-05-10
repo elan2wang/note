@@ -88,3 +88,7 @@ footer p {
 	padding-left:25px;
 	border-left:#b9221f solid 5px;
 }
+
+.pagination {
+	padding-left:30px;
+}
