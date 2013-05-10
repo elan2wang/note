@@ -66,7 +66,7 @@ footer {
 
 footer p {
 	color:#999;
-	text-align:left;
+	text-align:center;
 }
 
 
@@ -99,19 +99,25 @@ footer p {
 	border-left:#b9221f solid 5px;
 }
 
-#blog-index .title a {
-	color:#000000;
+a {
+	color:#b9221f;
 	text-decoration:none;
 }
 
-#blog-index .title a:hover {
-	color:#b9221f;
+a:hover {
+	color:#999;
 	text-decoration:none;
 	border-bottom:1px dashed #c7c7c7;
 }
 
 .pagination {
 	padding-left:30px;
+}
+
+.post {
+	padding:10px 0 30px 30px;
+	padding-bottom:30px;
+	border-bottom:1px dashed #c7c7c7;
 }
 
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;}
