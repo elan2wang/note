@@ -131,8 +131,15 @@ a:hover {
 }
 
 .post .prev-next {
+	float:left;
+	padding:0 20px;
 	margin-top:20px;
 	font-size:12px;
+}
+
+.post .prev-next a:hover {
+	text-decoration:none;
+	border:0;
 }
 
 .post .prev-next .left {
