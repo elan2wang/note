@@ -120,8 +120,22 @@ a:hover {
 	border-bottom:1px dashed #c7c7c7;
 }
 
-.post .meta {
+.post .tags {
 	padding:5px 0;
+}
+
+.post .prev-next {
+	margin-top:20px;
+	padding:5px 0;
+	font-size:12px;
+}
+
+.post .prev-next left {
+	float:left;
+}
+
+.post .prev-next right {
+	float:right;
 }
 
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;}
