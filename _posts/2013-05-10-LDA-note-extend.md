@@ -4,7 +4,7 @@ title: LDA学习笔记(4)-扩展模型
 tags: LDA Extend
 categories: 
 ---
-本文是[LDA学习笔记]({% post_url {{ 2013-05-09-LDA-note }} %})系列文章的第4部分，主要介绍一些比较常见的LDA的扩展模型  
+本文是[LDA学习笔记]({% post_url 2013-05-09-LDA-note %})系列文章的第4部分，主要介绍一些比较常见的LDA的扩展模型  
 ##4. LDA扩展
 ###4.1. Author-Topic模型
 阅读论文: [Michal Rosen-Zvi et al. "The Author-Topic Model for Authors and Documents" 2004](http://psiexp.ss.uci.edu/research/papers/uai04_v8.pdf)  
