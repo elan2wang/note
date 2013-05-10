@@ -88,8 +88,8 @@ footer p {
 
 #blog-index article {
 	padding:10px 0 30px 30px;
-	padding-bottom: 30px;
-	border-bottom: 1px dashed #c7c7c7;
+	padding-bottom:30px;
+	border-bottom:1px dashed #c7c7c7;
 }
 
 #blog-index .title {
@@ -97,6 +97,16 @@ footer p {
 	padding-left:25px;
 	margin-top:10px;
 	border-left:#b9221f solid 5px;
+}
+
+#blog-index .title a {
+	text-decoration:none;
+}
+
+#blog-index .title a:hover {
+	color:#999;
+	text-decoration:none;
+	border-bottom:1px dashed #c7c7c7;
 }
 
 .pagination {
