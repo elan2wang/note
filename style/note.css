@@ -138,9 +138,8 @@ a:hover {
 	font-size:12px;
 }
 
-.post .prev-next a:hover {
-	text-decoration:none;
-	border:0;
+.post .prev-next a {
+	color:#999;
 }
 
 .post .prev-next .left {
