@@ -76,7 +76,7 @@ footer p {
 }
 
 #main img {
-	max-width:600px;
+	max-width:550px;
 	display:block;
 	margin:4px auto;
 	box-shadow:#999 1px 1px 4px;
@@ -89,7 +89,7 @@ footer p {
 #blog-index article {
 	padding-left:30px;
 	margin-bottom: 30px;
-	border-right: 1px dashed #c7c7c7;
+	border-buttom: 1px dashed #c7c7c7;
 }
 
 #blog-index .title {
