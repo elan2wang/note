@@ -74,3 +74,16 @@ footer p {
 	margin:4px auto;
 	box-shadow:#999 1px 1px 4px;
 }
+
+#blog-index {
+	padding:8px 0;
+}
+
+article {
+	
+}
+
+article h2 {
+	border-left:#b9221f solid 5px;
+	padding-left:25px;
+}
