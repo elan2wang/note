@@ -88,6 +88,8 @@ footer p {
 
 #blog-index article {
 	padding-left:30px;
+	margin-bottom: 30px;
+	border-right: 1px dashed #c7c7c7;
 }
 
 #blog-index .title {
