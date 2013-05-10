@@ -116,7 +116,7 @@ a:hover {
 
 .post {
 	padding:10px 0 30px 30px;
-	padding-bottom:30px;
+	padding-bottom:50px;
 	border-bottom:1px dashed #c7c7c7;
 }
 
@@ -132,8 +132,9 @@ a:hover {
 
 .post .prev-next {
 	float:left;
+	width:100%;
 	padding:0 20px;
-	margin-top:20px;
+	margin-top:10px;
 	font-size:12px;
 }
 
