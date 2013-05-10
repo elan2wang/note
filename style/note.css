@@ -87,16 +87,16 @@ footer p {
 }
 
 #blog-index article {
-	padding: 10px 0 30px 30px;
+	padding:10px 0 30px 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px dashed #c7c7c7;
 }
 
 #blog-index .title {
-	line-height: 30px;
-	padding-left: 25px;
-	margin-top: 10px;
-	border-left: #b9221f solid 5px;
+	line-height:30px;
+	padding-left:25px;
+	margin-top:10px;
+	border-left:#b9221f solid 5px;
 }
 
 .pagination {
