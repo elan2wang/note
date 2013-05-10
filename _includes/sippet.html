@@ -2,8 +2,8 @@
   <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
   <section class="meta">
     <span class="author">
-      {% if page.author %}
-      <a href="{{ page.author-url }}">{{ page.author }}</a>
+      {% if post.author %}
+      <a href="{{ post.author-url }}">{{ post.author }}</a>
 	  {% else %}
 	  <a href="https://github.com/elan2wang">{{ site.author }}</a>
 	  {% endif %}
