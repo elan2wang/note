@@ -1,5 +1,5 @@
 paginate: 5
 author: Elan Wang
 permalink: /:year/:month/:day/:title/
-base: http://elan2wang.github.io/
-url: http://elan2wang.github.io/note/
+base: http://elan2wang.github.io
+url: http://elan2wang.github.io/note
