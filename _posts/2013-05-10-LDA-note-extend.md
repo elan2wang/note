@@ -26,4 +26,4 @@ $$
 $$
 出于模型的复杂性考虑，作者没有在动态主题模型中考虑主题之间的关联关系，但是作者在他的另一篇文章[Correlated topic
 models](http://www.cs.princeton.edu/~blei/papers/BleiLafferty2006.pdf)中考虑了该问题。  
-参数评估时由于后验分布无法直接求解，所以论文中采用了**Variational Kalman Filter**和__Variational Wavelet Regression__这两种方法来做近似推理。
+参数评估时由于后验分布无法直接求解，所以论文中采用了**Variational Kalman Filter**和**Variational Wavelet Regression**这两种方法来做近似推理。
