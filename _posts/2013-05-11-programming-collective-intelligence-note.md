@@ -12,7 +12,7 @@ categories: 机器学习 文本分析
 **皮尔逊相关系数**用于度量两个变量X和Y之间的相关（线性相关），其值介于-1到1之间。两个变量之间的皮尔逊相关系数定义为两个变量之间的协方差和标准差的商：
 $$
 \begin{equation}
-\rho_{X,Y} = \frac{cov \left( X,Y \right)}{\sigma_X \sigma_Y} = \frac{E\left[\left( X - \mu x \right)\left( Y - \mu y \right) \right]}{\sigma_X \sigma_Y}
+\rho_{X,Y} = \frac{cov \left( X,Y \right)}{\sigma_X \sigma_Y} = \frac{E[\left( X - \mu x \right)\left( Y - \mu y \right)]}{\sigma_X \sigma_Y}
 \end{equation}
 $$
 详细内容参见[Wikipedia](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient)
@@ -32,4 +32,4 @@ $$
 上图中，红、蓝、黄线表示的曼哈顿距离都相等(12)，绿线表示欧几里得距离($6 * \sqrt{2} \approx 8.48$)。详情参见[Wikipedia](http://en.wikipedia.org/wiki/Taxicab_geometry)
 <br>
 <br>
-更多的相似度计算公式可以参见[Wikipedia](http://en.wikipedia.org/wiki/Metric_%28mathematics%29)
+更多的相似度计算公式可以参见[Wikipedia](http://en.wikipedia.org/wiki/Metric_(mathematics))
