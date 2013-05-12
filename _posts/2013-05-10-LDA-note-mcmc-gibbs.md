@@ -77,9 +77,11 @@ $$
 下面我们通过一个例子，来说明马尔科夫链的状态转移过程  
 >假设状态空间为{下雨，天晴，多云}，并且天气变化符合马尔科夫过程。因此，明天的天气仅仅依赖今天的天气。假设：P(Rain tomorrow | Rain today)=0.5，P(Sunny tomorrow | Rain today)=0.25，P(Cloudy tomorrow | Rain today)=0.25，则状态转移矩阵的第一行为(0.5, 0.25, 0.25)，假设转移矩阵的剩余元素如下
 $$
-\mathbf{P}=\begin{pmatrix}0.5 & 0.25 & 0.25 \\\\ 
-0.5 & 0 & 0.5 \\\\
-0.25 & 0.25 & 0.5 \end{pmatrix}
+\mathbf{P}=\begin{pmatrix}
+0.5 & 0.25 & 0.25 \\ 
+0.5 & 0 & 0.5 \\
+0.25 & 0.25 & 0.5
+\end{pmatrix}
 $$
 ###Metropolis Hastings算法
 
