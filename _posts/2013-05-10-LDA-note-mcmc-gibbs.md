@@ -14,12 +14,11 @@ $$
 $$
 \int_a^b h\left(x\right)dx = \int_a^b f\left(x\right) p\left(x\right) dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\]
 $$
-因此积分可以表示成函数$f\left(x\right)$在密度$p\left(x\right)$上的期望。如果我们从$p\left(x\right)$获得一大堆随机变量$x_1,...,x_n$，则
+因此积分可以表示成函数$f\left(x\right)$在概率密度$p\left(x\right)$上的期望。如果我们从$p\left(x\right)$获得一系列随机变量$x_1,...,x_n$，则
 $$
 \int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\] = c \sum_{i=1}^n f\left(x_i \right)
 $$
-这个式子就被称为**蒙特卡罗积分**
-蒙特卡罗积分可以用于近似贝叶斯分析中的后验分布(或边缘分布)，对于积分$I\left(y \right) = \int f\left(y \mid x \right) p\left(x\right) dx$，它可以近似于
+这个式子就被称为**蒙特卡罗积分**。蒙特卡罗积分可以用于近似贝叶斯分析中的后验分布(或边缘分布)，对于积分$I\left(y \right) = \int f\left(y \mid x \right) p\left(x\right) dx$，它可以近似于
 $$
 \hat{I} \left(y \right) = \frac{1}{n} \sum_{i=1}^n f\left(y \mid x_i\right)
 $$
@@ -27,8 +26,15 @@ $$
 $$
 SE^2\left\[\hat{I} \left(y \right) \right\] = \frac{1}{n} \left(\frac{1}{n-1} \sum_{i=1}^n \left(f\left(y \mid x_i\right) - \hat{I} \left(y \right) \right) \right)
 $$
-
+###重要性采样
+在利用蒙特卡罗方法求复杂积分时，我们需要根据概率密度$p\left(x\right)$获取一系列的随机变量，但是计算机只能获得均匀分布的随机数。假设我们需要按照正态分布$N\left(0,1\right)$获得10个随机数，蒙特卡罗法是这样做的：  
+首先，在[0,1]区间上按均匀分布选取10个随机数，例如：  
+0.4505, 0.0838, 0.2290, 0.9133, 0.1524, 0.8258, 0.5383, 0.9961, 0.0782, 0.4427
+接着，计算该正态分布的[累积概率分布函数](http://en.wikipedia.org/wiki/Cumulative_distribution_function)分别取上述值时对应的自变量值$x_i$，这样获得的$x_1,...,x_10$值分别为：  
+-0.1243, -1.3798, -0.7422, 1.3616, -1.0263, 0.9378, 0.0963, 2.6636, -1.4175, -0.1442  
+以上就是服从正态分布的10个随机数。
 <br>
 <br>
 **参考资料**  
 [1. Markov Chain Monte Carlo and Gibbs Sampling](http://web.mit.edu/~wingated/www/introductions/mcmc-gibbs-intro.pdf)  
+[2. 如何理解重要性采样](http://wbxin2007.blog.163.com/blog/static/1643141252011229729234/?COLLCC=1808049947&)
