@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LDA学习笔记(3)-MCMC和Gibbs
+title: LDA学习笔记(3)-MCMC和Gibbs采样
 tags: LDA MCMC Gibbs
 categories: 机器学习 文本分析
 ---
@@ -16,7 +16,7 @@ $$
 $$
 因此积分可以表示成函数$f\left(x\right)$在密度$p\left(x\right)$上的期望。如果我们从$p\left(x\right)$获得一大堆随机变量$x_1,...,x_n$，则
 $$
-\int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\} = \frac{1}{n} \sum_{i=1}^n f\left(x\right)
+\int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\] = \frac{1}{n} \sum_{i=1}^n f\left(x\right)
 $$
 这个式子就被称为**蒙特卡罗积分**
 
