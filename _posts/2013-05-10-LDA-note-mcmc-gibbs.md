@@ -19,3 +19,8 @@ $$
 \int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\} = \frac{1}{n} \sum_{i=1}^n f\left(x\right)
 $$
 这个式子就被称为**蒙特卡罗积分**
+
+<br>
+<br>
+**参考资料**  
+[1. Markov Chain Monte Carlo and Gibbs Sampling](http://web.mit.edu/~wingated/www/introductions/mcmc-gibbs-intro.pdf)  
