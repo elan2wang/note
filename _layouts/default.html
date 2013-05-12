@@ -6,13 +6,17 @@
   <link rel="stylesheet" type="text/css" href="/note/style/common.css">
   <link rel="stylesheet" type="text/css" href="/note/style/highlight.css">
   <link rel="stylesheet" type="text/css" href="/note/style/note.css">
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
 	tex2jax: {
 	  inlineMath: [['$','$']],
-	  displayMath: [ ['$$','$$']]
+	  displayMath: [ ['$$','$$']],
+	  processEscapes: true,
+	  processEnvironments: true
 	}
   });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
 </head>
 
