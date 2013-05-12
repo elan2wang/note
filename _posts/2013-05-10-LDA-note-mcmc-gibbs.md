@@ -16,7 +16,7 @@ $$
 $$
 因此积分可以表示成函数$f\left(x\right)$在概率密度$p\left(x\right)$上的期望。如果我们从$p\left(x\right)$获得一系列随机变量$x_1,...,x_n$，则
 $$
-\int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\] = c \sum_{i=1}^n f\left(x_i \right)
+\int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\] \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right)
 $$
 这个式子就被称为**蒙特卡罗积分**。蒙特卡罗积分可以用于近似贝叶斯分析中的后验分布(或边缘分布)，对于积分$I\left(y \right) = \int f\left(y \mid x \right) p\left(x\right) dx$，它可以近似于
 $$
@@ -35,13 +35,17 @@ $$
 >就是服从正态分布的10个随机数。
 到此为止，我们知道：要求复杂函数的积分，我们可以通过蒙特卡罗方法用一系列随机数来近似；要获得一系列的随机数，我们要求累积概率分布函数。  
 那么既然概率密度函数都已经很难求了，我们如何能求累积概率分布呢？？这便引出来重要性采样(Importance Sampling)。  
-假设概率密度$q\left(x \right)$很容易求得，那么$p\left(x\right)$可以表示成
+假设概率密度$s\left(x \right)$很容易求得，那么$p\left(x\right)$可以表示成
 $$
-p\left(x\right) = \frac{p\left(x\right)}{q\left(x \right)} q\left(x \right)
+p\left(x\right) = \frac{p\left(x\right)}{s\left(x \right)} s\left(x \right)
 $$
 因此可以得出
 $$
-\int f\left(x\right) p\left(x\right) dx = \int f\left(x\right) \left( \frac{p\left(x\right)}{q\left(x \right)} \right) q\left(x \right) dx = E_{p\left(x\right)}\left\[f\left(x\right) \left( \frac{p\left(x\right)}{q\left(x \right)} \right) \right\]
+\int f\left(x\right) p\left(x\right) dx = \int f\left(x\right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right) s\left(x \right) dx = E_{s\left(x\right)}\left\[f\left(x\right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right) \right\]
+$$
+我们根据$s\left(x \right)获取一系列随机数$x_1,...,x_n$，则上面的式子可以表示为
+$$
+\int f\left(x\right) p\left(x\right) dx \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right)
 $$
 
 <br>
