@@ -35,6 +35,7 @@ $$
 >就是服从正态分布的10个随机数。
 到此为止，我们知道：要求复杂函数的积分，我们可以通过蒙特卡罗方法用一系列随机数来近似；要获得一系列的随机数，我们要求累积概率分布函数。  
 那么既然概率密度函数都已经很难求了，我们如何能求累积概率分布呢？？这便引出来重要性采样(Importance Sampling)。  
+<br>
 假设概率密度$s\left(x \right)$很容易求得，那么$p\left(x\right)$可以表示成
 $$
 p\left(x\right) = \frac{p\left(x\right)}{s\left(x \right)} s\left(x \right)
@@ -43,15 +44,28 @@ $$
 $$
 \int f\left(x\right) p\left(x\right) dx = \int f\left(x\right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right) s\left(x \right) dx = E_{s\left(x\right)}\left\[f\left(x\right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right) \right\]
 $$
-我们根据$s\left(x \right)获取一系列随机数$x_i$，则上面的式子可以表示为
+我们根据$s\left(x \right)$获取一系列随机数$x_1,...,x_n$，则上面的式子可以表示为
 $$
 \int f\left(x\right) p\left(x\right) dx \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right)
 $$
-
 ###马尔科夫链
-
-
-
+一阶马尔科夫链是指，时间$t+1$的状态只与时间$t$的状态有关，数学定义如下
+$$
+Pr\left(X_{t+1}=s_j \mid X_t=s_i,...,x_0=s_k \right) = Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
+$$
+马尔科夫链是通过它转移概率来定义的，用$P\left( i,j \right)$表示状态$s_i$通过一步转移到状态$s_j$的概率
+$$
+P\left( i,j \right)=Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
+$$
+用$\pi_j\left(t \right)$表示时间$t$时状态为$j$的概率，则
+$$
+\pi_j\left(t \right)=Pr\left(X_t=s_j \right)
+$$
+用行向量$\mathbf{\pi}\left(t \right)$表示时间$t$时的状态分布，$\mathbf{\pi}\left(0 \right)$表示初始时的状态分布，通常$\mathbf{\pi}\left(0 \right)$只有一个分量为1，其余分量都为0。
+时间$t+1$时的状态为$s_i$的概率可以通过[Chapman-Kolomogrov equation](http://en.wikipedia.org/wiki/Chapman%E2%80%93Kolmogorov_equation)计算获得
+$$
+\pi_i\left(t+1 \right)=Pr\left(X_{t+1}=s_i\right)=\sum_k Pr \left(X_{t+1}=s_i \mid X_t=s_k\right)\cdot Pr\left(X_t=s_k\right)=\sum_k P\left(k,i\right)\pi_k\left(t \right)
+$$
 ###Metropolis Hastings算法
 
 
