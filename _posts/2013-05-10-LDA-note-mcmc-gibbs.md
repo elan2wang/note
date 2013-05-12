@@ -45,8 +45,14 @@ $$
 $$
 我们根据$s\left(x \right)获取一系列随机数$x_1,...,x_n$，则上面的式子可以表示为
 $$
-\int f\left(x\right) p\left(x\right) dx \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right)  
+\int f\left(x\right) p\left(x\right) dx \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right)
 $$
+###马尔科夫链
+
+
+
+###Metropolis Hastings算法
+
 
 <br>
 <br>
