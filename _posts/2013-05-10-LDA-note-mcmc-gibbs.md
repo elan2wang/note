@@ -66,7 +66,7 @@ $$
 $$
 \pi_i\left(t+1 \right)=\sum_k Pr \left(X_{t+1}=s_i \mid X_t=s_k\right)\cdot Pr\left(X_t=s_k\right)=\sum_k P\left(k,i\right)\pi_k\left(t \right)
 $$
-用$\mathbf{P}$表示**概率转移矩阵**，则该矩阵的$i,jth$元素表示从状态$i$转移到状态$j$的概率$P\left(i,j\right)$。很容易知道，该矩阵\mathbf{P}的行向量之和1。由此可得
+用$\mathbf{P}$表示**概率转移矩阵**，则该矩阵的$i,jth$元素表示从状态$i$转移到状态$j$的概率$P\left(i,j\right)$。很容易知道，该矩阵$\mathbf{P}$的行向量之和1。由此可得
 $$
 \vec{\pi}\left(t+1\right)=\vec{\pi}\left(t\right)\mathbf{P}
 $$
@@ -74,6 +74,17 @@ $$
 $$
 \vec{\pi}\left(t+1\right)=\vec{\pi}\left(0\right)\mathbf{P}^t
 $$
+下面我们通过一个例子，来说明马尔科夫链的状态转移过程  
+>假设状态空间为{下雨，天晴，多云}，并且天气变化符合马尔科夫过程。因此，明天的天气仅仅依赖今天的天气。假设：
+>P( Rain tomorrow | Rain today ) = 0.5,
+>P( Sunny tomorrow | Rain today ) = 0.25,
+>P( Cloudy tomorrow | Rain today ) = 0.25,
+>则状态转移矩阵的第一行为(0.5, 0.25, 0.25),假设转移矩阵的剩余元素如下
+\mathbf{P}=\begin{pmatrix}
+0.5 & 0.25 & 0.25 \\ 
+0.5 & 0 & 0.5 \\ 
+0.25 & 0.25 & 0.5
+\end{pmatrix}
 ###Metropolis Hastings算法
 
 
