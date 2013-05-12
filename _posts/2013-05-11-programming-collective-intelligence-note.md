@@ -30,4 +30,4 @@ $$
 上图中，红、蓝、黄线表示的曼哈顿距离都相等(12)，绿线表示欧几里得距离($6 * \sqrt{2} \approx 8.48$)。详情参见[Wikipedia](http://en.wikipedia.org/wiki/Taxicab_geometry)
 <br>
 <br>
-更多的相似度计算公式可以参见[Wikipedia](http://en.wikipedia.org/wiki/Metric_(mathematics))
+更多的相似度计算公式可以参见[Wikipedia](http://en.wikipedia.org/wiki/Metric_%28mathematics%29)
