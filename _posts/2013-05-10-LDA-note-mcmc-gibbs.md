@@ -66,7 +66,14 @@ $$
 $$
 \pi_i\left(t+1 \right)=\sum_k Pr \left(X_{t+1}=s_i \mid X_t=s_k\right)\cdot Pr\left(X_t=s_k\right)=\sum_k P\left(k,i\right)\pi_k\left(t \right)
 $$
-我们定义
+用$\mathbf{P}$表示**概率转移矩阵**，则该矩阵的$i,jth$元素表示从状态$i$转移到状态$j$的概率$P\left(i,j\right)$。很容易知道，该矩阵\mathbf{P}的行向量之和1。由此可得
+$$
+\vec{\pi}\left(t+1\right)=\vec{\pi}\left(t\right)\mathbf{P}
+$$
+当使用矩阵形式表示后，通过快速迭代可以得到
+$$
+\vec{\pi}\left(t+1\right)=\vec{\pi}\left(0\right)\mathbf{P}^t
+$$
 ###Metropolis Hastings算法
 
 
