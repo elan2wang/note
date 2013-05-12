@@ -11,7 +11,7 @@ categories: 机器学习 文本分析
 ###1.2. Pearson Correlation Score
 **皮尔逊相关系数**用于度量两个变量X和Y之间的相关（线性相关），其值介于-1到1之间。两个变量之间的皮尔逊相关系数定义为两个变量之间的协方差和标准差的商：
 $$
-\rho_{X,Y} = \frac{cov \left( X,Y \right)}{\sigma_X \sigma_Y} = \frac{E \left[\left( Y - \mu y \right) \right]}{\sigma_X \sigma_Y}
+\rho_{X,Y} = \frac{cov \left( X,Y \right)}{\sigma_X \sigma_Y} = \frac{E\bigl[\left( X - \mu x \right)\left( Y - \mu y \right) \bigr]}{\sigma_X \sigma_Y}
 $$
 详细内容参见[Wikipedia](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient)
 ###1.3. Jaccard Coefficient Score
@@ -27,7 +27,7 @@ $$
 ###1.4. Manhattan Distance Socre
 **曼哈顿距离**又称为**出租车几何**或**方格线距离**，它定义为：欧几里得空间的固定直角坐标系上两点所形成的线段对轴产生的投影的距离总和。
 ![Manhattan_distance.png]({{ site.url }}/images/Manhattan_distance.png)
-上图中，红、蓝、黄线表示的曼哈顿距离都相等(12)，绿线表示欧几里得距离($6 * \sqrt{2} \approx 8.48$)。详细内容参见[Wikipedia](http://en.wikipedia.org/wiki/Taxicab_geometry)
+上图中，红、蓝、黄线表示的曼哈顿距离都相等(12)，绿线表示欧几里得距离($6 * \sqrt{2} \approx 8.48$)。详情参见[Wikipedia](http://en.wikipedia.org/wiki/Taxicab_geometry)
 <br>
 <br>
 更多的相似度计算公式可以参见[Wikipedia](http://en.wikipedia.org/wiki/Metric_%28mathematics%29)
