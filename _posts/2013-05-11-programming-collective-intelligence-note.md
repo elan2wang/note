@@ -10,11 +10,13 @@ categories: 机器学习 文本分析
 ###1.1. Euclidean Distance Score
 ###1.2. Pearson Correlation Score
 **皮尔逊相关系数**用于度量两个变量X和Y之间的相关（线性相关），其值介于-1到1之间。两个变量之间的皮尔逊相关系数定义为两个变量之间的协方差和标准差的商：
-$$
-\begin{equation}
-\rho_{X,Y} = \frac{cov \left( X,Y \right)}{\sigma_X \sigma_Y} = \frac{E[\left( X - \mu x \right)\left( Y - \mu y \right)]}{\sigma_X \sigma_Y}
+\begin{equation} 
+\label{euler-series} 
+\Bigl[\Bigl(\frac{2}{1}\Bigr)^n\frac{1}{n+1}\Bigr] 
+\Bigl[\Bigl(\frac{3}{2}\Bigr)^n\frac{2}{n+2}\Bigr] 
+\Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n! 
+\quad  (*) 
 \end{equation}
-$$
 详细内容参见[Wikipedia](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient)
 ###1.3. Jaccard Coefficient Score
 Jaccard Coefficient用于测量样本集之间的相似度，它定义为：集合交集与集合并集的商，公式如下：
