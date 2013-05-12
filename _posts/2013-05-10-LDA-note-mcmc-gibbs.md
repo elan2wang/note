@@ -34,7 +34,15 @@ $$
 >-0.1243, -1.3798, -0.7422, 1.3616, -1.0263, 0.9378, 0.0963, 2.6636, -1.4175, -0.1442  
 >就是服从正态分布的10个随机数。
 到此为止，我们知道：要求复杂函数的积分，我们可以通过蒙特卡罗方法用一系列随机数来近似；要获得一系列的随机数，我们要求累积概率分布函数。  
-那么既然概率密度函数都已经很难求了，我们如何能求累积概率分布呢？？这便引出来重要性采样(Importance Sampling)  
+那么既然概率密度函数都已经很难求了，我们如何能求累积概率分布呢？？这便引出来重要性采样(Importance Sampling)。  
+假设概率密度$q\left(x \right)$很容易求得，那么$p\left(x\right)$可以表示成
+$$
+p\left(x\right) = \frac{p\left(x\right)}{q\left(x \right)} q\left(x \right)
+$$
+因此可以得出
+$$
+\int f\left(x\right) p\left(x\right) dx = \int f\left(x\right) \left( \frac{p\left(x\right)}{q\left(x \right)} \right) q\left(x \right) dx = E_{p\left(x\right)}\left\[f\left(x\right) \left( \frac{p\left(x\right)}{q\left(x \right)} \right) \right\]
+$$
 
 <br>
 <br>
