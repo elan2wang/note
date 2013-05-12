@@ -43,10 +43,11 @@ $$
 $$
 \int f\left(x\right) p\left(x\right) dx = \int f\left(x\right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right) s\left(x \right) dx = E_{s\left(x\right)}\left\[f\left(x\right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right) \right\]
 $$
-我们根据$s\left(x \right)获取一系列随机数$x_1,...,x_n$，则上面的式子可以表示为
+我们根据$s\left(x \right)获取一系列随机数$x_i$，则上面的式子可以表示为
 $$
 \int f\left(x\right) p\left(x\right) dx \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right)
 $$
+
 ###马尔科夫链
 
 
