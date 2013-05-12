@@ -64,9 +64,7 @@ $$
 用行向量$\vec{\pi}\left(t \right)$表示时间$t$时的状态分布，$\vec{\pi}\left(0 \right)$表示初始时的状态分布，通常$\vec{\pi}\left(0 \right)$只有一个分量为1，其余分量都为0。
 时间$t+1$时的状态为$s_i$的概率可以通过[Chapman-Kolomogrov equation](http://en.wikipedia.org/wiki/Chapman%E2%80%93Kolmogorov_equation)计算获得
 $$
-\pi_i\left(t+1 \right)=Pr\left(X_{t+1}=s_i\right) \\
-=\sum_k Pr \left(X_{t+1}=s_i \mid X_t=s_k\right)\cdot Pr\left(X_t=s_k\right) \\
-=\sum_k P\left(k,i\right)\pi_k\left(t \right)
+\pi_i\left(t+1 \right)=Pr\left(X_{t+1}=s_i\right)=\sum_k Pr \left(X_{t+1}=s_i \mid X_t=s_k\right)\cdot Pr\left(X_t=s_k\right)=\sum_k P\left(k,i\right)\pi_k\left(t \right)
 $$
 ###Metropolis Hastings算法
 
