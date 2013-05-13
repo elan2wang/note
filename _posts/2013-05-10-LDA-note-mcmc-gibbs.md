@@ -72,7 +72,7 @@ $$
 $$
 当使用矩阵形式表示后，通过快速迭代可以得到
 $$
-\vec{\pi}\left(t+1\right)=\vec{\pi}\left(0\right)\mathbf{P}^t
+\vec{\pi}\left(t+1\right)=\vec{\pi}\left(0\right)\mathbf{P}^{t+1}
 $$
 下面我们通过一个例子，来说明马尔科夫链的状态转移过程  
 >假设状态空间为{下雨，天晴，多云}，并且天气变化符合马尔科夫过程。因此，明天的天气仅仅依赖今天的天气。假设：P(Rain tomorrow | Rain today)=0.5，P(Sunny tomorrow | Rain today)=0.25，P(Cloudy tomorrow | Rain today)=0.25，则状态转移矩阵的第一行为(0.5, 0.25, 0.25)，假设转移矩阵的剩余元素如下
@@ -87,7 +87,8 @@ $$
 >假设今天是天晴，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 0 & 1 & 0 \end{pmatrix}$，则7天后的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$相反，如果假设今天下雨，即$vec{\pi}\left(0\right)=\begin{pmatrix} 1 & 0 & 0 \end{pmatrix}$，那么7天的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$由此可见，经过足够时间的转移，期望天气与城市天气是独立的。换句话说，该天气转移的马尔科夫链达到了一个**稳态分布(stationary distribution)**。  
 正如上面的例子所示，马尔科夫链可能会达到一个稳态分布$\vec{\pi}^\*$，此时的概率向量值与初始条件的是独立的。稳态分布满足以下条件$$\vec{\pi}^\* = \vec{\pi}^\* \mathbf{P}$$
 ###Metropolis Hastings算法
-
+正如**重要性采样**小节所述，利用蒙特卡罗方法求积分时主要问题是如何从复杂的概率分布$p\left(x\right)$获取样本数据，该问题的求解也是MCMC方法的根源。  
+假设我们要从分布$p\left(\theta\right)$获取样本数据，其中$p\left(\theta\right)=f\left(\theta\right)/K$，但是标准化常量K并不知道，并且也很难计算。**Metropolis**算法按如下过程生成样本序列：  
 
 <br>
 <br>
