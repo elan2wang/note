@@ -84,6 +84,8 @@ $$
 >5 & 0.25 & 0.5
 >\end{bmatrix}
 >$$
+>假设今天是天晴，即$vec{\pi}\left(0\right)&=\left(0 1 0\right)$，则7天后的天气情况为$$$vec{\pi}\left(7\right)&=$vec{\pi}\left(0\right)\mathbf{P}^7&=\left(0.4 0.2 0.4\right)$$相反，如果假设今天下雨，即$vec{\pi}\left(0\right)&=\left(1 0 0\right)$，那么7天的天气情况为$$$vec{\pi}\left(7\right)&=$vec{\pi}\left(0\right)\mathbf{P}^7&=\left(0.4 0.2 0.4\right)$$由此可见，经过足够时间的转移，期望天气与城市天气是独立的。换句话说，该天气转移的马尔科夫链达到了一个**稳态分布(stationary distribution)**。  
+正如上面的例子所示，马尔科夫链可能会达到一个稳态分布$\vec{\pi}_*$，此时的概率向量值与初始条件的是独立的。稳态分布满足以下条件$$\vec{\pi}_* &= \vec{\pi}_* \mathbf{P}$$
 ###Metropolis Hastings算法
 
 
