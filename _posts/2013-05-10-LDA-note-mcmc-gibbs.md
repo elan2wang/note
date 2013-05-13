@@ -5,7 +5,7 @@ tags: LDA MCMC Gibbs
 categories: 机器学习 文本分析
 ---
 本文是[LDA学习笔记]({% post_url 2013-05-09-LDA-note %})系列文章之一，主要讲解Markov Chain Monte Carlo和Gibbs采样。在贝叶斯方法中，求解后验分布时需要对一个高维的函数进行积分，通常该积分的计算非常困难，因此产生了一些并非直接进行积分的方法，Markov Chain Monte Carlo就是其中之一。MCMC利用前一次的采样值来随机地产生下一次采样值，产生一个马尔科夫链。
-###1. 蒙特卡罗积分
+###3.1. 蒙特卡罗积分
 原始的蒙特卡罗方法是由物理学家发明的，它利用生成随机数来计算积分。假设我们需要计算一个复杂的积分：
 $$
 \int_a^b h\left(x\right) dx
@@ -26,7 +26,7 @@ $$
 $$
 SE^2\left\[\hat{I} \left(y \right) \right\] = \frac{1}{n} \left(\frac{1}{n-1} \sum_{i=1}^n \left(f\left(y \mid x_i\right) - \hat{I} \left(y \right) \right) \right)
 $$
-###2. 重要性采样
+###3.2. 重要性采样
 在利用蒙特卡罗方法求复杂积分时，我们需要根据概率密度$p\left(x\right)$获取一系列的随机变量，但是计算机只能获得均匀分布的随机数。假设我们需要按照正态分布$N\left(0,1\right)$获得10个随机数，蒙特卡罗法是这样做的：  
 >首先，在\[0,1\]区间上按均匀分布选取10个随机数，例如：  
 >0.4505, 0.0838, 0.2290, 0.9133, 0.1524, 0.8258, 0.5383, 0.9961, 0.0782, 0.4427  
@@ -48,7 +48,7 @@ $$
 $$
 \int f\left(x\right) p\left(x\right) dx \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right)
 $$
-###马尔科夫链
+###3.3. 马尔科夫链
 一阶马尔科夫链是指，时间$t+1$的状态只与时间$t$的状态有关，数学定义如下
 $$
 Pr\left(X_{t+1}=s_j \mid X_t=s_i,...,x_0=s_k \right) = Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
@@ -86,7 +86,7 @@ $$
 >$$
 >假设今天是天晴，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 0 & 1 & 0 \end{pmatrix}$，则7天后的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$相反，如果假设今天下雨，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 1 & 0 & 0 \end{pmatrix}$，那么7天的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$由此可见，经过足够时间的转移，期望天气与城市天气是独立的。换句话说，该天气转移的马尔科夫链达到了一个**稳态分布(stationary distribution)**。  
 正如上面的例子所示，马尔科夫链会达到一个稳态分布$\vec{\pi}^\*$，此时的概率向量值与初始条件的是独立的。稳态分布满足以下条件$$\vec{\pi}^\* = \vec{\pi}^\* \mathbf{P}$$
-###3. Metropolis Hastings算法
+###3.4. Metropolis Hastings算法
 正如**重要性采样**小节所述，利用蒙特卡罗方法求积分时主要问题是如何从复杂的概率分布$p\left(x\right)$获取样本数据，该问题的求解也是MCMC方法的根源。  
 假设我们要从分布$p\left(\theta\right)$获取样本数据，其中$p\left(\theta\right)=f\left(\theta\right)/K$，但是标准化常量K并不知道，并且也很难计算。**Metropolis**算法按如下过程生成样本序列：  
 1. 任意选取$\theta_0$，使得$f\left(\theta_0\right)>0$。
