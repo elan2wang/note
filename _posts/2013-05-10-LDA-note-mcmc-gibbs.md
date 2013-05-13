@@ -98,5 +98,5 @@ $$
 <br>
 <br>
 **参考资料**  
-[1. Markov Chain Monte Carlo and Gibbs Sampling](http://web.mit.edu/~wingated/www/introductions/mcmc-gibbs-intro.pdf)  
-[2. 如何理解重要性采样](http://wbxin2007.blog.163.com/blog/static/1643141252011229729234/?COLLCC=1808049947&)
+1. [Markov Chain Monte Carlo and Gibbs Sampling](http://web.mit.edu/~wingated/www/introductions/mcmc-gibbs-intro.pdf)  
+2. [如何理解重要性采样](http://wbxin2007.blog.163.com/blog/static/1643141252011229729234/?COLLCC=1808049947&)
