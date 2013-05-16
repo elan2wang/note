@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Learning note
+title: Learning Note
 ---
+<div id="blog-index">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 {% include sippet.html %}
 {% endfor %}
+</div>
 
 <!-- Pagination links -->
 <div class="pagination">

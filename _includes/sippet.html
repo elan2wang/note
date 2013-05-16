@@ -1,14 +1,8 @@
-<article>
+<div class="title">
   <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-  <section class="meta">
-    <span class="author">
-      <a href="https://github.com/elan2wang">{{ site.author }}</a>
-    </span>
-    <span class="time">
-      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    </span>
-  </section>
-  <section>
-    {{ post.content }}
-  </section>
+  <p><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time></p>
+</div>
+
+<article>
+{{ post.content }}
 </article>
