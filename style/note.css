@@ -1,13 +1,3 @@
-body {
-	width:80%;
-	margin:0 auto;
-	font-size:14px;
-	color:#000000;
-	line-height: 2.5em;
-	background-color:#ffffff;
-	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
-}
-
 *{
 	padding:0;
 	margin: 0;
@@ -15,9 +5,18 @@ body {
 	outline:none;
 }
 
+body {
+	margin:0 10%;
+	font-size:14px;
+	color:#000000;
+	line-height: 2.5em;
+	background-color:#ffffff;
+	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+}
+
 #sidebar {
 	height: 100%;
-	width: 20%;
+	width: 16%;
 	float: left;
 	position: fixed;
 	font-size:1.4em;
@@ -26,6 +25,13 @@ body {
 	text-transform:uppercase;
 	border-right: 1px dashed #c7c7c7;
 	font-family:"Electrolize",sans-serif;
+}
+
+#main {
+	height:auto;
+	width:80%;
+	float:right;
+	margin:2em auto;
 }
 
 #sidebar a{
@@ -42,14 +48,6 @@ body {
 	text-align:center;
 	text-decoration:none;
 	background-color:#b9221f;
-}
-
-#main {
-	height:auto;
-	width:80%;
-	float:right;
-	margin:2em auto;
-	padding-right:30px;
 }
 
 #main header {
