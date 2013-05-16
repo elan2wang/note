@@ -6,7 +6,7 @@
 }
 
 body {
-	margin:0 10%;
+	margin:0 15%;
 	font-size:14px;
 	color:#000000;
 	line-height: 2.5em;
@@ -16,9 +16,10 @@ body {
 
 #sidebar {
 	height: 100%;
-	width: 16%;
+	width: 14%;
 	float: left;
 	position: fixed;
+	top:0;
 	font-size:1.4em;
 	text-align:right;
 	padding-top: 5em;
