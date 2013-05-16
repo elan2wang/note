@@ -6,7 +6,7 @@ categories: 机器学习 文本分析
 ---
 本文是[LDA学习笔记]({% post_url 2013-05-09-LDA-note %})系列文章之一，主要讲解Markov Chain Monte Carlo和Gibbs采样。在贝叶斯方法中，求解后验分布时需要对一个高维的函数进行积分，通常该积分的计算非常困难，因此产生了一些并非直接进行积分的方法，Markov Chain Monte Carlo就是其中之一。MCMC利用前一次的采样值来随机地产生下一次采样值，产生一个马尔科夫链。
 ###3.1. 蒙特卡罗积分
-原始的蒙特卡罗方法是由物理学家发明的，它利用生成随机数来计算积分。假设我们需要计算一个复杂的积分：
+蒙特卡罗方法最初是由物理学家发明的，它利用生成随机数来计算积分。假设我们需要计算一个复杂的积分：
 $$
 \int_a^b h\left(x\right) dx
 $$
@@ -93,7 +93,6 @@ $$
 2. 使用当前的$\theta$值，根据**jumping distribution**$q\left(\theta_1, \theta_2\right)$采样一个**候选点$\theta^\*$**。**jumping distribution**的返回值是根据前一个值$\theta_1$获得$\theta_2$的概率。jumping density唯一的限制是，它必须是对称的，即$q\left(\theta_1, \theta_2\right)=q\left(\theta_2, \theta_1\right)$。
 3. 根据候选点$\theta^\*$和当前点$\theta_{t-1}$按照以下公式计算$$\alpha=\frac{p\left(\theta^\*\right)}{p\left(\theta_{t-1}\right)}=\frac{f\left(\theta^\*\right)}{f\left(\theta_{t-1}\right)}$$标准化常量K在计算中被约去。
 4. 如果计算出$\alpha>0$那么接受当前候选点$\theta^\*$，并继续第2步；如果$\alpha &lt; 0$，那么以概率$\alpha$接受候选点，否则拒绝，然后继续第2步。  
-
 
 
 <br>
