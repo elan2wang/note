@@ -1,5 +1,10 @@
-paginate: 5
+
 author: Elan Wang
+title: Elan Wang | 王坚
+
 permalink: /:year/:month/:day/:title/
-base: http://elan2wang.github.io
 url: http://elan2wang.github.io/note
+
+paginate: 5
+
+google_analytics_tracking_id: UA-33915214-1
