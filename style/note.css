@@ -1,5 +1,5 @@
 body {
-	width:780px;
+	width:80%;
 	margin:0 auto;
 	font-size:14px;
 	color:#000000;
@@ -17,7 +17,7 @@ body {
 
 #sidebar {
 	height: 100%;
-	width: 150px;
+	width: 20%;
 	float: left;
 	position: fixed;
 	font-size:1.4em;
@@ -46,7 +46,7 @@ body {
 
 #main {
 	height:auto;
-	width:600px;
+	width:80%;
 	float:right;
 	margin:2em auto;
 	padding-right:30px;
