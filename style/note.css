@@ -6,7 +6,7 @@
 }
 
 body {
-	margin:0 15%;
+	margin:0 17%;
 	font-size:14px;
 	color:#000000;
 	line-height: 2.5em;
@@ -16,7 +16,7 @@ body {
 
 #sidebar {
 	height: 100%;
-	width: 14%;
+	width: 13%;
 	float: left;
 	position: fixed;
 	top:0;
