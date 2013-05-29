@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Shell编程笔记
-tags: LDA Extend
-categories: 机器学习 文本分析
+tags: shell awk sed
+categories: Linux
 ---
 **Awk编程笔记**  
 1. awk读取文件的指定行的指定字段
