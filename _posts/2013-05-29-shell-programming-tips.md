@@ -13,7 +13,7 @@ n,k正整数，分别表示记录的行号和字段号。若要用变量表示�
 <code>awk 'NR%10==5 {print $0}' path/filename</code>  
 打印行号除以10后余数为5的行的记录  
 2. 跳过当前记录(也即，读取到当前行时不打印任何字段)  
-<code>awk 'if NF 6 next' path/filename</code>  
+<code>awk 'NR%10==5 {print $0}' path/filename</code>  
 上面这条脚本表示，若当前记录的字段数等于6则跳过，否则输出当前记录  
 3. 将awk命令的输出传递给其它变量  
 <code>text=${awk '{print $0}' path/filename}</code>  
