@@ -5,7 +5,7 @@ tags: shell awk sed
 categories: Linux
 ---
 **Awk编程笔记**  
-1. awk读取文件的指定行的指定字段 
+1. awk读取文件的指定行的指定字段  
 **awk 'NR==n {print $k}' path/filename**  
 n,k正整数，分别表示行号和字段号。若要用变量表示行号，则需要用单引号将变量引起来
 
