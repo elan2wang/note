@@ -154,6 +154,16 @@ a:hover {
 	float:right;
 }
 
+/* categories page */
+#tag_cloud {
+	padding-left:25px;
+}
+
+#listing {
+	padding-left:25px;
+	list-style:none;
+}
+
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;line-height: 2.8em;}
 h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;line-height: 2.6em;}
 h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;line-height: 2.4em;}
