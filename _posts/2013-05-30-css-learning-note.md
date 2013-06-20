@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS学习笔记
-tags: css em
+tags: css
 categories: Web
 ---
 - [EM与弹性布局](http://www.w3cplus.com/css/px-to-em)  
