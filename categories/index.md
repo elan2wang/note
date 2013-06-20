@@ -20,4 +20,3 @@ layout: default
 {% endfor %}
 {% endfor %}
 </ul>
-</script>
