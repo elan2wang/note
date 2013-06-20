@@ -10,7 +10,7 @@ body {
 	font-size:14px;
 	color:#000000;
 	line-height: 1.8em;
-	background-color:#ffffff;
+	background:url(../images/bg.gif) 0 0 repeat fixed;
 	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
 }
 
@@ -24,6 +24,7 @@ body {
 	text-align:right;
 	padding-top: 5em;
 	text-transform:uppercase;
+	background-color:#ffffff;
 	border-right: 1px dashed #c7c7c7;
 	font-family:"Electrolize",sans-serif;
 }
@@ -33,6 +34,7 @@ body {
 	width:80%;
 	float:right;
 	margin:2em auto;
+	background-color:#ffffff;
 }
 
 #sidebar a{
