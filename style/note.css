@@ -150,11 +150,7 @@ a:hover {
 	float:right;
 }
 
-.post ol {
-	padding-left:30px;
-}
-
-#blog-index  ol {
+ol {
 	padding-left:30px;
 }
 
