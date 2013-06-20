@@ -1,14 +1,12 @@
 ---
 layout: default
-title: Learning Note
+title: My Learning Note
 ---
-<div id="blog-index">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 {% include sippet.html %}
 {% endfor %}
-</div>
-
+<a id="back-to-top" href="#" class="active">^</a>
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}

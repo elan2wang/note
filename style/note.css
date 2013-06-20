@@ -1,3 +1,4 @@
+/* css for all pages */
 *{
 	padding:0;
 	margin: 0;
@@ -6,96 +7,22 @@
 }
 
 body {
-	margin:0 17%;
+	margin:0 15%;
 	font-size:14px;
 	color:#000000;
 	line-height: 1.8em;
-	background-color:#ffffff;
+	background:url(../images/bg.gif) 0 0 repeat fixed;
 	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
 }
 
-#sidebar {
-	height: 100%;
-	width: 13%;
-	float: left;
-	position: fixed;
-	top:0;
-	font-size:1.4em;
-	text-align:right;
-	padding-top: 5em;
-	text-transform:uppercase;
-	border-right: 1px dashed #c7c7c7;
-	font-family:"Electrolize",sans-serif;
-}
+h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;line-height: 2.8em;}
+h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;line-height: 2.6em;}
+h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;line-height: 2.4em;}
+h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.0em;color:#333;line-height: 2.2em;}
 
-#main {
-	height:auto;
-	width:80%;
-	float:right;
-	margin:2em auto;
-}
-
-#sidebar a{
-	display:block;
-	color:#000000;
-	padding:.7em 3em .7em 1em;
-	border-radius:5px;
-	text-decoration:none;
-}
-
-#sidebar a:hover{
-	color:#f9f9f9;
-	font-weight:600;
-	text-align:center;
-	text-decoration:none;
-	background-color:#b9221f;
-}
-
-#main header {
-	font-size:40px;
-	font-weight:800;
-	line-height:60px;
-	padding:10px 30px;
-}
-
-footer {
-	padding-left:30px;
-	margin-top:50px;
-}
-
-footer p {
-	color:#999;
-	text-align:center;
-}
-
-
-#main p {
-	font-size:13px;
-	text-align:justify;
-}
-
-#main img {
-	max-width:550px;
-	display:block;
-	margin:4px auto;
-	box-shadow:#999 1px 1px 4px;
-}
-
-#blog-index {
-	padding:8px 0;
-}
-
-#blog-index article {
-	padding:10px 0 30px 30px;
-	padding-bottom:30px;
-	border-bottom:1px dashed #c7c7c7;
-}
-
-#blog-index .title {
-	line-height:30px;
+ol ul{
 	padding-left:25px;
-	margin-top:10px;
-	border-left:#b9221f solid 5px;
+	list-style:none;
 }
 
 a {
@@ -109,10 +36,87 @@ a:hover {
 	border-bottom:1px dashed #c7c7c7;
 }
 
-.pagination {
-	padding-left:30px;
+#sidebar {
+	width:19%;
+	float:left;
+	font-size:1.4em;
+	text-align:right;
+	padding-top:5em;
+	text-transform:uppercase;
+	background-color:#ffffff;
+	font-family:"Electrolize",sans-serif;
 }
 
+#main {
+	width:79%;
+	float:left;
+	padding:10px 10px 10px 0;
+	background-color:#ffffff;
+	border-left:1px dashed #c7c7c7;
+}
+
+#sidebar a{
+	display:block;
+	color:#000000;
+	padding:.7em 1em;
+	border-radius:5px;
+	text-decoration:none;
+}
+
+#sidebar a:hover{
+	color:#f9f9f9;
+	text-decoration:none;
+	background-color:#b9221f;
+}
+
+#main header {
+	font-size:40px;
+	font-weight:800;
+	line-height:60px;
+	padding:10px 30px 10px 25px;
+}
+
+#main p {
+	font-size:13px;
+	text-align:justify;
+}
+
+#main img {
+	max-width:550px;
+	display:block;
+	margin:4px auto;
+	box-shadow:#999 1px 1px 4px;
+}
+
+footer {
+	padding-left:25px;
+	margin-top:50px;
+}
+
+footer p {
+	color:#999;
+	text-align:center;
+}
+
+/* css for home page */
+article {
+	padding:10px 0 30px 25px;
+	padding-bottom:30px;
+	border-bottom:1px dashed #c7c7c7;
+}
+
+.title {
+	line-height:0;
+	padding-bottom:10px;
+	padding-left:25px;
+	margin-top:10px;
+}
+
+.pagination {
+	padding-left:25px;
+}
+
+/* css for post page */
 .post {
 	padding:10px 0 30px 30px;
 	padding-bottom:50px;
@@ -157,15 +161,18 @@ a:hover {
 	float:right;
 }
 
-.post ol {
-	padding-left:30px;
+/* categories page */
+#tag_cloud {
+	padding:5px 25px;
 }
 
-#blog-index  ol {
-	padding-left:30px;
+ul.listing {
+	padding:5px 25px;
+	list-style:none;
+	line-height:25px;
 }
 
-h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;line-height: 2.8em;}
-h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;line-height: 2.6em;}
-h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;line-height: 2.4em;}
-h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.0em;color:#333;line-height: 2.2em;}
+li.listing-seperator {
+	font-weight:bold;
+	padding-top:10px;
+}
