@@ -6,7 +6,7 @@
 }
 
 body {
-	margin:0 17%;
+	margin:0 200px;
 	font-size:14px;
 	color:#000000;
 	line-height: 1.8em;
@@ -15,22 +15,22 @@ body {
 }
 
 #sidebar {
-	height: 100%;
-	width: 13%;
-	float: left;
-	position: fixed;
+	height:100%;
+	width:13%;
+	float:left;
+	position:fixed;
 	top:0;
 	font-size:1.4em;
 	text-align:right;
-	padding-top: 5em;
+	padding-top:5em;
 	text-transform:uppercase;
 	background-color:#ffffff;
-	border-right: 1px dashed #c7c7c7;
+	border-right:1px dashed #c7c7c7;
 	font-family:"Electrolize",sans-serif;
 }
 
 #main {
-	height:auto;
+	height:100%;
 	width:80%;
 	float:right;
 	padding:10px 10px 10px 0;
