@@ -81,17 +81,13 @@ footer p {
 	box-shadow:#999 1px 1px 4px;
 }
 
-#blog-index {
-	padding:8px 0;
-}
-
-#blog-index article {
+article {
 	padding:10px 0 30px 30px;
 	padding-bottom:30px;
 	border-bottom:1px dashed #c7c7c7;
 }
 
-#blog-index .title {
+.title {
 	line-height:30px;
 	padding-left:25px;
 	margin-top:10px;
