@@ -23,7 +23,6 @@ body {
 	padding-top:5em;
 	text-transform:uppercase;
 	background-color:#ffffff;
-	border-right:1px dashed #c7c7c7;
 	font-family:"Electrolize",sans-serif;
 }
 
@@ -33,6 +32,7 @@ body {
 	float:left;
 	padding:10px 10px 10px 0;
 	background-color:#ffffff;
+	border-left:1px dashed #c7c7c7;
 }
 
 #sidebar a{
@@ -95,7 +95,6 @@ footer p {
 	line-height:30px;
 	padding-left:25px;
 	margin-top:10px;
-	border-left:#b9221f solid 5px;
 }
 
 a {
