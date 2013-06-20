@@ -14,6 +14,10 @@ body {
 	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
 }
 
+ol {
+	padding-left:30px;
+}
+
 #sidebar {
 	width:19%;
 	float:left;
@@ -53,7 +57,7 @@ body {
 	font-size:40px;
 	font-weight:800;
 	line-height:60px;
-	padding:10px 30px;
+	padding:10px 30px 10px 25px;
 }
 
 footer {
@@ -80,7 +84,7 @@ footer p {
 }
 
 article {
-	padding:10px 0 30px 30px;
+	padding:10px 0 30px 25px;
 	padding-bottom:30px;
 	border-bottom:1px dashed #c7c7c7;
 }
@@ -148,10 +152,6 @@ a:hover {
 .post .prev-next .right {
 	display:block;
 	float:right;
-}
-
-ol {
-	padding-left:30px;
 }
 
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;line-height: 2.8em;}
