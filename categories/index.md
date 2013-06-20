@@ -5,7 +5,7 @@ layout: default
 
 <div id='tag_cloud'>
 {% for cat in site.categories %}
-<span class="label"><a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a><span>
+<a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}"><span class="label">{{ cat[0] }} ({{ cat[1].size }})<span></a>
 {% endfor %}
 </div>
 
