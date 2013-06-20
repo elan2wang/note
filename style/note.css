@@ -16,10 +16,8 @@ body {
 
 #sidebar {
 	height:100%;
-	width:13%;
+	width:19%;
 	float:left;
-	position:fixed;
-	top:0;
 	font-size:1.4em;
 	text-align:right;
 	padding-top:5em;
