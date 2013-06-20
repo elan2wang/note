@@ -1,3 +1,4 @@
+/* css for all pages */
 *{
 	padding:0;
 	margin: 0;
@@ -14,8 +15,24 @@ body {
 	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
 }
 
+h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;line-height: 2.8em;}
+h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;line-height: 2.6em;}
+h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;line-height: 2.4em;}
+h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.0em;color:#333;line-height: 2.2em;}
+
 ol {
 	padding-left:25px;
+}
+
+a {
+	color:#b9221f;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#999;
+	text-decoration:none;
+	border-bottom:1px dashed #c7c7c7;
 }
 
 #sidebar {
@@ -60,17 +77,6 @@ ol {
 	padding:10px 30px 10px 25px;
 }
 
-footer {
-	padding-left:30px;
-	margin-top:50px;
-}
-
-footer p {
-	color:#999;
-	text-align:center;
-}
-
-
 #main p {
 	font-size:13px;
 	text-align:justify;
@@ -83,6 +89,17 @@ footer p {
 	box-shadow:#999 1px 1px 4px;
 }
 
+footer {
+	padding-left:30px;
+	margin-top:50px;
+}
+
+footer p {
+	color:#999;
+	text-align:center;
+}
+
+/* css for home page */
 article {
 	padding:10px 0 30px 25px;
 	padding-bottom:30px;
@@ -95,21 +112,11 @@ article {
 	margin-top:10px;
 }
 
-a {
-	color:#b9221f;
-	text-decoration:none;
-}
-
-a:hover {
-	color:#999;
-	text-decoration:none;
-	border-bottom:1px dashed #c7c7c7;
-}
-
 .pagination {
 	padding-left:30px;
 }
 
+/* css for post page */
 .post {
 	padding:10px 0 30px 30px;
 	padding-bottom:50px;
@@ -159,12 +166,7 @@ a:hover {
 	padding-left:25px;
 }
 
-#listing {
+ul.listing {
 	padding-left:25px;
 	list-style:none;
 }
-
-h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;line-height: 2.8em;}
-h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;line-height: 2.6em;}
-h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;line-height: 2.4em;}
-h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.0em;color:#333;line-height: 2.2em;}
