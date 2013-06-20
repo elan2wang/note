@@ -8,7 +8,7 @@ title: Learning Note
 {% include sippet.html %}
 {% endfor %}
 </div>
-
+<a id="back-to-top" href="#" class="active">4</a>
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
@@ -18,7 +18,6 @@ title: Learning Note
       <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="previous">&laquo;</a>
 	{% endif %}
   {% endif %}
-  <a id="back-to-top" href="#" class="active">4</a>
   <span class="page_number ">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
     <a href="{{ site.url }}/page{{ paginator.next_page }}" class="next">&raquo;</a>
