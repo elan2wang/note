@@ -25,6 +25,7 @@ ol {
 }
 
 ul {
+	padding-left:25px;
 	list-style-type:lower-roman;
 }
 
