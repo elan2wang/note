@@ -26,7 +26,7 @@ $$
 详细内容参见[Wikipedia](http://en.wikipedia.org/wiki/Jaccard_index)
 ###1.4. 曼哈顿距离
 **曼哈顿距离(Manhattan Distance)**又称为**出租车几何(Taxicab geometry)**或**方格线距离**，它定义为：欧几里得空间的固定直角坐标系上两点所形成的线段对轴产生的投影的距离总和。
-![Manhattan_distance.png]({{ site.url }}/images/Manhattan_distance.png)
+![Manhattan_distance.png](../images/Manhattan_distance.png)
 上图中，红、蓝、黄线表示的曼哈顿距离都相等(12)，绿线表示欧几里得距离($6 * \sqrt{2} \approx 8.48$)。详情参见[Wikipedia](http://en.wikipedia.org/wiki/Taxicab_geometry)
 <br>
 <br>
