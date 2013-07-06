@@ -7,4 +7,6 @@ url: http://elan2wang.github.io/note
 
 paginate: 5
 
+mardown: rdiscount
+
 google_analytics_tracking_id: UA-33915214-1
