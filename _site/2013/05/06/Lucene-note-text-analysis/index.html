@@ -1,0 +1,131 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lucene源码分析(1)—文本处理 | Elan Wang | 王坚</title>
+  <meta name="author" content="Elan Wang"/>
+  <meta name="keywords" content="Elan Wang | 王坚"/>
+  <meta name="description" conetnt="Elan Wang | 王坚 | Machine Learning | Artificial Intelligence | Algorithm"/>
+  <link rel="stylesheet" type="text/css" href="/note/style/common.css">
+  <link rel="stylesheet" type="text/css" href="/note/style/highlight.css">
+  <link rel="stylesheet" type="text/css" href="/note/style/note.css">
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+	  linebreaks: { automatic:true }
+	},
+	tex2jax: {
+	  inlineMath: [['$','$']],
+	  displayMath: [ ['$$','$$']],
+	  skipTags: ["script","noscript","style","textarea","pre","code"],
+	  processEscapes: true,
+	  processEnvironments: true
+	}
+  });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33915214-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+  <div id="sidebar">
+    <a href="http://elan2wang.github.io/note/">Home</a>
+<a href="http://elan2wang.github.io/note/categories/">Categories</a>
+<a href="/">About Me</a>
+
+  </div>
+  <div id="main">
+    <header>Lucene源码分析(1)—文本处理</header>
+    <div class="post">
+    <!-- post tags -->
+    <section class="tags">
+    
+      
+      <span class="label">Lucene</span>
+      
+      <span class="label">analysis</span>
+      
+    
+    </section>
+    
+    <!-- post content -->
+    <section class="content">
+      <p>本文主要分析<a href='http://lucene.apache.org/'>Lucene</a>源码中关于文本处理的部分，该功能封装在<a href='http://www.docjar.com/docs/api/org/apache/lucene/analysis/package-index.html'>analysis</a>包中。本文并不涉及Lucene的使用方法介绍。 <img alt='lucene logo' src='../images/lucene_logo.png' /> Lucene的文本处理包括：去除非字母字符、大写字母转换成小写、去除停用词、词形还原&#8230;等等，并且可以通过自定义扩展实现所需的处理。<em>Analyzer</em>抽象类是Lucene进行文本处理的重要类，所有继承<em>Analyzer</em>的子类都需要重写<em>tokenStream()</em>方法，该方法将文本信息转换成Token流并返回一个<em>TokenStream</em>对象，每一个Token除了包含文本单词以外，还包括一些重要的元数据，如：该单词的位置信息，偏移量等。<em>TokenStream</em>可以逐一枚举所有的Token并实现对Token的处理和转换。在Lucene中有两类重要的<em>TokenStream</em>，分别是<em>Tokenizer</em>和<em>TokenFilter</em>，下图描述了它们之间的类图关系： <img alt='TokeStream Class Hierarchy' src='../images/tokenstream-class.png' /> 从上图中，可以看出<em>TokenFilter和TokenStream</em>之间有组合关系，也就是说，<em>TokenFilter</em>中可以再封装一个<em>TokenStream</em>对象(可以是<em>Tokenizer</em>也可以是<em>TokenFilter</em>)。<em>Tokenizer</em>从<em>java.io.Reader</em>读取字符并创建Token流，而<em>TokenFilter</em>读取Token流，并输出新的Token流（通过添加、删除Token，或者修改Token属性）。Lucene中文本分析链一般从一个<em>Tokenizer</em>开始，然后经过若干个不同<em>TokenFilter</em>，最后输出Token流： <img alt='analyzer chain' src='../images/analyzer-chain.png' /> Lucene中文本分析链的创建时同过<em>TokenStream</em>的嵌套形成的，例如：在创建第一个<em>TokenFilter</em>对象时，需要传递<em>Tokenizer</em>对象给它；在创建第二个<em>TokenFilter</em>对象时，需要传递第一个<em>TokenFilter</em>对象给它；依次类推，从而形成一个分析链。文本按照<em>TokenStream</em>的嵌套顺序，依次被处理。 <br /> 下面我将通过一段具体的代码分析TokenFilter中，数据流是如何传递的：</p>
+<div class='highlight'><pre><code class='java'><span class='lineno'>1</span> <span class='kd'>public</span> <span class='n'>TokenStream</span> <span class='nf'>tokenStream</span><span class='o'>(</span><span class='n'>String</span> <span class='n'>fieldName</span><span class='o'>,</span> <span class='n'>Reader</span> <span class='n'>reader</span><span class='o'>)</span> <span class='o'>{</span>
+<span class='lineno'>2</span>   <span class='k'>return</span> <span class='k'>new</span> <span class='nf'>StopFilter</span><span class='o'>(</span><span class='n'>enablePositionIncrements</span><span class='o'>,</span> <span class='k'>new</span> <span class='n'>LowerCaseTokenizer</span><span class='o'>(</span><span class='n'>reader</span><span class='o'>),</span> <span class='n'>stopWords</span><span class='o'>);</span>
+<span class='lineno'>3</span> <span class='o'>}</span>
+</code></pre></div>
+<p>以上代码中出现在<em>StopAnalyzer</em>类中，<em>StopAnalyzer</em>为<em>Analyzer</em>的子类，<em>StopFilter</em>为<em>TokenFilter</em>的子类，<em>LowerCaseTokenizer</em>为<em>Tokenizer</em>的子类。<em>tokenStream</em>方法从<em>Reader</em>读取文本，创建<em>LowerCaseTokenizer</em>对象，并将其作为参数传递给<em>StopFilter</em>对象。文本在<em>LowerCaseTokenizer</em>中被转换成Token流，然后经过<em>StopFilter</em>去除Token流中的停用词。下面的<em>increamentToken()</em>是<em>StopFilter</em>中逐一处理Token的方法：</p>
+<div class='highlight'><pre><code class='java'><span class='lineno'> 1</span> <span class='kd'>public</span> <span class='kd'>final</span> <span class='kt'>boolean</span> <span class='nf'>incrementToken</span><span class='o'>()</span> <span class='kd'>throws</span> <span class='n'>IOException</span> <span class='o'>{</span>
+<span class='lineno'> 2</span>   <span class='c1'>// return the first non-stop word found</span>
+<span class='lineno'> 3</span>   <span class='kt'>int</span> <span class='n'>skippedPositions</span> <span class='o'>=</span> <span class='mi'>0</span><span class='o'>;</span>
+<span class='lineno'> 4</span>   <span class='k'>while</span> <span class='o'>(</span><span class='n'>input</span><span class='o'>.</span><span class='na'>incrementToken</span><span class='o'>())</span> <span class='o'>{</span>
+<span class='lineno'> 5</span>     <span class='k'>if</span> <span class='o'>(!</span><span class='n'>stopWords</span><span class='o'>.</span><span class='na'>contains</span><span class='o'>(</span><span class='n'>termAtt</span><span class='o'>.</span><span class='na'>termBuffer</span><span class='o'>(),</span> <span class='mi'>0</span><span class='o'>,</span> <span class='n'>termAtt</span><span class='o'>.</span><span class='na'>termLength</span><span class='o'>()))</span> <span class='o'>{</span>
+<span class='lineno'> 6</span>       <span class='k'>if</span> <span class='o'>(</span><span class='n'>enablePositionIncrements</span><span class='o'>)</span> <span class='o'>{</span>
+<span class='lineno'> 7</span>         <span class='n'>posIncrAtt</span><span class='o'>.</span><span class='na'>setPositionIncrement</span><span class='o'>(</span><span class='n'>posIncrAtt</span><span class='o'>.</span><span class='na'>getPositionIncrement</span><span class='o'>()</span> <span class='o'>+</span> <span class='n'>skippedPositions</span><span class='o'>);</span>
+<span class='lineno'> 8</span>       <span class='o'>}</span>
+<span class='lineno'> 9</span>       <span class='k'>return</span> <span class='kc'>true</span><span class='o'>;</span>
+<span class='lineno'>10</span>     <span class='o'>}</span>
+<span class='lineno'>11</span>     <span class='n'>skippedPositions</span> <span class='o'>+=</span> <span class='n'>posIncrAtt</span><span class='o'>.</span><span class='na'>getPositionIncrement</span><span class='o'>();</span>
+<span class='lineno'>12</span>   <span class='o'>}</span>
+<span class='lineno'>13</span>   <span class='c1'>// reached EOS -- return false</span>
+<span class='lineno'>14</span>   <span class='k'>return</span> <span class='kc'>false</span><span class='o'>;</span>
+<span class='lineno'>15</span> <span class='o'>}</span>
+</code></pre></div>
+<p>以上代码表明，<em>StopFilter</em>每次从<em>LowerCaseTokenizer</em>中取出一个Token，判断该Token是否在stopWords中，若存在则跳过该Token（即过滤掉），若不存在则修改该Token的位置属性；处理完之后再取下一个Token。由此可知，Token流在经过多个<em>TokenFilter</em>时，是一个Token先经过所有的<em>TokenFilter</em>，然后再去下一个Token经过所有的<em>TokenFilter</em>；而并不是所有的Token先经过第一个<em>TokenFilter</em>，然后所有的Token再经过下一个<em>TokenFilter</em>。</p>
+    </section>
+    
+    <!-- post meta info -->
+    <section class="meta">
+        <span class="author">
+        
+          <a href="https://github.com/elan2wang">Elan Wang</a>
+        
+        </span>
+        <span class="time">
+          /<time datetime="2013-05-06">2013-05-06</time>
+        </span>
+    </section>
+    
+    <section class="prev-next">
+      
+      
+      <a class="right" href="http://elan2wang.github.io/note/2013/05/09/LDA-note/" title="next Post: LDA学习笔记">LDA学习笔记 &raquo;</a>
+      
+    </section>
+	<section class="comment">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'elansblog'; // required: replace example with your forum shortname
+    var disqus_url = 'http://elan2wang.github.io/note/2013/05/06/Lucene-note-text-analysis/';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+</div>
+
+    <footer>
+  <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2012 - 2013 by <a href="https://github.com/elan2wang">Elan Wang</a> | <span class="label label-info">11 Jul 2013</span></small></p>
+</footer>
+  </div>
+</body>

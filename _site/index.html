@@ -1,0 +1,175 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Learning Note | Elan Wang | 王坚</title>
+  <meta name="author" content="Elan Wang"/>
+  <meta name="keywords" content="Elan Wang | 王坚"/>
+  <meta name="description" conetnt="Elan Wang | 王坚 | Machine Learning | Artificial Intelligence | Algorithm"/>
+  <link rel="stylesheet" type="text/css" href="/note/style/common.css">
+  <link rel="stylesheet" type="text/css" href="/note/style/highlight.css">
+  <link rel="stylesheet" type="text/css" href="/note/style/note.css">
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+	  linebreaks: { automatic:true }
+	},
+	tex2jax: {
+	  inlineMath: [['$','$']],
+	  displayMath: [ ['$$','$$']],
+	  skipTags: ["script","noscript","style","textarea","pre","code"],
+	  processEscapes: true,
+	  processEnvironments: true
+	}
+  });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33915214-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+  <div id="sidebar">
+    <a href="http://elan2wang.github.io/note/">Home</a>
+<a href="http://elan2wang.github.io/note/categories/">Categories</a>
+<a href="/">About Me</a>
+
+  </div>
+  <div id="main">
+    <header>My Learning Note</header>
+    <!-- This loops through the paginated posts -->
+
+<div class="title">
+  <h2><a href="http://elan2wang.github.io/note/2013/07/09/java-tips/">Java Tips</a></h2>
+  <p><time datetime="2013-07-09">2013-07-09</time></p>
+</div>
+
+<article>
+<ol>
+<li>ResourceBundle和Properties比较<br />一般来说，ResourceBundle类通常是用于针对不同的语言来使用的属性文件。 而如果你的应用程序中的属性文件只是一些配置，并不是针对多国语言的目的，那么使用Properties类就可以了。 2.</li>
+</ol>
+</article>
+
+<div class="title">
+  <h2><a href="http://elan2wang.github.io/note/2013/07/07/mesaage-push/">消息推送技术</a></h2>
+  <p><time datetime="2013-07-07">2013-07-07</time></p>
+</div>
+
+<article>
+<ul>
+<li><a href=''>Comet</a></li>
+
+<li><a href='http://www.pushlets.com/'>Pushlets</a></li>
+</ul>
+
+<h4 id='id18'>参考资料</h4>
+
+<ol>
+<li>http://88250.b3log.org/web-message-push 2.</li>
+</ol>
+</article>
+
+<div class="title">
+  <h2><a href="http://elan2wang.github.io/note/2013/07/03/ruby-config/">ruby使用基础</a></h2>
+  <p><time datetime="2013-07-03">2013-07-03</time></p>
+</div>
+
+<article>
+<h3 id='id15'>名词解析</h3>
+
+<ol>
+<li>RVM<br />Ruby Version Manager</li>
+
+<li>RubyGem<br /><a href='http://guides.rubygems.org/what-is-a-gem/'>What is a gem</a> A RubyGem is a software package, commonly called a “gem”. Gems contain a packaged Ruby application or library</li>
+
+<li>RubyGems<br />The RubyGems software itself allows you to easily download, install, and manipulate gems on your system.</li>
+</ol>
+
+<h3 id='id16'>常用命令</h3>
+
+<ol>
+<li>RubyGems命令<br /># 更新升级RubyGems软件自身<br />gem update &#8211;system<br /># 更新所有已安装的gem包<br />gem update<br /># 查看本机已安装的所有gem包<br />gem list</li>
+</ol>
+</article>
+
+<div class="title">
+  <h2><a href="http://elan2wang.github.io/note/2013/06/22/jbdc-connection-pool/">JDBC连接池的并发设计</a></h2>
+  <p><time datetime="2013-06-22">2013-06-22</time></p>
+</div>
+
+<article>
+<p>Apache Tomcat 7系列的版本中使用了JDBC Connection Pool替代传统的commons-dbcp作为新的数据库连接池。其中很重要的一个原因是，commons-dbcp是单线程的，为了保证线程安全它必须将整个线程池上锁，并且它在对高并发的支持方面表现很差。JDBC Connection Pool一个很重要的新特性就是它对高并发环境和多核/多处理器系统的支持。下面将通过对JDBC Connection Pool的源码分析，深入理解其连接池设计的思想以及对高并发的解决方法。</p>
+
+<h3 id='id9'>连接池的存储设计</h3>
+
+<p>连接池使用两个阻塞队列BlockingQueue分别存储已分配的active和空闲的idle连接对象。如果BlockingQueue是空的，从BlockingQueue中取元素会被阻断进入等待状态，直到BlockingQueue进入元素后才被唤醒；同样，如果BlockingQueue是满的，任何试图往队列里存元素也会被阻断进入等待状态，直到BlockingQueue中有空间时才会被唤醒继续操作。<br />Tomcat 7 JDBC Connection Pool中的FairBlockingQueue实现了BlockingQueue接口。FairBlockingQueue采用先进先出(FIFO)原理，从而保证最先进入idle队列的连接最先被分配。FairBlockingQueue的offer和poll操作时均使用ReentrantLock锁定该连接，操作成功后解锁。ReentrantLock锁是一个可重入的互斥锁，它由最近成功获得锁定，并且还没有释放该锁的线程拥有。所以FairBlockingQueue在offer和poll一个连接对象时，能够确保该连接不会被其它并发的请求干扰，导致死锁。（后面小节中提到的锁均是指ReentrantLock）。</p>
+
+<h3 id='id10'>并发请求与连接对象的映射</h3>
+
+<p>当同时有多个用户请求连接对象时，若有足够的连接对象，则每个用户根据请求的时间依次从idle队列中获取一个连接对象。若idle队列中没有足够的队列，则需要按请求时间依次将这些用户请求添加到一个先进先出FIFO的受阻塞的请求队列，每次添加都是在队列尾部插入，从而保证一旦有空闲连接产生时，先来的请求最先获得连接。一旦请求获得连接对象后，它将从受阻塞的请求队列中移除。在向受阻塞的请求队列中添加和移除请求时，都需要对队列上锁，防止同时有多个请求被添加、或同时有多个请求被移除、或同时既有请求被添加又有请求被移除等情况发生，导致请求队列的乱序，直到操作完成后解锁。<br />连接池为每一个没有分配到连接的请求设置一个同步倒数计数器CountDownLatch，每个计数器传入的初始值分别为请求到来的顺序。例如，最早来到的且未被分配连接的请求的同步计数器初值设为1，后面来到的请求初值依次加1。计数器大于0，该线程就会被阻塞，直到计数器为0，该线程才能继续执行。每次当有空闲连接产生，并且成功分配给受阻塞的请求队列最前面的请求后，所有被阻塞的请求的计数器减1，因此刚获取连接对象的请求线程的计数器值变为0，从而可以继续执行，其它请求线程则继续处于阻塞状态。<br />在Tomcat 7 JDBC Connection Pool中，自定义了ExchangeCountDownLatch类，该类继承CountDownLatch，并且添加了一个成员变量，表示该请求线程最终被分配到的连接对象。<br />下面通过一个例子说明以上过程：如下图1中Time=1时，受阻塞请求队列中有n个请求线程受阻塞，各自的同步计数器值分别从1到n，此时空闲连接队列为空，工作连接队列中队尾的连接为Cm；假设Time=1结束后，工作连接队列中的C1被释放，则在Time=2时，受阻塞请求队列的队首R1(count=1)线程获得刚被释放的C1连接，因此它被移除受阻塞请求队列，队首请求变为R2，并且所有的受阻塞的请求线程计数器都减1，此时R1的count=0可以继续执行，R2的count=1，继续被阻塞。C1连接因为被R1所占用，因此又被添加到工作队列的队尾。<br /><img alt='受阻塞请求队列与连接池演化' src='../images/jdbc-connection-pool-1.png' /></p>
+
+<h3 id='id11'>获取连接对象的流程</h3>
+
+<p>当用户请求连接对象时，若连接池中有空闲连接则立即返回该连接，若没有空闲连接但是连接总数没有达到设定的最大值，则创建一个新的连接对象并返回。否则循环等待并检查是否有空闲连接，若有空闲连接产生则返回该连接，若超过等待时间仍无空闲连接产生，则抛出异常。下图2详细说明了请求连接对象的流程。<br /><img alt='获取连接对象的流程' src='../images/jdbc-connection-pool-2.png' /><br />在检查到idle队列中存在空闲连接后还需要对连接作有效性的检查，以确定该连接对象与数据库是处于连接状态，若连接断开需重新连接，以保证该连接对象的有效性。为了确保多个请求线程不会竞争同一个连接对象，首先获得该连接的线程需要对该连接上锁，直到检查完毕确保该连接有效并被添加到active队列后才为其解锁。</p>
+</article>
+
+<div class="title">
+  <h2><a href="http://elan2wang.github.io/note/2013/06/22/java-concurrency/">Java进阶—并发程序设计</a></h2>
+  <p><time datetime="2013-06-22">2013-06-22</time></p>
+</div>
+
+<article>
+<h3 id='java'>Java中的进程与线程</h3>
+
+<p>1. 进程 在JDK中与进程直接关联的类是Java.lang.Process，它是一个抽象类，ProcessImpl是JDK提供的一个实现该抽象类的类，如果用户创建一个进程，那么肯定会伴随着一个新的ProcessImpl实例。Java.lang.Runtime.exec方法和Java.lang.ProcessBuilder.start方法都可以创建一个本地的进程，然后返回代表这个进程的 Java.lang.Process引用。JDK的ProcessImpl实现，引用了native的create，close，waitfor，destory和exitValue方法，native方法是依赖于操作系统平台的本地方法，它的实现是用C/C++等底层语言实现的。针对Windows系统而言，JVM中对应native的create方法实际上是调用了操作系统的CreatePipe和CreateProcess方法来创建一个进程，同时在JVM中保存了这个进程对应的句柄，然后返回给了ProcessImpl类，但是该类对返回句柄进行了隐藏。<br />2. 线程 Java创建线程的方式有两种：继承Thread类，实现Runnable接口<br /><code>java
+//继承Thread类
+class MyThread extends Thread{ 
+	public void run() { 	
+		System.out.println(&quot;My thread is started.&quot;); 
+	} 
+} 
+//实现Runnable接口
+class MyRunnable implements Runnable{ 
+	public void run() { 
+	    System.out.println(&quot;My runnable is invoked.&quot;); 
+	} 
+}
+</code> 对于以上两种方法创建线程时，调用的方式分别如下:<br /><code>java
+//继承Thread类
+MyThread myThread = new MyThread(); 
+myThread.start(); 
+//实现Runnable接口
+Thread myThread = new Thread( new MyRunnable()); 
+myThread.start();
+</code> 以上两种方法，不管哪一种都必须实现一个run方法，该方法本质上是一个回调方法。有start方法创建的线程会调用run方法从而执行需要的代码。run方法并不是一个真正的线程函数，只是被线程函数调用的一个java方法而已，如果直接调用run方法，并不会创建一个新的线程。</p>
+
+<p><strong>参考资料</strong><br />1. <a href='http://www.ibm.com/developerworks/cn/java/j-lo-processthread/index.html'>Java 中的进程与线程</a> - IBM DeveloperWorks</p>
+</article>
+
+<a id="back-to-top" href="#" class="active">^</a>
+<!-- Pagination links -->
+<div class="pagination">
+  
+  <span class="page_number ">page 1 of 4</span>
+  
+    <a href="http://elan2wang.github.io/note/page2" class="next">&raquo;</a>
+  
+</div>
+    <footer>
+  <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2012 - 2013 by <a href="https://github.com/elan2wang">Elan Wang</a> | <span class="label label-info">11 Jul 2013</span></small></p>
+</footer>
+  </div>
+</body>
