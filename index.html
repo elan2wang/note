@@ -16,7 +16,9 @@ title: My Learning Note
       <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="previous">&laquo;</a>
 	{% endif %}
   {% endif %}
-  <span class="page_number ">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% for cur_page in paginator.total_pages %}
+  <span class="page_number ">{{ cur_page }}</span>
+  {% endfor %}
   {% if paginator.next_page %}
     <a href="{{ site.url }}/page{{ paginator.next_page }}" class="next">&raquo;</a>
   {% endif %}
