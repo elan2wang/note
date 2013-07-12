@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《集体智慧编程》读书笔记
+title: 集体智慧编程-读书笔记
 tags: 集体智慧编程 相似度评分
 categories: 机器学习 文本分析
 ---
