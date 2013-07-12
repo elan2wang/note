@@ -6,7 +6,9 @@ permalink: /:year/:month/:day/:title/
 url: http://elan2wang.github.io/note
 
 paginate: 5
-
-mardown: rdiscount
+safe: true
+lsi: false
+pygments: true
+markdown: rdiscount
 
 google_analytics_tracking_id: UA-33915214-1
