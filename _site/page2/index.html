@@ -60,17 +60,20 @@
 <article>
 <p>Objective-C的数据类型可以分为：基本数据类型，对象类型和id类型。</p>
 
-<p>字符串创建方式：
-<code>
-NSString *firstString = [[NSString alloc] initWithCString:"Hello World!" encoding:NSUTF8StringEncoding];
-NSString *secondString = [NSString stringWithCString:"Hello World!" encoding:NSUTF8StringEncoding];
-NSString *thirdString = @"Hello World!";
-</code>
-<strong>NSString</strong>是不可变的，也就是说她的字符串的内容在创建时就设定好了，之后无法改变。如果要表示另一个字符串，必须按如下方式创建一个新的字符串变量：
-<code>
-NSString *name = @"John";
-name = [name stringByAppendingString:@"ny"];
-</code></p>
+<p>字符串创建方式：</p>
+
+<div class="highlight"><pre><code class="objective-c"><span class="lineno">1</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">firstString</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSString</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithCString</span><span class="o">:</span><span class="s">&quot;Hello World!&quot;</span> <span class="n">encoding</span><span class="o">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">];</span>
+<span class="lineno">2</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">secondString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithCString</span><span class="o">:</span><span class="s">&quot;Hello World!&quot;</span> <span class="n">encoding</span><span class="o">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">];</span>
+<span class="lineno">3</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">thirdString</span> <span class="o">=</span> <span class="s">@&quot;Hello World!&quot;</span><span class="p">;</span>
+</code></pre></div>
+
+
+<p><strong>NSString</strong>是不可变的，也就是说她的字符串的内容在创建时就设定好了，之后无法改变。如果要表示另一个字符串，必须按如下方式创建一个新的字符串变量：</p>
+
+<div class="highlight"><pre><code class="objective-c"><span class="lineno">1</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span> <span class="o">=</span> <span class="s">@&quot;John&quot;</span><span class="p">;</span>
+<span class="lineno">2</span> <span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="n">stringByAppendingString</span><span class="o">:</span><span class="s">@&quot;ny&quot;</span><span class="p">];</span>
+</code></pre></div>
+
 
 </article>
 
