@@ -11,17 +11,15 @@ title: My Learning Note
 <div class="pagination">
     <div id="post-pagination" class="pagination">
         {% if paginator.previous_page %}
-        <p class="previous">
+        <span class="previous">
         {% if paginator.previous_page == 1 %}
         <a href="/">Previous</a>
         {% else %}
         <a href="{{ site.url }}/{{ paginator.previous_page_path }}">Previous</a>
         {% endif %}
-        </p>
+        </span>
         {% else %}
-        <p class="previous disabled">
-        <span>Previous</span>
-        </p>
+        <span class="previous disabled">Previous</span>
         {% endif %}
         
         
@@ -40,14 +38,11 @@ title: My Learning Note
         {% endfor %}
         
         {% if paginator.next_page %}
-        <p class="next">
+        <span class="next">
         <a href="{{ site.url }}/{{ paginator.next_page_path }}">Next</a>
-        </p>
+        </span>
         {% else %}
-        <p class="next disabled">
-        <span>Next</span>
-        </p>
+        <span class="next disabled">Next</span>
         {% endif %}
-        
     </div>
 </div>
