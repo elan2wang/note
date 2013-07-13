@@ -79,12 +79,12 @@ Tomcat 7 JDBC Connection Pool中的FairBlockingQueue实现了BlockingQueue接口
 连接池为每一个没有分配到连接的请求设置一个同步倒数计数器CountDownLatch，每个计数器传入的初始值分别为请求到来的顺序。例如，最早来到的且未被分配连接的请求的同步计数器初值设为1，后面来到的请求初值依次加1。计数器大于0，该线程就会被阻塞，直到计数器为0，该线程才能继续执行。每次当有空闲连接产生，并且成功分配给受阻塞的请求队列最前面的请求后，所有被阻塞的请求的计数器减1，因此刚获取连接对象的请求线程的计数器值变为0，从而可以继续执行，其它请求线程则继续处于阻塞状态。<br/>
 在Tomcat 7 JDBC Connection Pool中，自定义了ExchangeCountDownLatch类，该类继承CountDownLatch，并且添加了一个成员变量，表示该请求线程最终被分配到的连接对象。<br/>
 下面通过一个例子说明以上过程：如下图1中Time=1时，受阻塞请求队列中有n个请求线程受阻塞，各自的同步计数器值分别从1到n，此时空闲连接队列为空，工作连接队列中队尾的连接为Cm；假设Time=1结束后，工作连接队列中的C1被释放，则在Time=2时，受阻塞请求队列的队首R1(count=1)线程获得刚被释放的C1连接，因此它被移除受阻塞请求队列，队首请求变为R2，并且所有的受阻塞的请求线程计数器都减1，此时R1的count=0可以继续执行，R2的count=1，继续被阻塞。C1连接因为被R1所占用，因此又被添加到工作队列的队尾。<br/>
-<img src="../images/jdbc-connection-pool-1.png" alt="受阻塞请求队列与连接池演化" /></p>
+<img src="http://elan2wang.github.io/note/images/jdbc-connection-pool-1.png" alt="受阻塞请求队列与连接池演化" /></p>
 
 <h3>获取连接对象的流程</h3>
 
 <p>当用户请求连接对象时，若连接池中有空闲连接则立即返回该连接，若没有空闲连接但是连接总数没有达到设定的最大值，则创建一个新的连接对象并返回。否则循环等待并检查是否有空闲连接，若有空闲连接产生则返回该连接，若超过等待时间仍无空闲连接产生，则抛出异常。下图2详细说明了请求连接对象的流程。<br/>
-<img src="../images/jdbc-connection-pool-2.png" alt="获取连接对象的流程" /><br/>
+<img src="http://elan2wang.github.io/note/images/jdbc-connection-pool-2.png" alt="获取连接对象的流程" /><br/>
 在检查到idle队列中存在空闲连接后还需要对连接作有效性的检查，以确定该连接对象与数据库是处于连接状态，若连接断开需重新连接，以保证该连接对象的有效性。为了确保多个请求线程不会竞争同一个连接对象，首先获得该连接的线程需要对该连接上锁，直到检查完毕确保该连接有效并被添加到active队列后才为其解锁。</p>
 
     </section>
@@ -127,7 +127,7 @@ Tomcat 7 JDBC Connection Pool中的FairBlockingQueue实现了BlockingQueue接口
 </div>
 
     <footer>
-  <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2012 - 2013 by <a href="https://github.com/elan2wang">Elan Wang</a> | <span class="label label-info">12 Jul 2013</span></small></p>
+  <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2012 - 2013 by <a href="https://github.com/elan2wang">Elan Wang</a> | <span class="label label-info">13 Jul 2013</span></small></p>
 </footer>
   </div>
 </body>
