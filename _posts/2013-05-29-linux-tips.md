@@ -22,7 +22,7 @@ categories: Linux
 <code>uname -a</code>  
 <code>cat /etc/issue</code>  
 5. 查看运行文件的地址  
-<code>which jdk<>  
+<code>which jdk</code>  
 6. 查看rpm包的安装路径  
 <code>rpm -ql packagename</code>
 7. 查找文件  
@@ -33,11 +33,11 @@ categories: Linux
 2. 安装jdk<code>rpm -ivh jdk-[version].rpm</code>  
 3. 配置环境变量  
 <code>vim /etc/profile</code>  
->\#set java environment
->JAVA_HOME=/usr/java/jdk1.7.0_25
->CLASSPATH=.:$JAVA_HOME/lib
->PATH=.:$PATH:$JAVA_HOME/bin
->CATALINA_HOME=/usr/local/tomcat
+>\#set java environment  
+>JAVA_HOME=/usr/java/jdk1.7.0_25  
+>CLASSPATH=.:$JAVA_HOME/lib  
+>PATH=.:$PATH:$JAVA_HOME/bin  
+>CATALINA_HOME=/usr/local/tomcat  
 >export JAVA_HOME CATALINA_HOME  
 <code>source /etc/profile</code>  
 
