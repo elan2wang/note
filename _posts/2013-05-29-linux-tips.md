@@ -21,17 +21,25 @@ categories: Linux
 <code>cat /proc/version</code>  
 <code>uname -a</code>  
 <code>cat /etc/issue</code>  
+5. 查看运行文件的地址  
+<code>which jdk<>  
+6. 查看rpm包的安装路径  
+<code>rpm -ql packagename</code>
+7. 查找文件  
+<code>find [path] -name [name]</code>  
 
-###JDK安装配置
-1. 下载jdk  
-2. rpm -ivh jdk-[version].rpm  
+###JDK和tomcat安装配置
+1. 下载jdk和tomcat  
+2. 安装jdk<code>rpm -ivh jdk-[version].rpm</code>  
 3. 配置环境变量  
 <code>vim /etc/profile</code>  
 >\#set java environment
->JAVA_HOME=/usr/java/jdk-1_5_0_02  
->CLASSPATH=.:＄JAVA_HOME/lib.tools.jar  
->PATH=＄JAVA_HOME/bin:＄PATH  
->export JAVA_HOME CLASSPATH PATH  
+>JAVA_HOME=/usr/java/jdk1.7.0_25
+>CLASSPATH=.:$JAVA_HOME/lib
+>PATH=.:$PATH:$JAVA_HOME/bin
+>CATALINA_HOME=/usr/local/tomcat
+>export JAVA_HOME CATALINA_HOME  
+<code>source /etc/profile</code>  
 
 ###MySQL配置管理
 1. 修改root用户密码  
