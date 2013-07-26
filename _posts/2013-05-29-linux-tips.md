@@ -27,6 +27,10 @@ categories: Linux
 <code>rpm -ql packagename</code>
 7. 查找文件  
 <code>find [path] -name [name]</code>  
+8. 进程相关  
+<code>ps -ef | grep java</code>  
+<code>ps -aux | grep java</code>	显示所有java的进程  
+<code>kill -9 pid</code>	－9表示强制退出  
 
 ###JDK和tomcat安装配置
 1. 下载jdk和tomcat  
