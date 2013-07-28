@@ -31,6 +31,8 @@ categories: Linux
 <code>ps -ef | grep java</code>  
 <code>ps -aux | grep java</code> #显示所有java的进程  
 <code>kill -9 pid</code> #－9表示强制退出  
+9. 创建ssh密钥  
+<code>ssh-keygen -t rsa</code>  
 
 ###JDK和tomcat安装配置
 1. 下载jdk和tomcat  
