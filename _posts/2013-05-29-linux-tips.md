@@ -12,7 +12,7 @@ categories: Linux
 <code>iptables -L</code> ＃查看规则是否生效  
 2. ftp管理  
 配置文件目录: /etc/vsftpd/vsftpd.conf  
-<code>/etc/init.d/vsftpd status|start|stop|restart</code>
+<code>/etc/init.d/vsftpd status|start|stop|restart</code>  
 <code>service vsftpd status|start|stop|restart</code>
 3. 系统服务管理  
 <code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
@@ -48,10 +48,15 @@ categories: Linux
 <code>source /etc/profile</code>  
 
 ###MySQL配置管理
-1. 修改root用户密码  
-<code>mysqladmin -u root password 'new-password'</code>
-2. 打开mysql的远程连接  
-<code>GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'your paaaword';</code>  
+1. 创建用户    
+<code>mysql> CREATE USER user_name IDENTIFIED BY "your_password";</code>
+2. 用户授权  
+<code>mysql> GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'your paaaword';</code>  
+<code>mysql> GRANT SELECT,INSERT,UPDATE,DELETE ON *.* TO test1@"%" IDENTIFIED BY "your_password";</code>  
+3. 修改用户密码  
+<code>mysqladmin -u root password 'new-password'</code>  
+<code>mysql> SET PASSWORD FOR username@"%" = PASSWORD('password');</code>  
+<code>mysql> GRANT USAGE ON *.* TO username@"%" IDENTIFIED BY 'password';</code>  
 
 ###常用命令
 1. source  
