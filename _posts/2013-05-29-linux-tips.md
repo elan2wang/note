@@ -41,8 +41,8 @@ categories: Linux
 <code>vim /etc/profile</code>  
 >\#set java environment  
 >JAVA_HOME=/usr/java/jdk1.7.0_25  
->CLASSPATH=.:$JAVA_HOME/lib  
->PATH=.:$PATH:$JAVA_HOME/bin  
+>CLASSPATH=.:\$JAVA_HOME/lib  
+>PATH=.:\$PATH:\$JAVA_HOME/bin  
 >CATALINA_HOME=/usr/local/tomcat  
 >export JAVA_HOME CATALINA_HOME  
 <code>source /etc/profile</code>  
