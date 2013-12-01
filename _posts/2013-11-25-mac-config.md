@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac配置
-tags: VIM
+tags: vim
 categories: linux
 ---
 
