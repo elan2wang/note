@@ -4,14 +4,9 @@ title: Latex笔记
 tags: latex
 categories: Latex
 ---
-
-####Latex中插入图片
-
-
-####关于字体
-1. 数学公式字体加粗  
-http://blog.sina.com.cn/s/blog_5caa94a0010106ut.html
-2. 字体设置  
-http://blog.sina.com.cn/s/blog_5caa94a0010106ut.html
-3. 图片设置  
-http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+#####[Latex Wiki Book](http://en.wikibooks.org/wiki/LaTeX)
+1. 数学公式 [Mathematics](http://en.wikibooks.org/wiki/LaTeX/Mathematics)
+2. 字体设置 [Fonts](http://en.wikibooks.org/wiki/LaTeX/Fonts)
+3. 参考文献 [Reference](http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management)
+4. 图片设置 [Figure](http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions)
+5. 列表格式 [List_Structures](http://en.wikibooks.org/wiki/LaTeX/List_Structures)
