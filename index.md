@@ -1,6 +1,6 @@
 ---
 layout: default
-title: My Learning Note
+title: Notes
 ---
 <!-- This loops through the paginated posts -->
 <ul class="listing">
