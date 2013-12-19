@@ -7,7 +7,7 @@
 }
 
 body {
-	margin:0 5%;
+	margin:0 20%;
 	font-size:14px;
 	color:#000000;
 	line-height: 1.8em;
@@ -42,11 +42,10 @@ a:hover {
 #sidebar {
 	width:19%;
 	float:left;
-	font-size:1.4em;
+	font-size:1.2em;
 	text-align:right;
 	padding-top:5em;
 	text-transform:uppercase;
-	background-color:#ffffff;
 	font-family:"Electrolize",sans-serif;
 }
 
@@ -73,22 +72,9 @@ a:hover {
 }
 
 #main header {
-	font-size:40px;
-	font-weight:800;
-	line-height:60px;
+	font-size:1.4em;
+	line-height: 2.4em;
 	padding:10px 30px 10px 25px;
-}
-
-#main p {
-	font-size:13px;
-	text-align:justify;
-}
-
-#main img {
-	max-width:550px;
-	display:block;
-	margin:4px auto;
-	box-shadow:#999 1px 1px 4px;
 }
 
 footer {
