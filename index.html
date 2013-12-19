@@ -3,10 +3,15 @@ layout: default
 title: My Learning Note
 ---
 <!-- This loops through the paginated posts -->
+<ul class="listing">
 {% for post in paginator.posts %}
+  <li class="listing-item">
+  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
 {% include sippet.html %}
 {% endfor %}
-<a id="back-to-top" href="#" class="active">^</a>
+</ul>
 <!-- Pagination links -->
 <div class="pagination">
     <div id="post-pagination" class="pagination">
