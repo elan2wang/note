@@ -4,8 +4,9 @@ title: Security of RESTful API
 tags: REST API Security
 categories: REST
 ---
-###网络攻击
-####1. Session Fixsation Attack[[wiki](http://en.wikipedia.org/wiki/Session_fixation)] 
+####
+####Cookie加密
+####Session Fixsation Attack[[wiki](http://en.wikipedia.org/wiki/Session_fixation)] 
 Session fixation attack(会话固定攻击)是利用服务器的session不变机制，借他人之手获得认证和授权，然后冒充他人。如果应用程序在用户首次访问时为该用户建立一个匿名会话，并且在用户登录成功后，仍然使用该会话的SID(sessionId)，那么便存在安全漏洞。  
 __攻击场景__  
 >_step1_: Mallory访问 http://unsafe/ 并获得了一个会话ID（SID），例如服务器返回的形式是：Set-Cookie: SID=0D6441FEA4496C2  
