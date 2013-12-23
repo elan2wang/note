@@ -2,7 +2,7 @@
 layout: post
 title: LDA学习笔记(3)-MCMC和Gibbs采样
 tags: LDA MCMC Gibbs
-categories: 机器学习 文本分析
+categories: 机器学习
 ---
 本文是[LDA学习笔记]()系列文章之一，主要讲解Markov Chain Monte Carlo和Gibbs采样。在贝叶斯方法中，求解后验分布时需要对一个高维的函数进行积分，通常该积分的计算非常困难，因此产生了一些并非直接进行积分的方法，Markov Chain Monte Carlo就是其中之一。MCMC利用前一次的采样值来随机地产生下一次采样值，产生一个马尔科夫链。
 ###3.1. 蒙特卡罗积分

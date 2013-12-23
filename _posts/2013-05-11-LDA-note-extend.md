@@ -2,7 +2,7 @@
 layout: post
 title: LDA学习笔记(4)-扩展模型
 tags: LDA Extend
-categories: 机器学习 文本分析
+categories: 机器学习
 ---
 本文是[LDA学习笔记]()系列文章的第4部分，主要介绍一些比较常见的LDA的扩展模型  
 ##4. LDA扩展
