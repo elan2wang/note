@@ -5,7 +5,7 @@ title: Jian Wang | 王坚
 permalink: /:year/:month/:day/:title/
 url: http://elan2wang.github.io/note
 
-paginate: 50
+paginate: 15
 safe: true
 lsi: false
 pygments: true
