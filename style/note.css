@@ -7,7 +7,7 @@
 }
 
 body {
-	margin:0 15% 0 10%;
+	margin:0;
 	font-size:14px;
 	color:#000000;
 	line-height: 1.8em;
@@ -40,8 +40,8 @@ a:hover {
 }
 
 #sidebar {
-	position:fixed;
-	width:19%;
+	position:absolute;
+	margin-left:10%;
 	float:left;
 	font-size:1.2em;
 	text-align:right;
@@ -51,7 +51,8 @@ a:hover {
 }
 
 #main {
-	width:79%;
+	position:relative;
+	margin-left:220px;
 	float:left;
 	padding:10px 10px 10px 0;
 	background-color:#ffffff;
