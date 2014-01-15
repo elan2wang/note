@@ -40,6 +40,7 @@ a:hover {
 }
 
 #sidebar {
+	position:fixed;
 	width:19%;
 	float:left;
 	font-size:1.2em;

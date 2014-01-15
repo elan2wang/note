@@ -4,7 +4,7 @@ title: Security of RESTful API
 tags: REST API Security
 categories: REST
 ---
-###AWS S3机制
+###AWS S3机制[[doc](http://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html)]
 ####1. S3 Basics
 S3处理的对象包括_objects_和_buckets_。object对象对应存储的文件，object包含identifier, owner, permissions。objects被存储在bucket中，每个bucket拥有唯一的名字，并且该名字必须满足域名的命名规则。object通过URL进行编址，如：_http://s3.amazonaws.com/bucketname/objectid_。object的identifier可以是文件名或带有相对地址的文件名(e.g., myalbum/august/photo21.jpg)。通过这样的命名模式，S3的存储可以呈现为一个常规的文件系统。
 ####2. S3 REST Security
@@ -46,3 +46,5 @@ _step4_: 因为服务器的会话ID不改变，现在Mallory点击“http://unsa
 4. [Principles for Standardized REST Authentication](http://broadcast.oreilly.com/2009/12/principles-for-standardized-rest-authentication.html)
 5. [How to implement RESTful authentication](http://blog.synopse.info/post/2011/05/24/How-to-implement-RESTful-authentication)
 6. [Security of REST authentication schemes](http://stackoverflow.com/questions/454355/security-of-rest-authentication-schemes)
+7. [Signing and Authenticating REST Requests](http://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html)
+8. <http://www.admin10000.com/document/3689.html>
