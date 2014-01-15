@@ -41,7 +41,8 @@ a:hover {
 
 #sidebar {
 	position:absolute;
-	margin-left:10%;
+	margin-left:100px;
+	width:150px;
 	float:left;
 	font-size:1.2em;
 	text-align:right;
@@ -52,7 +53,7 @@ a:hover {
 
 #main {
 	position:relative;
-	margin-left:220px;
+	margin:0 10% 0 250px;
 	float:left;
 	padding:10px 10px 10px 0;
 	background-color:#ffffff;
