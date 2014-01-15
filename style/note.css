@@ -40,7 +40,7 @@ a:hover {
 }
 
 #sidebar {
-	position:absolute;
+	position:fixed;
 	margin-left:100px;
 	width:150px;
 	float:left;
