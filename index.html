@@ -17,9 +17,9 @@ title: Notes
         {% if paginator.previous_page %}
         <span class="previous">
         {% if paginator.previous_page == 1 %}
-        <a href="/">Previous</a>
+        <a href="{{ site.url }}">Previous</a>
         {% else %}
-        <a href="{{ site.url }}/{{ paginator.previous_page_path }}">Previous</a>
+        <a href="{{ site.url }}{{ paginator.previous_page_path }}">Previous</a>
         {% endif %}
         </span>
         {% else %}
@@ -43,7 +43,7 @@ title: Notes
         
         {% if paginator.next_page %}
         <span class="next">
-        <a href="{{ site.url }}/{{ paginator.next_page_path }}">Next</a>
+        <a href="{{ site.url }}{{ paginator.next_page_path }}">Next</a>
         </span>
         {% else %}
         <span class="next disabled">Next</span>
