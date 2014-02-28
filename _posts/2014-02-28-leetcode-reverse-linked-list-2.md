@@ -31,35 +31,35 @@ categories: leetcode
 若m等于1, 且n等于链表长度, {3,5}, m=1, n=2;  
 
 ####[参考代码]
-````
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-        if (head == null || head.next == null || m == n) return head;
+{% highlight java linenos %}
+public ListNode reverseBetween(ListNode head, int m, int n) {
+    if (head == null || head.next == null || m == n) return head;
         
-        ListNode cur = head;
-        ListNode next = null;
-        ListNode sub_head = null;
-        ListNode sub_tail = null;
-        ListNode pre_sub = new ListNode(0);
+    ListNode cur = head;
+    ListNode next = null;
+    ListNode sub_head = null;
+    ListNode sub_tail = null;
+    ListNode pre_sub = new ListNode(0);
         
-        int node_i = 1;
-        while (node_i < n) {
-            next = cur.next;
-            if (node_i < m) {
-                pre_sub = cur;
-            } else {
-                if (node_i == m) {
-                    sub_tail = cur;
-                }
-                cur.next = sub_head;
-                sub_head = cur;
+    int node_i = 1;
+    while (node_i < n) {
+        next = cur.next;
+        if (node_i < m) {
+            pre_sub = cur;
+        } else {
+            if (node_i == m) {
+                sub_tail = cur;
             }
-            cur = next;
-            pre_sub.next = next;
-            node_i++;
+            cur.next = sub_head;
+            sub_head = cur;
         }
-        sub_tail.next = cur.next;
-        cur.next = sub_head;
-        
-        return m == 1 ? cur : head;  
+        cur = next;
+        pre_sub.next = next;
+        node_i++;
     }
-````
+    sub_tail.next = cur.next;
+    cur.next = sub_head;
+        
+    return m == 1 ? cur : head;  
+}
+{% endhighlight %}
