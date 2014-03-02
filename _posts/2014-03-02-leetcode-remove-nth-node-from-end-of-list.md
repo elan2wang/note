@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [LeetCode] Remove Nth Node From End of List
+title: LeetCode Remove Nth Node From End of List
 tags: leetcode
 categories: leetcode
 ---
