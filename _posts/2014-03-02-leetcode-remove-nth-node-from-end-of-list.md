@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove Nth Node From End of List
+title: LeetCode: Remove Nth Node From End of List
 tags: leetcode
 categories: leetcode
 ---
@@ -17,6 +17,7 @@ categories: leetcode
 >**Note:**  
 >Given n will always be valid.  
 >Try to do this in one pass.
+
 ####[问题分析]
 1. 边界情况  
 链表为空, head==null, 直接返回head即可
@@ -24,13 +25,17 @@ categories: leetcode
 n=1, 即删除链表最后一个元素;  
 n=length, 即删除链表第一个元素;  
 
+
 题目只有时间上的要求O(n), 所以最先想到的应该是用一个数组记录所有的node, 遍历一遍后即可找到要删除的节点current_node(数组的第length-n+1个元素), 然后只需将(数组第length-n个元素)previous_node.next = current_node.next即可。  
+
 
 显然以上方法需要消耗O(n)的空间，那么能否在O(1)空间内完成呢?  
 
-利用两个指针, cur和cur2;  
-首先移动cur至指向第n个node; 然后同时移动cur和cur2, 直到cur指向最后一个node(cur.next==null)才停止, 此时cur2指向的即时倒数第n个node.  
-为了移除cur2最终指向的倒数第n个node, 还需要一个指向cur2前一个node的指针prev_cur2.
+
+1. 创建两个指针cur和cur2分别指向head;  
+2. 单独移动cur至指向第n个node;
+3. 然后同时移动cur和cur2, 直到cur指向最后一个node(cur.next==null)才停止, 此时cur2指向的即时倒数第n个node.
+4. 为了移除cur2最终指向的倒数第n个node, 还需要一个指向cur2前一个node的指针prev_cur2.
 
 ####[参考代码]
 {% highlight java linenos %}
