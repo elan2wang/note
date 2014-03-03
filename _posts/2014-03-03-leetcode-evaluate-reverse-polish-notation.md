@@ -54,10 +54,10 @@ public class Solution {
         return operands[0];
     }
 	
-	private boolean isOperator(String s) {
-		if (s.equals("+") || s.equals("-") || 
+    private boolean isOperator(String s) {
+        if (s.equals("+") || s.equals("-") || 
 		    s.equals("*") || s.equals("/")) return true;
-		else return false;
+        else return false;
     }
 }
 {% endhighlight %}
