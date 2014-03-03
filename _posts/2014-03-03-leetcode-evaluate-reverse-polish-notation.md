@@ -8,7 +8,7 @@ categories: leetcode
 <http://oj.leetcode.com/problems/evaluate-reverse-polish-notation/>
 >Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
->Valid operators are +, -, *, /. Each operand may be an integer or another expression.
+>Valid operators are **+, -, *, /**. Each operand may be an integer or another expression.
 
 >Some examples:
 >>  ["2", "1", "+", "3", "*"] -> ((2 + 1) * 3) -> 9  
@@ -19,7 +19,7 @@ categories: leetcode
 
 时间和空间复杂度均为O(N).
 ####[参考代码]
-{% highlight java lineons %}
+{% highlight java linenos %}
 public class Solution {
     public int evalRPN(String[] tokens) {
         if (tokens.length == 0) return 0;
