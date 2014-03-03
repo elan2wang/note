@@ -9,7 +9,7 @@ categories: leetcode
 >Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 
 ####[问题分析]
-利用归并排序中merge方法的思想; 事件复杂度为O(n), n表示两个lists的总长度; 若使用新的list来保存合并后的元素, 则需要O(n)的空间消耗; 另外也可以用其中一个lsit来存储元素, 此时不需要而外的空间。
+利用归并排序中merge方法的思想; 时间复杂度为O(n), n表示两个lists的总长度; 若使用新的list来保存合并后的元素, 则需要O(n)的空间消耗; 另外也可以用其中一个lsit来存储元素, 此时不需要而外的空间。
 
 ####[参考代码]  
 以下代码的空间消耗为O(1)  
