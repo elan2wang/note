@@ -9,12 +9,11 @@ categories: HTTP
 S3处理的对象包括_objects_和_buckets_。object对象对应存储的文件，object包含identifier, owner, permissions。objects被存储在bucket中，每个bucket拥有唯一的名字，并且该名字必须满足域名的命名规则。object通过URL进行编址，如：_http://s3.amazonaws.com/bucketname/objectid_。object的identifier可以是文件名或带有相对地址的文件名(e.g., myalbum/august/photo21.jpg)。通过这样的命名模式，S3的存储可以呈现为一个常规的文件系统。
 2. S3 REST Security
 S3 REST的所有资源都是受保护的，AWS客户通过分配的AWSSecretKey来访问资源，这个key由AWSSecretKeyID进行验证。S3的安全特性包括：
-
-- Authentication: requests include AWSAccessKeyID
-- Authorization: Access Control List(ACL) could be applied to each resource
-- Integrity: Request are digitally signed with AWSSecretKey
-- Confidentiality: S3 is available through both HTTP and HTTPS
-- Non repudiation: Requests are time stamped(with integrity, it's a proof of transaction)
+>- Authentication: requests include AWSAccessKeyID
+>- Authorization: Access Control List(ACL) could be applied to each resource
+>- Integrity: Request are digitally signed with AWSSecretKey
+>- Confidentiality: S3 is available through both HTTP and HTTPS
+>- Non repudiation: Requests are time stamped(with integrity, it's a proof of transaction)
 
 ###网络攻击
 ####1. 密码保护
@@ -42,20 +41,14 @@ CGI以JSOn形式输出数据，黑客控制的开发者站点以CSRF手段迫使
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Session Fixsation Attack[[wiki](http://en.wikipedia.org/wiki/Session_fixation)] 
-Session fixation attack(会话固定攻击)是利用服务器的session不变机制，借他人之手获得认证和授权，然后冒充他人。如果应用程序在用户首次访问时为该用户建立一个匿名会话，并且在用户登录成功后，仍然使用该会话的SID(sessionId)，那么便存在安全漏洞。  
-**攻击场景**   
+Session fixation attack(会话固定攻击)是利用服务器的session不变机制，借他人之手获得认证和授权，然后冒充他人。如果应用程序在用户首次访问时为该用户建立一个匿名会话，并且在用户登录成功后，仍然使用该会话的SID(sessionId)，那么便存在安全漏洞。最简单的防范措施是，在每次用户登录成功后，将旧的会话失效，为该用户创建一个新的会话。  
+**攻击场景**    
 >_step1_: Mallory访问 http://unsafe/ 并获得了一个会话ID（SID），例如服务器返回的形式是：Set-Cookie: SID=0D6441FEA4496C2  
-_step2_: Mallory给Alice发了一个邮件：“我行推出了一项新服务，率先体验请点击：http://unsafe/?SID=0D6441FEA4496C2”  
-_step3_: Alice点击并登录了  
-_step4_: 因为服务器的会话ID不改变，现在Mallory点击“http://unsafe/?SID=0D6441FEA4496C2”后，他就拥有了Alice的身份  
-
-**防范措施**  
-最简单的防范措施是，在每次用户登录成功后，将旧的会话失效，为该用户创建一个新的会话。
-
-- Replay Attack[[wiki](http://en.wikipedia.org/wiki/Replay_attack)]
-
-**防范措施**  
-[Cryptographic nonce](http://en.wikipedia.org/wiki/Cryptographic_nonce)
+>_step2_: Mallory给Alice发了一个邮件：“我行推出了一项新服务，率先体验请点击：http://unsafe/?SID=0D6441FEA4496C2”  
+>_step3_: Alice点击并登录了  
+>_step4_: 因为服务器的会话ID不改变，现在Mallory点击“http://unsafe/?SID=0D6441FEA4496C2”后，他就拥有了Alice的身份    
+- Replay Attack[[wiki](http://en.wikipedia.org/wiki/Replay_attack)]  
+预防措施：[Cryptographic nonce](http://en.wikipedia.org/wiki/Cryptographic_nonce)
 
 
 ####参考资料  
