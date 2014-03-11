@@ -2,7 +2,7 @@
 layout: post
 title: Security of RESTful API
 tags: REST API Security
-categories: REST
+categories: JAVA
 ---
 ###AWS S3机制[[doc](http://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html)]
 ####1. S3 Basics
