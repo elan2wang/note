@@ -53,8 +53,7 @@ a:hover {
 
 #main {
 	position:relative;
-	margin:0 10% 0 250px;
-	float:left;
+	margin:0 15% 0 250px;
 	min-height:100%;
 	padding:10px 10px 10px 0;
 	background-color:#ffffff;
