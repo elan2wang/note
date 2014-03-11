@@ -2,7 +2,7 @@
 layout: post
 title: Security of RESTful API
 tags: REST API Security
-categories: JAVA
+categories: HTTP
 ---
 ###AWS S3机制[[doc](http://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html)]
 ####1. S3 Basics
@@ -39,12 +39,30 @@ _step4_: 因为服务器的会话ID不改变，现在Mallory点击“http://unsa
 **防范措施**  
 [Cryptographic nonce](http://en.wikipedia.org/wiki/Cryptographic_nonce)
 
+####注入攻击
+1. SQL注入
+2. Cross-site Scripting(XSS)
+Web程序代码中把用户提交的参数未做过滤就直接输出到页面，参数中的特俗字符打破了HTML页面的原有逻辑，黑客可以利用该漏洞执行恶意HTML/JS代码，构造蠕虫传播、篡改页面实施钓鱼攻击。  
+[ref](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS\))   [code](https://code.google.com/p/owasp-esapi-java/source/browse/trunk/src/main/java/org/owasp/esapi/codecs/)
+3. HTTP响应头注入
+Web程序代码把用户提交的参数未做过滤就直接输出到HTTP响应头中，攻击者可以利用该漏洞来注入HTTP响应头，可以造成XSS攻击，欺骗用户下载恶意可执行文件。
+
+####请求伪造攻击
+1. Cross-Site Request Forgery (CSRF)
+用户以当前身份浏览到flash或者开发者网站时，JS/Flash可以迫使用户浏览器向任意CGI发起请求，此请求包含用户身份标识，CGI如无限制则会以用户身份进行操作。  
+[ref](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_\(CSRF\)_Prevention_Cheat_Sheet)
+
+2. JSON-hijackin
+CGI以JSOn形式输出数据，黑客控制的开发者站点以CSRF手段迫使用户浏览器请求CGI得到JSON数据，黑客可以获取敏感信息。
+
 ####参考资料  
-1. [关于Spring Security中无Session和无状态stateless](http://www.cnblogs.com/Mainz/p/3230077.html)
-2. [Jetty源码学习11-Session](http://my.oschina.net/tryUcatchUfinallyU/blog/113350)
-3. [RESTful Authentication](http://stackoverflow.com/questions/319530/restful-authentication)
-4. [Principles for Standardized REST Authentication](http://broadcast.oreilly.com/2009/12/principles-for-standardized-rest-authentication.html)
-5. [How to implement RESTful authentication](http://blog.synopse.info/post/2011/05/24/How-to-implement-RESTful-authentication)
-6. [Security of REST authentication schemes](http://stackoverflow.com/questions/454355/security-of-rest-authentication-schemes)
-7. [Signing and Authenticating REST Requests](http://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html)
-8. <http://www.admin10000.com/document/3689.html>
+- [The Open Web Application Security Project](https://www.owasp.org/index.php/About_OWASP)
+- [OWASP Enterprise Security API (Java Edition)](https://code.google.com/p/owasp-esapi-java/source/browse/trunk/src/#src%2Fmain%2Fjava%2Forg%2Fowasp%2Fesapi%2Fcodecs%253Fstate%253Dclosed)
+- [关于Spring Security中无Session和无状态stateless](http://www.cnblogs.com/Mainz/p/3230077.html)
+- [Jetty源码学习11-Session](http://my.oschina.net/tryUcatchUfinallyU/blog/113350)
+- [RESTful Authentication](http://stackoverflow.com/questions/319530/restful-authentication)
+- [Principles for Standardized REST Authentication](http://broadcast.oreilly.com/2009/12/principles-for-standardized-rest-authentication.html)
+- [How to implement RESTful authentication](http://blog.synopse.info/post/2011/05/24/How-to-implement-RESTful-authentication)
+- [Security of REST authentication schemes](http://stackoverflow.com/questions/454355/security-of-rest-authentication-schemes)
+- [Signing and Authenticating REST Requests](http://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html)
+- <http://www.admin10000.com/document/3689.html>

@@ -1,6 +1,6 @@
 ---
 layout: post
-titile: Java注意点
+titile: Java Specification
 tags: java
 categories: java
 ---
