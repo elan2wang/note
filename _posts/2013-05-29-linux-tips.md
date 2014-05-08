@@ -12,11 +12,11 @@ categories: Linux
 <code>iptables -L</code> ＃查看规则是否生效  
 2. ftp管理  
 配置文件目录: /etc/vsftpd/vsftpd.conf  
-<code>/etc/init.d/vsftpd status|start|stop|restart</code>  
-<code>service vsftpd status|start|stop|restart</code>
-3. 系统服务管理  
-<code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
-<code>chkconfig --level 345 vsftpd off</code> ＃将vsftpd服务在345这个级别关闭
+启用本地用户登录: <code>local_enable=YES</code>  
+允许用户上传文件: <code>write_enable=YES</code> (若未启用，在上传文件时会出现: ERROR 550: permission denied)  
+服务的启用与停止:  
+<code>/etc/init.d/vsftpd status|start|stop|restart</code>  <code>service vsftpd status|start|stop|restart</code>  
+查看是否安装了vsftpd: which vsftpd  
 4. 查看系统信息  
 <code>cat /proc/version</code>  
 <code>uname -a</code>  
@@ -34,6 +34,17 @@ categories: Linux
 9. 创建ssh密钥  
 <code>ssh-keygen -t rsa</code>  
 
+###系统服务管理
+<code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
+<code>chkconfig --level 345 vsftpd off</code> ＃将vsftpd服务在345这个级别关闭  
+
+<code>/etc/init.d</code> 这个目录存放着系统中各种服务(sshd, samba, ftpd, mysql, apache2, networking...)的脚本文件。这些脚本至少提供了<code>start/stop</code>命令, 通过<code>/etc/init.d/sshd start|stop|restart</code>可以对这些服务进行相应的操作。  
+<http://www.ghacks.net/2009/04/04/get-to-know-linux-the-etcinitd-directory/>  
+
+<code>service sshd start</code>与<code>/etc/init.d/sshd start</code>具有完全相同的效果, <code>service SCRIPT</code>会调用<code>/etc/init.d/SCRIPT</code>的脚本。  
+
+<code>service -s|--status-all</code> runs all init scripts locateds in <code>/etc/init.d/</code>, in alphabetic order, with the **status** command.
+
 ###JDK和tomcat安装配置
 1. 下载jdk和tomcat  
 2. 安装jdk<code>rpm -ivh jdk-[version].rpm</code>  
@@ -48,7 +59,7 @@ categories: Linux
 <code>source /etc/profile</code>  
 
 ###MySQL配置管理
-1. 创建用户    
+1. 创建用户
 <code>mysql> CREATE USER user_name IDENTIFIED BY "your_password";</code>
 2. 用户授权  
 <code>mysql> GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'your paaaword';</code>  
@@ -79,7 +90,7 @@ n,k正整数，分别表示记录的行号和字段号。若要用变量表示�
 打印行号除以10后余数为5的行的记录  
 2. 将awk命令的输出传递给其它变量  
 <code>text=${awk '{print $0}' path/filename}</code>  
-  
+
 ###Sed编程笔记
 ###参考资料  
 1. [awk学习笔记](http://man.lupaworld.com/content/manage/ringkee/awk.htm#id2861697) - Jims of 肥肥世家
