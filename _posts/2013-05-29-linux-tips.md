@@ -32,6 +32,7 @@ categories: Linux
 <code>GRUB_CMDLINE_LINUX_DEFAULT="text"</code> #文本界面  
 <code>sudo update-grub</code> #修改后执行更新, 否则重启仍是原模式  
 
+
 ###系统服务管理
 <code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
 <code>chkconfig --level 345 vsftpd off</code> ＃将vsftpd服务在345这个级别关闭  
@@ -59,17 +60,17 @@ categories: Linux
 - 修改VNC默认设置  
 <code>sudo chmod 755 /etc/X11/xinit/xinitrc</code> #使文件/etc/X11/xinit/xinitrc成为可执行文件
 <code>vim ~.vnc/xstartup</code> #修改vnc的配置文件, 修改后如下  
->\#!/bin/sh
->\# Uncomment the following two lines for normal desktop:
->unset SESSION_MANAGER
->exec /etc/X11/xinit/xinitrc
->
->[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
->[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
->\#xsetroot -solid grey
->\#vncconfig -iconic &
->\#x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
->\#x-window-manager &
+>\#!/bin/sh  
+>\# Uncomment the following two lines for normal desktop:  
+>unset SESSION_MANAGER  
+>exec /etc/X11/xinit/xinitrc  
+>  
+>[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup  
+>[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources  
+>\#xsetroot -solid grey  
+>\#vncconfig -iconic &  
+>\#x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &  
+>\#x-window-manager &  
 
 ####MySQL配置与管理
 <code>mysql> CREATE USER user_name IDENTIFIED BY "your_password";</code> #创建用户
