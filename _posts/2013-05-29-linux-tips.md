@@ -5,35 +5,27 @@ tags: shell awk sed
 categories: Linux
 ---
 ###系统管理命令（CentOS）
-1. 防火墙管理  
-配置文件目录: /etc/sysconfig/iptables  
+- 防火墙管理  
+<code>/etc/sysconfig/iptables</code> #配置文件目录  
 <code>/etc/init.d/iptables status|start|stop|restart</code>  
 <code>service iptables status|start|stop|restart</code>  
 <code>iptables -L</code> ＃查看规则是否生效  
-2. ftp管理  
-配置文件目录: /etc/vsftpd/vsftpd.conf  
-启用本地用户登录: <code>local_enable=YES</code>  
-允许用户上传文件: <code>write_enable=YES</code> (若未启用，在上传文件时会出现: ERROR 550: permission denied)  
-服务的启用与停止:  
-<code>/etc/init.d/vsftpd status|start|stop|restart</code>  <code>service vsftpd status|start|stop|restart</code>  
-查看是否安装了vsftpd: which vsftpd  
-4. 查看系统信息  
+- 查看系统信息  
 <code>cat /proc/version</code>  
 <code>uname -a</code>  
 <code>cat /etc/issue</code>  
-5. 查看运行文件的地址  
-<code>which jdk</code>  
-6. 查看rpm包的安装路径  
+<code>top</code>  #查看CPU和内存使用情况  
+<code>free</code> #仅查看内存使用情况  
+- 查看rpm包的安装路径  
 <code>rpm -ql packagename</code>
-7. 查找文件  
+- 查找文件  
 <code>find [path] -name [name]</code>  
-8. 进程相关  
+- 进程相关  
 <code>ps -ef | grep java</code>  
 <code>ps -aux | grep java</code> #显示所有java的进程  
 <code>kill -9 pid</code> #－9表示强制退出  
-9. 创建ssh密钥  
+- 创建ssh密钥  
 <code>ssh-keygen -t rsa</code>  
-
 ###系统服务管理
 <code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
 <code>chkconfig --level 345 vsftpd off</code> ＃将vsftpd服务在345这个级别关闭  
@@ -43,7 +35,24 @@ categories: Linux
 
 <code>service sshd start</code>与<code>/etc/init.d/sshd start</code>具有完全相同的效果, <code>service SCRIPT</code>会调用<code>/etc/init.d/SCRIPT</code>的脚本。  
 
-<code>service -s|--status-all</code> runs all init scripts locateds in <code>/etc/init.d/</code>, in alphabetic order, with the **status** command.
+<code>service -s|--status-all</code> runs all init scripts locateds in <code>/etc/init.d/</code>, in alphabetic order, with the **status** command.  
+
+####ftp配置与管理  
+<code>which vsftpd</code> #查看是否安装了vsftpd  
+<code>/etc/vsftpd/vsftpd.conf</code>    #配置文件目录  
+uncomment <code>local_enable=YES</code> #启用本地用户登录  
+uncomment <code>write_enable=YES</code> #允许用户上传文件; 若未启用, 在上传文件时会出现: ERROR 550: permission denied  
+<code>/etc/init.d/vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
+<code>service vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
+####VNC配置与管理  
+
+####MySQL配置与管理
+<code>mysql> CREATE USER user_name IDENTIFIED BY "your_password";</code> #创建用户
+<code>mysql> GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'your paaaword';</code> #用户授权  
+<code>mysql> GRANT SELECT,INSERT,UPDATE,DELETE ON *.* TO test1@"%" IDENTIFIED BY "your_password";</code> #用户授权  
+<code>mysqladmin -u root password 'new-password'</code> #修改用户密码  
+<code>mysql> SET PASSWORD FOR username@"%" = PASSWORD('password');</code> #修改用户密码  
+<code>mysql> GRANT USAGE ON *.* TO username@"%" IDENTIFIED BY 'password';</code> #修改用户密码  
 
 ###JDK和tomcat安装配置
 1. 下载jdk和tomcat  
@@ -57,17 +66,6 @@ categories: Linux
 >CATALINA_HOME=/usr/local/tomcat  
 >export JAVA_HOME CATALINA_HOME  
 <code>source /etc/profile</code>  
-
-###MySQL配置管理
-1. 创建用户
-<code>mysql> CREATE USER user_name IDENTIFIED BY "your_password";</code>
-2. 用户授权  
-<code>mysql> GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'your paaaword';</code>  
-<code>mysql> GRANT SELECT,INSERT,UPDATE,DELETE ON *.* TO test1@"%" IDENTIFIED BY "your_password";</code>  
-3. 修改用户密码  
-<code>mysqladmin -u root password 'new-password'</code>  
-<code>mysql> SET PASSWORD FOR username@"%" = PASSWORD('password');</code>  
-<code>mysql> GRANT USAGE ON *.* TO username@"%" IDENTIFIED BY 'password';</code>  
 
 ###常用命令
 1. source  
