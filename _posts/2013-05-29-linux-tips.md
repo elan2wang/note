@@ -26,6 +26,11 @@ categories: Linux
 <code>kill -9 pid</code> #－9表示强制退出  
 - 创建ssh密钥  
 <code>ssh-keygen -t rsa</code>  
+- 修改系统启动方式  
+<code>sudo vim /etc/default/grub</code>  
+<code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code> #图形界面  
+<code>GRUB_CMDLINE_LINUX_DEFAULT="text"</code> #文本界面  
+<code>sudo update-grub</code> #修改后执行更新, 否则重启仍是原模式
 ###系统服务管理
 <code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
 <code>chkconfig --level 345 vsftpd off</code> ＃将vsftpd服务在345这个级别关闭  
@@ -40,11 +45,29 @@ categories: Linux
 ####ftp配置与管理  
 <code>which vsftpd</code> #查看是否安装了vsftpd  
 <code>/etc/vsftpd/vsftpd.conf</code>    #配置文件目录  
-uncomment <code>local_enable=YES</code> #启用本地用户登录  
-uncomment <code>write_enable=YES</code> #允许用户上传文件; 若未启用, 在上传文件时会出现: ERROR 550: permission denied  
+<code>local_enable=YES</code> #取消该行注解, 启用本地用户登录  
+<code>write_enable=YES</code> #取消该行注解, 允许用户上传文件; 若未启用, 在上传文件时会出现: ERROR 550: permission denied  
 <code>/etc/init.d/vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
 <code>service vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
 ####VNC配置与管理  
+- VNC基本命令  
+<code>vncserver :1</code> #启动端口为1的vnc服务  
+<code>vncserver -kill :1</code> #关闭端口1的vnc服务(kill后面有空格)  
+<code>vncpasswd</code> #修改当前用户的vnc登录密码
+- 修改VNC默认设置  
+<code>sudo chmod 755 /etc/X11/xinit/xinitrc</code> #使文件/etc/X11/xinit/xinitrc成为可执行文件
+<code>vim ~.vnc/xstartup</code> #修改vnc的配置文件, 修改后如下  
+>\#!/bin/sh
+>\# Uncomment the following two lines for normal desktop:
+>unset SESSION_MANAGER
+>exec /etc/X11/xinit/xinitrc
+>
+>[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+>[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+>\#xsetroot -solid grey
+>\#vncconfig -iconic &
+>\#x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+>\#x-window-manager &
 
 ####MySQL配置与管理
 <code>mysql> CREATE USER user_name IDENTIFIED BY "your_password";</code> #创建用户
