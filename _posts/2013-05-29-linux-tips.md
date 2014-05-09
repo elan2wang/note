@@ -30,7 +30,8 @@ categories: Linux
 <code>sudo vim /etc/default/grub</code>  
 <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code> #图形界面  
 <code>GRUB_CMDLINE_LINUX_DEFAULT="text"</code> #文本界面  
-<code>sudo update-grub</code> #修改后执行更新, 否则重启仍是原模式
+<code>sudo update-grub</code> #修改后执行更新, 否则重启仍是原模式  
+
 ###系统服务管理
 <code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
 <code>chkconfig --level 345 vsftpd off</code> ＃将vsftpd服务在345这个级别关闭  
@@ -49,6 +50,7 @@ categories: Linux
 <code>write_enable=YES</code> #取消该行注解, 允许用户上传文件; 若未启用, 在上传文件时会出现: ERROR 550: permission denied  
 <code>/etc/init.d/vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
 <code>service vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
+
 ####VNC配置与管理  
 - VNC基本命令  
 <code>vncserver :1</code> #启动端口为1的vnc服务  
