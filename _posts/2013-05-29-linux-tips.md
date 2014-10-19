@@ -62,6 +62,9 @@ categories: Linux
 >\#x-window-manager &  
 
 ####2.3. MySQL配置与管理
+OSX Mysql Sever command  
+mysql.server start  
+mysql.server stop  
 参考资料: [MySQL 远程连接配置的正确实现](http://database.51cto.com/art/201006/204537.htm)  
 <code>mysql> CREATE USER user_name IDENTIFIED BY "your_password";</code> #创建用户
 <code>mysql> GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'your paaaword';</code> #用户授权  
@@ -111,3 +114,9 @@ n,k正整数，分别表示记录的行号和字段号。若要用变量表示�
 __参考资料__  
 - [awk学习笔记](http://man.lupaworld.com/content/manage/ringkee/awk.htm#id2861697) - Jims of 肥肥世家
 - [sed学习笔记](http://tsnc.zhongaokao.com/tsnc_wgrj/doc/sed.htm) - Jims of 肥肥世家
+
+###4. Bash
+####4.1 bash_profile VS. bashrc
+<http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html>
+####4.2 color setting of bash
+<http://it.toolbox.com/blogs/lim/how-to-fix-colors-on-mac-osx-terminal-37214>
