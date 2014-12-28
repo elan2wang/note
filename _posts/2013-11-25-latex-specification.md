@@ -11,6 +11,12 @@ categories: Latex
 4. 图片设置 [Figure](http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions)
 5. 列表格式 [List_Structures](http://en.wikibooks.org/wiki/LaTeX/List_Structures)
 
+#####Install new package manually
+1. download source file from <http://www.ctan.org/>
+2. create a folder for this package with its name under the folder <code>/usr/local/texlive/2014/texmf-dist/tex/latex<code>
+3. sudo mktexlsr [update package info]
+4. kpsewhich [package-name]  locate a package
+
 #####Tips
 1. 参考文献排序  
 \bibliographystyle{unsrt}：按照引用的先后排序  
