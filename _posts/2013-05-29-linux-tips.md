@@ -120,3 +120,6 @@ __参考资料__
 <http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html>
 ####4.2 color setting of bash
 <http://it.toolbox.com/blogs/lim/how-to-fix-colors-on-mac-osx-terminal-37214>
+
+###5. SSH
+<http://blog.csdn.net/wangjunjun2008/article/details/20037101>
