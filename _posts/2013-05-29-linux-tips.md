@@ -123,3 +123,5 @@ __参考资料__
 
 ###5. SSH
 <http://blog.csdn.net/wangjunjun2008/article/details/20037101>
+###6. VPN
+<http://www.vpser.net/manage/linode-vps-pptp-vpn-howto.html>
