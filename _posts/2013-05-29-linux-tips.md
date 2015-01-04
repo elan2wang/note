@@ -73,7 +73,10 @@ mysql.server stop
 <code>mysql> SET PASSWORD FOR username@"%" = PASSWORD('password');</code> #修改用户密码  
 <code>mysql> GRANT USAGE ON *.* TO username@"%" IDENTIFIED BY 'password';</code> #修改用户密码  
 
-####2.4. JDK和tomcat安装配置
+####2.4. Ubuntu安装Oracle JDK
+<http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html>
+
+####2.5. JDK和tomcat安装配置
 1. 下载jdk和tomcat  
 2. 安装jdk<code>rpm -ivh jdk-[version].rpm</code>  
 3. 配置环境变量  
@@ -86,13 +89,13 @@ mysql.server stop
 >export JAVA_HOME CATALINA_HOME  
 <code>source /etc/profile</code>  
 
-####2.5. 防火墙管理  
+####2.6. 防火墙管理  
 <code>/etc/sysconfig/iptables</code> #配置文件目录  
 <code>/etc/init.d/iptables status|start|stop|restart</code>  
 <code>service iptables status|start|stop|restart</code>  
 <code>iptables -L</code> ＃查看规则是否生效  
 
-####2.6. 设置系统启动模式  
+####2.7. 设置系统启动模式  
 <code>sudo vim /etc/default/grub</code>  
 <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code> #图形界面  
 <code>GRUB_CMDLINE_LINUX_DEFAULT="text"</code> #文本界面  
