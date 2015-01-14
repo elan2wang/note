@@ -13,9 +13,10 @@ categories: Latex
 
 #####Install new package manually
 1. download source file from <http://www.ctan.org/>
-2. create a folder for this package with its name under the folder <code>/usr/local/texlive/2014/texmf-dist/tex/latex<code>
-3. sudo mktexlsr [update package info]
-4. kpsewhich [package-name]  locate a package
+2. create a folder for this package with its name under the folder  <code>/usr/local/texlive/2014/texmf-dist/tex/latex<code>  
+3. move the sty file to this folder
+3. update package info with command <code>sudo mktexlsr</code>
+4. locate a package with command <code>kpsewhich [package-name]</code>
 
 #####Tips
 1. 参考文献排序  
