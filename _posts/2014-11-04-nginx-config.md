@@ -1,6 +1,6 @@
 ---
 layout: post
-title: nginx配置
+title: nginx configuration
 tags: nginx
 categories: http
 ---
