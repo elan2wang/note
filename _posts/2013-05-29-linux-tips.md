@@ -128,3 +128,4 @@ __参考资料__
 <http://blog.csdn.net/wangjunjun2008/article/details/20037101>
 ###6. VPN
 <http://www.vpser.net/manage/linode-vps-pptp-vpn-howto.html>
+<http://blog.atime.me/note/pptpd.html>
