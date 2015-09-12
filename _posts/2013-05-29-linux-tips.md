@@ -126,6 +126,11 @@ __参考资料__
 
 ###5. SSH
 <http://blog.csdn.net/wangjunjun2008/article/details/20037101>
+ssh 无密码登录
+> authorized_keys
+> chmod 700 .ssh
+> chmod 600 authorized_keys
+
 ###6. VPN
 <http://www.vpser.net/manage/linode-vps-pptp-vpn-howto.html>
 <http://blog.atime.me/note/pptpd.html>
