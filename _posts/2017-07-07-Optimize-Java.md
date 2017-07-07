@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Optimize Java
@@ -10,8 +9,11 @@ categories: Java
 ## JVM subsystem
 
 Class loader
+
 Interpreter
+
 JIT compiler
+
 Garbage collector
 
 # Memory Model
@@ -42,11 +44,11 @@ Eliminate the method lookup overhead by remembering the previous invocation
 
 Space-time trade off
 
-### [Monomorphic Dispatch]
+### Monomorphic Dispatch
 
-### [Dead Code Elimination]
+### Dead Code Elimination
 
-### [Intrinsic]
+### Intrinsic
 
 ### [Escape Analysis](https://en.wikipedia.org/wiki/Escape_analysis)
 
