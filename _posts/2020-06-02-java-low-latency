@@ -1,0 +1,34 @@
+---
+layout: post
+title: Java Low Latency
+tags: ZeroGC, JIT, Lock-free
+categories: Java
+---
+
+# Zero GC
+* Use primitive type whenever possible
+* Use mutable object whenever possible
+* Use object pool when object creation is inevitable
+* LSB+MSB <=> UUID
+* Avoid for-each on object collection
+* Avoid stream API
+* Avoid autoboxing
+* Avoid 
+
+# Threading & Lock-free
+* CPU pinning
+* Optimistic concurrency control
+* CAS
+* Volatile
+* Circular buffer
+
+# JIT
+* Warmup
+* Simple code
+* 
+
+# IPC
+* shared memory
+* SBE
+
+# Profiling
