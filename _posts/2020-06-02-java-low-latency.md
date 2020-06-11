@@ -28,7 +28,7 @@ categories: Java
 * 
 
 # IPC
-* shared memory
+* Shared memory
 * SBE (Binary)
 * Protobuf (key-value)
 
