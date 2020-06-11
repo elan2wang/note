@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java Low Latency
-tags: ZeroGC, JIT, Lock-free
+tags: ZeroGC JIT Lock-free
 categories: Java
 ---
 
@@ -20,11 +20,14 @@ categories: Java
 * Visibility
 * Happen-Before
 * Performance
+
 ## Non-Blocking
 * Optimistic Locking (aka. Optimistic Concurrency Control)
 * CAS
 * A-B-A Problem
+
 ## CPU pinning
+
 ## Circular buffer
 
 # JIT
