@@ -33,6 +33,7 @@ categories: Java
 * Protobuf (key-value)
 
 # JVM Parameters
+```java
 -XX:MetaspaceSize=128m
 -XX:MaxMetaspaceSize=256m
 -XX:+UseNUMA (GC Heap Locality group)
@@ -45,5 +46,6 @@ categories: Java
 -XX:+PrintGCApplicationStoppedTime
 -XX:+PrintGCApplicationConcurrentTime
 -XX:+PrintSafepointStatistics
+```
 
 # Profiling
