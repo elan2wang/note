@@ -9,6 +9,5 @@ paginate: 20
 safe: true
 lsi: false
 pygments: true
-markdown: rdiscount
 
 google_analytics_tracking_id: UA-46598958-1
