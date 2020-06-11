@@ -7,13 +7,12 @@ categories: Java
 
 # Zero GC
 * Use primitive type whenever possible
-* Use mutable object whenever possible
+* Use mutable object whenever possible (e.g. High frequency data like book and order acknowledgement read from shared memory)
 * Use object pool when object creation is inevitable
 * LSB+MSB <=> UUID
 * Avoid for-each on object collection
 * Avoid stream API
 * Avoid autoboxing
-* Avoid 
 
 # Concurrency
 ## Volatile
