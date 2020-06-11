@@ -15,17 +15,21 @@ categories: Java
 * Avoid autoboxing
 * Avoid 
 
-# Threading & Lock-free
-* CPU pinning
-* Optimistic concurrency control
-* CAS (Atomic, ConcurrentHashMap#)
-* Volatile
-* Circular buffer
+# Concurrency
+## Volatile
+* Visibility
+* Happen-Before
+* Performance
+## Non-Blocking
+* Optimistic Locking (aka. Optimistic Concurrency Control)
+* CAS
+* A-B-A Problem
+## CPU pinning
+## Circular buffer
 
 # JIT
 * Warmup
 * Simple code
-* 
 
 # IPC
 * Shared memory
