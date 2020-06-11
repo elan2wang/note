@@ -18,7 +18,7 @@ categories: Java
 # Threading & Lock-free
 * CPU pinning
 * Optimistic concurrency control
-* CAS
+* CAS (Atomic, ConcurrentHashMap#)
 * Volatile
 * Circular buffer
 
@@ -29,6 +29,21 @@ categories: Java
 
 # IPC
 * shared memory
-* SBE
+* SBE (Binary)
+* Protobuf (key-value)
+
+# JVM Parameters
+-XX:MetaspaceSize=128m
+-XX:MaxMetaspaceSize=256m
+-XX:+UseNUMA (GC Heap Locality group)
+-XX:-UseBiasdLocking
+-XX:MaxGCPauseMillis=1
+-XX:UnlockDiagnosticVMOptions
+-XX:ComplieThreshold=1
+-XX:+PrintCompilation
+-XX:+PrintCodeCache
+-XX:+PrintGCApplicationStoppedTime
+-XX:+PrintGCApplicationConcurrentTime
+-XX:+PrintSafepointStatistics
 
 # Profiling
