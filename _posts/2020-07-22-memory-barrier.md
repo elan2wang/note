@@ -13,6 +13,6 @@ categories: Java
 * https://mechanical-sympathy.blogspot.com/2011/07/write-combining.html
 * https://www.infoq.com/articles/memory_barriers_jvm_concurrency/
 
-* [https://en.wikipedia.org/wiki/Volatile_memory](volatile memory)
-* [https://en.wikipedia.org/wiki/Static_random-access_memory](SRAM - Static random access memory)
-* [https://en.wikipedia.org/wiki/Dynamic_random-access_memory](DRAM - Dynamic random access memory)
+* [volatile memory](https://en.wikipedia.org/wiki/Volatile_memory)
+* [SRAM - Static random access memory](https://en.wikipedia.org/wiki/Static_random-access_memory)
+* [DRAM - Dynamic random access memory](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
