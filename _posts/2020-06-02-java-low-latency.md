@@ -16,8 +16,8 @@ categories: Java
 
 # Concurrency
 ## Volatile
-* Visibility
-* Happen-Before
+* [Basic - visibility/happen-before](https://www.baeldung.com/java-volatile)
+* [cache coherence](https://en.wikipedia.org/wiki/Cache_coherence)
 * Performance
 
 ## Non-Blocking
