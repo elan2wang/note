@@ -16,9 +16,9 @@ categories: Java
 
 # Concurrency
 ## Volatile
-* [Basic - visibility/happen-before](https://www.baeldung.com/java-volatile)
-* [cache coherence](https://en.wikipedia.org/wiki/Cache_coherence)
-* Performance
+* [memory visibility/rerodering/happen-before](https://www.baeldung.com/java-volatile)
+* [Cache coherence](https://en.wikipedia.org/wiki/Cache_coherence)
+* [Memory barrier](https://en.wikipedia.org/wiki/Memory_barrier)
 
 ## Non-Blocking
 * Optimistic Locking (aka. Optimistic Concurrency Control)
