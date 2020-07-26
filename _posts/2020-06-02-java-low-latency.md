@@ -16,7 +16,7 @@ categories: Java
 
 # Concurrency
 ## Volatile
-* [memory visibility/rerodering/happen-before](https://www.baeldung.com/java-volatile)
+* [Basic - visibility/happen-before](https://www.baeldung.com/java-volatile)
 * [Cache coherence](https://en.wikipedia.org/wiki/Cache_coherence)
 * [Memory barrier](https://en.wikipedia.org/wiki/Memory_barrier)
 
@@ -55,3 +55,4 @@ categories: Java
 ```
 
 # Profiling
+## JProfiler
