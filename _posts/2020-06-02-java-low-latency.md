@@ -27,6 +27,14 @@ categories: Java
 
 ## CPU pinning
 
+### How to check
+* ps
+* lscpu (e.g. lscpu --all --parse=CPU,Socket)
+* cat /proc/cmdline
+* cat /etc/redhat-release
+* jps
+* jstack
+
 ## Circular buffer
 
 # JIT
