@@ -9,10 +9,10 @@ categories: 机器学习
 蒙特卡罗方法最初是由物理学家发明的，它利用生成随机数来计算积分。假设我们需要计算一个复杂的积分：
 $$\int_a^bh\left(x\right)dx$$
 如果我们能将$h\left(x\right)$分解成函数$f\left(x\right)$和一个定义在区间$\left(a,b\right)$上的概率密度函数$p\left(x\right)$的乘积，那么我们可以将上面的式子写成
-$$\int_a^b h\left(x\right)dx = \int_a^b f\left(x\right) p\left(x\right) dx = E_{p\left(x\right)}\left\[ f\left(x\right)\right\]$$
+$$\int_a^b h\left(x\right)dx = \int_a^b f\left(x\right) p\left(x\right) dx = E_{p\left(x\right)}\left[f\left(x\right)\right]$$
 因此积分可以表示成函数$f\left(x\right)$在概率密度$p\left(x\right)$上的期望。如果我们从$p\left(x\right)$获得一系列随机变量$x_1,...,x_n$，则
 $$
-\int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left\[ f\left(x\right) \right\] \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right)
+\int_a^b h\left(x\right)dx = E_{p\left(x\right)}\left[f\left(x\right) \right] \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right)
 $$
 这个式子就被称为**蒙特卡罗积分**。蒙特卡罗积分可以用于近似贝叶斯分析中的后验分布(或边缘分布)，对于积分$I\left(y \right) = \int f\left(y \mid x \right) p\left(x\right) dx$，它可以近似于
 $$
