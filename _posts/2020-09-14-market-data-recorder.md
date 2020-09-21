@@ -32,7 +32,7 @@ public/test
 
 
 ## Persist Market Data
-Since we are listening to the ticking data, we should incrementally write data into the Parquet file. The only way to do so is via the `ParquetWriter` class.
+Since we are listening to the ticking data, we should incrementally write data into the Parquet file. The only way to do so is via the *ParquetWriter* class.
 ```python
 import pyarrow.parquet as pq
 
@@ -87,6 +87,24 @@ self.ticker_writer.close()
 ```
 
 ### Play with Market Data
+I ran the script on my Mac for the whole night, and got around 4M rows, the size of the parquet file is around 665M.
+```python
+import pyarrow.parquet as pq
+import pandas as pa
+
+ticker = pq.read_parquet('ticker.parquet')
+df = ticker.to_pandas()
+
+df1 = df[df['symbol']=='BTC-25SEP20-11000-C']
+df1.describe()
+```
+![describe_data](/note/images/ticker_describe.png)
+
+```python
+import plotly.express as px
+px.line(df1, x='timestamp', y=['aiv', 'biv', 'mark_iv']).show()
+```
+![ATM_vol_spread](/note/images/ATM_vol_spread.png)
 
 
 ### Others
