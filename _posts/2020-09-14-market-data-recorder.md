@@ -30,7 +30,6 @@ public/test
 ```
 *get_intruments* API is used to retrieve the list of open contract, which will then be used to build the subcription channels. The *subscribe* API is used to subscribe market data. During the test, the server will terminate the web socket connection after 10 minutes if no heartbeat was set. To keep the connection alive, we need to *set_heartbeat* with an *interval*, and respond to the heartbeat request with *test* API.
 
-
 ## Persist Market Data
 Since we are listening to the ticking data, we should incrementally write data into the Parquet file. The only way to do so is via the *ParquetWriter* class.
 ```python
@@ -86,15 +85,15 @@ self.ticker_writer.close()
 
 ```
 
-### Play with Market Data
+## Play with Market Data
 I ran the script on my Mac for the whole night, and got around 4M rows, the size of the parquet file is around 665M.
+
 ```python
 import pyarrow.parquet as pq
 import pandas as pa
 
 ticker = pq.read_parquet('ticker.parquet')
 df = ticker.to_pandas()
-
 df1 = df[df['symbol']=='BTC-25SEP20-11000-C']
 df1[['bbp', 'bap', 'delta', 'vega', 'theta']].describe()
 ```
@@ -107,5 +106,5 @@ px.line(df1, x='timestamp', y=['aiv', 'biv', 'mark_iv']).show()
 ![ATM_vol_spread](/note/images/ATM_vol_spread.png)
 
 
-### Others
+## Others
 * [Reducing Python String Memory Use in Apache Arrow 0.12](https://arrow.apache.org/blog/2019/02/05/python-string-memory-0.12/)
