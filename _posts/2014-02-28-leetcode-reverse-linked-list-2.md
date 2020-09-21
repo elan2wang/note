@@ -34,7 +34,7 @@ categories: leetcode
 {% highlight java linenos %}
 public ListNode reverseBetween(ListNode head, int m, int n) {
     if (head == null || head.next == null || m == n) return head;
-        
+      
     ListNode cur = head;
     ListNode next = null;
     ListNode sub_head = null;

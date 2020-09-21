@@ -6,7 +6,7 @@ categories: python, analytic
 ---
 
 Cryptocurrency's option market continue to grow in the past month. The open interest of the coming monthly expiry BTC option is again at $1 billion level.
-![btc option open interest by expiry](../images/skew_btc_options_oi_by_expiry_k_prev_day.png)
+![btc option open interest by expiry](images/skew_btc_options_oi_by_expiry_k_prev_day.png)
 
 In the traditional financial system, it's very difficult (costy) for individual to acess the market data, nevertheless to say analyze and trade option in a way of institutional user. But the cryptocurreny option market is open for everyboday, we can easily subcribe to realtime market data and programatically trade option with open API provided by all crypto exchanges.
 
@@ -20,7 +20,7 @@ By its nature time series data is columnar, [KDB+](https://kx.com/) is one of th
 
 ### Subscribe Market Data
 From below statistic, Deribit is the most active exchange for BTC option, so I'll start with Deribit API to subscribe the market data. 
-![btc opion open interest by exchange](../images/skew_total_btc_options_open_interest.png)
+![btc opion open interest by exchange](images/skew_total_btc_options_open_interest.png)
 As it is public data, we don't even need to create a account. In this post, we'll need three APIs which are:
 ```
 public/get_instruments
@@ -32,6 +32,8 @@ public/subscribe
 ```python
 import pyarrow.parquet as pq
 ```
+
+### Play with Market Data
 
 
 ### Others
