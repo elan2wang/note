@@ -96,7 +96,7 @@ ticker = pq.read_parquet('ticker.parquet')
 df = ticker.to_pandas()
 
 df1 = df[df['symbol']=='BTC-25SEP20-11000-C']
-df1.describe()
+df1[['bbp', 'bap', 'delta', 'vega', 'theta']].describe()
 ```
 ![describe_data](/note/images/describe_data.png)
 
