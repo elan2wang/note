@@ -9,21 +9,24 @@
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/style/note.css">
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": {
-  	  linebreaks: { 
-        automatic:true
-      }
-  	},
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
   	tex2jax: {
   	  inlineMath: [['$','$']],
   	  displayMath: [ ['$$','$$']],
   	  skipTags: ["script","noscript","style","textarea","pre","code"],
   	  processEscapes: true,
-  	  processEnvironments: true
-  	}
+  	  rocessEnvironments: true
+  	},
+    "HTML-CSS": {
+      fonts: ["TeX"],
+      linebreaks: { 
+        automatic:true
+      }
+    }
   });
   </script>cdnjs
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_CHTML">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js">
   </script>
   {% include google_analytics.html %}
 </head>
