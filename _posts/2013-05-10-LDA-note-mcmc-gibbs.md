@@ -45,6 +45,7 @@ $$
 $$
 \int f\left(x\right) p\left(x\right) dx \approx \frac{1}{n} \sum_{i=1}^n f\left(x_i \right) \left( \frac{p\left(x\right)}{s\left(x \right)} \right)
 $$
+
 ### 3.3. 马尔科夫链
 一阶马尔科夫链是指，时间$t+1$的状态只与时间$t$的状态有关，数学定义如下
 $$
@@ -82,7 +83,8 @@ $$
 >\end{bmatrix}
 >$$
 >假设今天是天晴，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 0 & 1 & 0 \end{pmatrix}$，则7天后的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$相反，如果假设今天下雨，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 1 & 0 & 0 \end{pmatrix}$，那么7天的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$由此可见，经过足够时间的转移，期望天气与城市天气是独立的。换句话说，该天气转移的马尔科夫链达到了一个**稳态分布(stationary distribution)**。  
-正如上面的例子所示，马尔科夫链会达到一个稳态分布$\vec{\pi}^\*$，此时的概率向量值与初始条件的是独立的。稳态分布满足以下条件$$\vec{\pi}^\* = \vec{\pi}^\* \mathbf{P}$$
+正如上面的例子所示，马尔科夫链会达到一个稳态分布$\vec{\pi}^*$，此时的概率向量值与初始条件的是独立的。稳态分布满足以下条件$$\vec{\pi}^* = \vec{\pi}^* \mathbf{P}$$
+
 ### 3.4. Metropolis Hastings算法
 正如**重要性采样**小节所述，利用蒙特卡罗方法求积分时主要问题是如何从复杂的概率分布$p\left(x\right)$获取样本数据，该问题的求解也是MCMC方法的根源。  
 假设我们要从分布$p\left(\theta\right)$获取样本数据，其中$p\left(\theta\right)=f\left(\theta\right)/K$，但是标准化常量K并不知道，并且也很难计算。**Metropolis**算法按如下过程生成样本序列：  
