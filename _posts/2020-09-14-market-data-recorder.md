@@ -98,7 +98,7 @@ df = ticker.to_pandas()
 df1 = df[df['symbol']=='BTC-25SEP20-11000-C']
 df1.describe()
 ```
-![describe_data](/note/images/ticker_describe.png)
+![describe_data](/note/images/describe_data.png)
 
 ```python
 import plotly.express as px
