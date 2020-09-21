@@ -21,11 +21,14 @@ h4 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-si
 
 ol {
 	padding-left:35px;
+	margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 ul {
 	padding-left:35px;
-	list-style-type:circle;
+	margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 a {
@@ -40,9 +43,17 @@ a:hover {
 }
 
 img {
-  width: 80%;
-  border: none;
-  background: none;
+	display: :block;
+	border: none;
+	max-width: 80%;
+	background: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+code {
+	margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #sidebar {
