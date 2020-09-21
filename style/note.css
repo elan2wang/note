@@ -39,6 +39,12 @@ a:hover {
 	border-bottom:1px dashed #c7c7c7;
 }
 
+img {
+  width: 80%;
+  border: none;
+  background: none;
+}
+
 #sidebar {
 	position:fixed;
 	margin-left:100px;
