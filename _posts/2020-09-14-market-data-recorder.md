@@ -6,7 +6,7 @@ categories: python, analytic
 ---
 
 Cryptocurrency's option market continue to grow in the past month. The open interest of the coming monthly expiry BTC option is again at $1 billion level.
-![btc option open interest by expiry](images/skew_btc_options_oi_by_expiry_k_prev_day.png)
+![btc option open interest by expiry](/note/images/skew_btc_options_oi_by_expiry_k_prev_day.png)
 
 In the traditional financial system, it's very difficult (costy) for individual to acess the market data, nevertheless to say analyze and trade option in a way of institutional user. But the cryptocurreny option market is open for everyboday, we can easily subcribe to realtime market data and programatically trade option with open API provided by all crypto exchanges.
 
@@ -20,7 +20,7 @@ By its nature time series data is columnar, [KDB+](https://kx.com/) is one of th
 
 ### Subscribe Market Data
 From below statistic, Deribit is the most active exchange for BTC option, so I'll start with Deribit API to subscribe the market data. 
-![btc opion open interest by exchange](images/skew_total_btc_options_open_interest.png)
+![btc opion open interest by exchange](/note/images/skew_total_btc_options_open_interest.png)
 As it is public data, we don't even need to create a account. In this post, we'll need three APIs which are:
 ```
 public/get_instruments
@@ -28,9 +28,61 @@ public/set_heartbeat
 public/subscribe
 ```
 
+
+
 ### Persist Market Data
+Since we are listening to the ticking data, we should incrementally write data into the Parquet file.
 ```python
 import pyarrow.parquet as pq
+
+# ... define the table schema and create an parquet file writer
+self.ticker_schema = pa.schema([
+    ('timestamp', pa.timestamp('ms')),
+    ('symbol', pa.string()),
+    ('index_price', t_float),
+    ('mark_price', t_float),
+    ('last_price', t_float),
+    ('mark_iv', t_float),
+    ('biv', t_float),
+    ('aiv', t_float),
+    ('bbp', t_float),
+    ('bbs', t_float),
+    ('bap', t_float),
+    ('bas', t_float),
+    ('delta', t_float),
+    ('gamma', t_float),
+    ('vega', t_float),
+    ('theta', t_float),
+    ('rho', t_float)
+])
+self.ticker_writer = pq.ParquetWriter("ticker.parquet",self.ticker_schema)
+
+# ... build PyArrow table from a list of array, and write to the parquet file
+tickers = pa.table(
+    [
+        self.ticker_ts,         # timestamp array
+        self.ticker_sym,        # symbol array
+        self.ticker_index_price,
+        self.ticker_mark_price,
+        self.ticker_last_price,
+        self.ticker_mark_iv,
+        self.ticker_biv,
+        self.ticker_aiv,
+        self.ticker_bbp,
+        self.ticker_bbs,
+        self.ticker_bap,
+        self.ticker_bas,
+        self.ticker_delta,
+        self.ticker_gamma,
+        self.ticker_vega,
+        self.ticker_theta,
+        self.ticker_rho
+    ], self.ticker_schema)
+self.ticker_writer.write_table(tickers)
+
+# ... close the writer to ensure the metadata of footer are appended to the parquet file
+self.ticker_writer.close()
+
 ```
 
 ### Play with Market Data

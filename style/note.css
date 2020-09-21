@@ -8,23 +8,23 @@
 
 body {
 	margin:0;
-	font-size:14px;
+	font-size:12px;
 	color:#000000;
-	line-height: 1.8em;
-	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+	line-height: 2em;
+	font-family:Courier, monospace,Verdana,sans-serif;
 }
 
-h1 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#000;line-height: 2.4em;}
-h2 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.3em;color:#111;line-height: 2.3em;}
-h3 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;line-height: 2.2em;}
-h4 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.1em;color:#333;line-height: 2.1em;}
+h1 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#000;line-height: 2.8em;}
+h2 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.3em;color:#111;line-height: 2.6em;}
+h3 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;line-height: 2.4em;}
+h4 {font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.1em;color:#333;line-height: 2.3em;}
 
 ol {
-	padding-left:25px;
+	padding-left:35px;
 }
 
 ul {
-	padding-left:25px;
+	padding-left:35px;
 	list-style-type:circle;
 }
 
