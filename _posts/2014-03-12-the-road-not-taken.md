@@ -4,7 +4,8 @@ title: The Road not Taken
 tags: Robert Frost
 categories: Thoughts
 ---
-####The Road not Taken
+
+#### The Road not Taken
 Two roads diverged in a yellow wood,  
 And sorry I could not travel both,  
 And be one traveler, long I stood  

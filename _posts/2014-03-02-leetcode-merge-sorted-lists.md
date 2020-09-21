@@ -4,14 +4,14 @@ title: LeetCode merge sorted lists
 tags: leetcode
 categories: leetcode
 ---
-####[题目描述]
+#### [题目描述]
 <http://oj.leetcode.com/problems/merge-two-sorted-lists/>  
 >Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 
-####[问题分析]
+#### [问题分析]
 利用归并排序中merge方法的思想; 时间复杂度为O(n), n表示两个lists的总长度; 若使用新的list来保存合并后的元素, 则需要O(n)的空间消耗; 另外也可以用其中一个lsit来存储元素, 此时不需要而外的空间。
 
-####[参考代码]  
+#### [参考代码]  
 以下代码的空间消耗为O(1)  
 {% highlight java linenos %}
 /**
@@ -87,14 +87,14 @@ public class Solution {
 {% endhighlight %}
 
 ==========================================================================
-####[题目描述]
+#### [题目描述]
 <http://oj.leetcode.com/problems/merge-k-sorted-lists/>  
 >Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
-####[问题分析]
+#### [问题分析]
 利用merge two sorted lists的思想, 将相邻lists两两合并, 递归实现。
 
-####[参考代码]  
+#### [参考代码]  
 {% highlight java linenos %}
 public ListNode mergeKLists(ArrayList<ListNode> lists) {
     if (lists == null || lists.size() == 0) return null;

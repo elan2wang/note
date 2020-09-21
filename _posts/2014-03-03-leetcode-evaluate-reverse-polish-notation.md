@@ -4,7 +4,7 @@ title: LeetCode Evaluate Reverse Polish Notation
 tags: leetcode
 categories: leetcode
 ---
-####[题目描述]
+#### [题目描述]
 <http://oj.leetcode.com/problems/evaluate-reverse-polish-notation/>
 >Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
@@ -14,11 +14,11 @@ categories: leetcode
 >>  ["2", "1", "+", "3", "*"] -> ((2 + 1) * 3) -> 9  
 >>  ["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
 
-####[问题分析]
+#### [问题分析]
 使用堆栈, 每次遇到数字则将数字进栈, 遇到操作符则取出栈顶的两个操作数, 进行相应的计算后, 将计算结果入栈. 可以用数组模拟堆栈.
 
 时间和空间复杂度均为O(N).
-####[参考代码]
+#### [参考代码]
 {% highlight java linenos %}
 public class Solution {
     public int evalRPN(String[] tokens) {

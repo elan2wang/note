@@ -14,5 +14,5 @@ categories: HTTP
 如果客户端浏览器将Cookie禁用，或者不支持Cookie，那么Session就不能再利用Cookie识别客户，这时可以采用**URL重写**，它将用户Session的id信息重写到URL地址中。服务器能够解析重写后的URL获取Session的id。
 
 
-###参考资料
+**参考资料**
 1. [Cookie/Session机制详解](http://www.360doc.com/content/11/1227/00/198_175229712.shtml)

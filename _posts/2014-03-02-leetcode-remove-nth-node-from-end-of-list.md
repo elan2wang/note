@@ -4,7 +4,7 @@ title: LeetCode Remove Nth Node From End of List
 tags: leetcode
 categories: leetcode
 ---
-####[题目描述]
+#### [题目描述]
 <http://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/>
 >Given a linked list, remove the nth node from the end of list and return its head.
 
@@ -18,7 +18,7 @@ categories: leetcode
 >Given n will always be valid.  
 >Try to do this in one pass.
 
-####[问题分析]
+#### [问题分析]
 1. 边界情况  
 链表为空, head==null, 直接返回head即可
 2. 特殊情况
@@ -37,7 +37,7 @@ n=length, 即删除链表第一个元素;
 3. 然后同时移动cur和cur2, 直到cur指向最后一个node(cur.next==null)才停止, 此时cur2指向的即时倒数第n个node.
 4. 为了移除cur2最终指向的倒数第n个node, 还需要一个指向cur2前一个node的指针prev_cur2.
 
-####[参考代码]
+#### [参考代码]
 {% highlight java linenos %}
 /**
  * Definition for singly-linked list.

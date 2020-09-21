@@ -4,7 +4,7 @@ title: LeetCode wildcard matching
 tags: leetcode
 categories: leetcode
 ---
-####[题目描述]
+#### [题目描述]
 <http://oj.leetcode.com/problems/wildcard-matching/>  
 >Implement wildcard pattern matching with support for '?' and '*'.  
 >
@@ -25,10 +25,10 @@ categories: leetcode
 >>isMatch("ab", "?*") → true  
 >>isMatch("aab", "c*a*b") → false
 
-####[问题分析]
+#### [问题分析]
 <http://xoomer.virgilio.it/acantato/dev/wildcard/wildmatch.html>
 
-####[参考代码]
+#### [参考代码]
 {% highlight java linenos %}
 
 {% endhighlight %}

@@ -4,11 +4,11 @@ title: LeetCode single number
 tags: leetcode
 categories: leetcode
 ---
-####[题目描述]
+#### [题目描述]
 <url>  
 >description
 
-####[问题分析]  
+#### [问题分析]  
 
 [Java位运算](http://shitouer.cn/2013/04/java-bit-operation-tutorial/)
 >~ 按位非(NOT),   逐位取反  
@@ -23,7 +23,7 @@ int和long类型最高位为符号位，正数为0，负数为1.正数的反码�
 >补码：0111 1111 1111 1111 1111 1111 1111 1111  
 
 
-####[参考代码]
+#### [参考代码]
 {% highlight java linenos %}
 
 {% endhighlight %}

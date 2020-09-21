@@ -4,7 +4,7 @@ title: LeetCode Reverse Linked List II
 tags: leetcode
 categories: leetcode
 ---
-####[题目描述]
+#### [题目描述]
 <http://oj.leetcode.com/problems/reverse-linked-list-ii/>
 >Reverse a linked list from position m to n. Do it in-place and in one-pass.
 
@@ -19,7 +19,7 @@ categories: leetcode
 
 >1 ≤ m ≤ n ≤ length of list.
 
-####[问题分析]
+#### [问题分析]
 1. 边界情况  
 链表为空, {};  
 链表只有一个元素, {1}; 
@@ -30,7 +30,7 @@ categories: leetcode
 若n等于链表的长度, {1,2,3,4}, m=2, n=4;  
 若m等于1, 且n等于链表长度, {3,5}, m=1, n=2;  
 
-####[参考代码]
+#### [参考代码]
 {% highlight java linenos %}
 public ListNode reverseBetween(ListNode head, int m, int n) {
     if (head == null || head.next == null || m == n) return head;

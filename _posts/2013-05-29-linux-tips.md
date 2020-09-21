@@ -4,7 +4,7 @@ title: Linux参考手册
 tags: shell awk sed
 categories: Linux
 ---
-###1. 常用命令
+### 1. 常用命令
 - 查看系统信息  
 <code>cat /proc/version</code>  
 <code>uname -a</code>  
@@ -26,14 +26,14 @@ categories: Linux
 - wget命令  
 <code>wget ftp://host/src/ [--user username] [--password yourpassword]</code> #获取ftp站点的文件夹  
 
-###2. 系统服务管理
+### 2. 系统服务管理
 <code>chkconfig --list</code> ＃查看服务在每个级别上的运行状态  
 <code>chkconfig --level 345 vsftpd off</code> ＃将vsftpd服务在345这个级别关闭  
 <code>/etc/init.d</code> 这个目录存放着系统中各种服务(sshd, samba, ftpd, mysql, apache2, networking...)的脚本文件。这些脚本至少提供了<code>start/stop</code>命令, 通过<code>/etc/init.d/sshd start|stop|restart</code>可以对这些服务进行相应的操作.[Reference](http://www.ghacks.net/2009/04/04/get-to-know-linux-the-etcinitd-directory/)  
 <code>service sshd start</code>与<code>/etc/init.d/sshd start</code>具有完全相同的效果, <code>service SCRIPT</code>会调用<code>/etc/init.d/SCRIPT</code>的脚本。  
 <code>service -s|--status-all</code> runs all init scripts locateds in <code>/etc/init.d/</code>, in alphabetic order, with the **status** command.  
 
-####2.1. ftp配置与管理  
+#### 2.1. ftp配置与管理  
 <code>which vsftpd</code> #查看是否安装了vsftpd  
 <code>/etc/vsftpd/vsftpd.conf</code>    #配置文件目录  
 <code>local_enable=YES</code> #取消该行注解, 启用本地用户登录  
@@ -41,7 +41,7 @@ categories: Linux
 <code>/etc/init.d/vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
 <code>service vsftpd status|start|stop|restart</code> #服务状态/开启/停止/重启  
 
-####2.2. VNC配置与管理  
+#### 2.2. VNC配置与管理  
 - VNC基本命令  
 <code>vncserver :1</code> #启动端口为1的vnc服务  
 <code>vncserver -kill :1</code> #关闭端口1的vnc服务(kill后面有空格)  
@@ -61,7 +61,7 @@ categories: Linux
 >\#x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &  
 >\#x-window-manager &  
 
-####2.3. MySQL配置与管理
+#### 2.3. MySQL配置与管理
 OSX Mysql Sever command  
 mysql.server start  
 mysql.server stop  
@@ -73,10 +73,10 @@ mysql.server stop
 <code>mysql> SET PASSWORD FOR username@"%" = PASSWORD('password');</code> #修改用户密码  
 <code>mysql> GRANT USAGE ON *.* TO username@"%" IDENTIFIED BY 'password';</code> #修改用户密码  
 
-####2.4. Ubuntu安装Oracle JDK
+#### 2.4. Ubuntu安装Oracle JDK
 <http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html>
 
-####2.5. JDK和tomcat安装配置
+#### 2.5. JDK和tomcat安装配置
 1. 下载jdk和tomcat  
 2. 安装jdk<code>rpm -ivh jdk-[version].rpm</code>  
 3. 配置环境变量  
@@ -89,20 +89,20 @@ mysql.server stop
 >export JAVA_HOME CATALINA_HOME  
 <code>source /etc/profile</code>  
 
-####2.6. 防火墙管理  
+#### 2.6. 防火墙管理  
 <code>/etc/sysconfig/iptables</code> #配置文件目录  
 <code>/etc/init.d/iptables status|start|stop|restart</code>  
 <code>service iptables status|start|stop|restart</code>  
 <code>iptables -L</code> ＃查看规则是否生效  
 
-####2.7. 设置系统启动模式  
+#### 2.7. 设置系统启动模式  
 <code>sudo vim /etc/default/grub</code>  
 <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code> #图形界面  
 <code>GRUB_CMDLINE_LINUX_DEFAULT="text"</code> #文本界面  
 <code>sudo update-grub</code> #修改后执行更新, 否则重启仍是原模式
 
-###3. Shell脚本编程
-####3.1. Awk编程笔记
+### 3. Shell脚本编程
+#### 3.1. Awk编程笔记
 1. 读取文件的指定行的指定字段  
 <code>awk 'NR==n {print $k}' path/filename</code>  
 n,k正整数，分别表示记录的行号和字段号。若要用变量表示行号，则需要用单引号将变量引起来  
@@ -113,24 +113,24 @@ n,k正整数，分别表示记录的行号和字段号。若要用变量表示�
 2. 将awk命令的输出传递给其它变量  
 <code>text=${awk '{print $0}' path/filename}</code>  
 
-####3.2. Sed编程笔记
+#### 3.2. Sed编程笔记
 __参考资料__  
 - [awk学习笔记](http://man.lupaworld.com/content/manage/ringkee/awk.htm#id2861697) - Jims of 肥肥世家
 - [sed学习笔记](http://tsnc.zhongaokao.com/tsnc_wgrj/doc/sed.htm) - Jims of 肥肥世家
 
-###4. Bash
-####4.1 bash_profile VS. bashrc
+### 4. Bash
+#### 4.1 bash_profile VS. bashrc
 <http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html>
-####4.2 color setting of bash
+#### 4.2 color setting of bash
 <http://it.toolbox.com/blogs/lim/how-to-fix-colors-on-mac-osx-terminal-37214>
 
-###5. SSH
+### 5. SSH
 <http://blog.csdn.net/wangjunjun2008/article/details/20037101>
 ssh 无密码登录
 > authorized_keys
 > chmod 700 .ssh
 > chmod 600 authorized_keys
 
-###6. VPN
+### 6. VPN
 <http://www.vpser.net/manage/linode-vps-pptp-vpn-howto.html>
 <http://blog.atime.me/note/pptpd.html>
