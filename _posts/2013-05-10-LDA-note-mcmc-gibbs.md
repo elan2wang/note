@@ -97,9 +97,9 @@ P\left( i,j \right)=Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
 1. 任意选取$\theta_0$，使得$f\left(\theta_0\right)>0$。
 2. 使用当前的$\theta$值，根据**jumping distribution**$q\left(\theta_1, \theta_2\right)$采样一个**候选点$\theta^*$**。**jumping distribution**的返回值是根据前一个值$\theta_1$获得$\theta_2$的概率。jumping density唯一的限制是，它必须是对称的，即$q\left(\theta_1, \theta_2\right)=q\left(\theta_2, \theta_1\right)$。
 3. 根据候选点$\theta^\*$和当前点$\theta_{t-1}$按照以下公式计算
-$$
+\\[
 \alpha=\frac{p\left(\theta^*\right)}{p\left(\theta_{t-1}\right)}=\frac{f\left(\theta^*\right)}{f\left(\theta_{t-1}\right)}
-$$
+\\]
 标准化常量K在计算中被约去。
 4. 如果计算出$\alpha>0$那么接受当前候选点$\theta^*$，并继续第2步；如果$\alpha < 0$，那么以概率$\alpha$接受候选点，否则拒绝，然后继续第2步。  
 
