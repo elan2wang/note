@@ -79,15 +79,15 @@ P\left( i,j \right)=Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
 \vec{\pi}\left(t+1\right)=\vec{\pi}\left(0\right)\mathbf{P}^{t+1}
 \\]
 下面我们通过一个例子，来说明马尔科夫链的状态转移过程  
->假设状态空间为$\{下雨，天晴，多云\}$，并且天气变化符合马尔科夫过程。因此，明天的天气仅仅依赖今天的天气。假设：$P\left(Rain tomorrow \middle| Rain today\right)=0.5$，$P\left(Sunny tomorrow \middle| Rain today \right)=0.25$，$P\left(Cloudy tomorrow \middle| Rain today\right)=0.25$，则状态转移矩阵的第一行为$\left(0.5, 0.25, 0.25\right)$，假设转移矩阵的剩余元素如下
+>假设状态空间为**{下雨，天晴，多云}**，并且天气变化符合马尔科夫过程。因此，明天的天气仅仅依赖今天的天气。假设：**P(Rain tomorrow|Rain today)=0.5，P(Sunny tomorrow|Rain today)=0.25，P(Cloudy tomorrow|Rain today)=0.25**，则状态转移矩阵的第一行为$\left(0.5, 0.25, 0.25\right)$，假设转移矩阵的剩余元素如下
 >\\[
 >\mathbf{P}=
 >\begin{bmatrix}
->5 & 0.25 & 0.25 \\\\
->5 & 0 & 0.5 \\\\
+>5 & 0.25 & 0.25 \\
+>5 & 0 & 0.5 \\
 >5 & 0.25 & 0.5
 >\end{bmatrix}
->\\]
+>\\}
 >假设今天是天晴，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 0 & 1 & 0 \end{pmatrix}$，则7天后的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$相反，如果假设今天下雨，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 1 & 0 & 0 \end{pmatrix}$，那么7天的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$由此可见，经过足够时间的转移，期望天气与城市天气是独立的。换句话说，该天气转移的马尔科夫链达到了一个**稳态分布(stationary distribution)**。  
 正如上面的例子所示，马尔科夫链会达到一个稳态分布$\vec{\pi}^*$，此时的概率向量值与初始条件的是独立的。稳态分布满足以下条件$$\vec{\pi}^* = \vec{\pi}^* \mathbf{P}$$
 
@@ -96,10 +96,10 @@ P\left( i,j \right)=Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
 假设我们要从分布$p\left(\theta\right)$获取样本数据，其中$p\left(\theta\right)=f\left(\theta\right)/K$，但是标准化常量K并不知道，并且也很难计算。**Metropolis**算法按如下过程生成样本序列：  
 1. 任意选取$\theta_0$，使得$f\left(\theta_0\right)>0$。
 2. 使用当前的$\theta$值，根据**jumping distribution**$q\left(\theta_1, \theta_2\right)$采样一个**候选点$\theta^*$**。**jumping distribution**的返回值是根据前一个值$\theta_1$获得$\theta_2$的概率。jumping density唯一的限制是，它必须是对称的，即$q\left(\theta_1, \theta_2\right)=q\left(\theta_2, \theta_1\right)$。
-3. 根据候选点$\theta^*$和当前点$\theta_{t-1}$按照以下公式计算
-\\[
+3. 根据候选点$\theta^\*$和当前点$\theta_{t-1}$按照以下公式计算
+$$
 \alpha=\frac{p\left(\theta^*\right)}{p\left(\theta_{t-1}\right)}=\frac{f\left(\theta^*\right)}{f\left(\theta_{t-1}\right)}
-\\]
+$$
 标准化常量K在计算中被约去。
 4. 如果计算出$\alpha>0$那么接受当前候选点$\theta^*$，并继续第2步；如果$\alpha < 0$，那么以概率$\alpha$接受候选点，否则拒绝，然后继续第2步。  
 
