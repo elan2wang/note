@@ -31,7 +31,7 @@ SE^2\left[\hat{I} \left(y \right) \right] = \frac{1}{n} \left(\frac{1}{n-1} \sum
 
 ### 3.2. 重要性采样
 在利用蒙特卡罗方法求复杂积分时，我们需要根据概率密度$p\left(x\right)$获取一系列的随机变量，但是计算机只能获得均匀分布的随机数。假设我们需要按照正态分布$N\left(0,1\right)$获得10个随机数，蒙特卡罗法是这样做的：  
->首先，在\left[0,1\right]区间上按均匀分布选取10个随机数，例如：  
+>首先，在$\left[0,1\right]$区间上按均匀分布选取10个随机数，例如：  
 >0.4505, 0.0838, 0.2290, 0.9133, 0.1524, 0.8258, 0.5383, 0.9961, 0.0782, 0.4427  
 >接着，计算该正态分布的[累积概率分布函数](http://en.wikipedia.org/wiki/Cumulative_distribution_function)分别取上述值时对应的自变量值$x_i$，这样获得的$x_1,...,x_{10}$值：  
 >-0.1243, -1.3798, -0.7422, 1.3616, -1.0263, 0.9378, 0.0963, 2.6636, -1.4175, -0.1442  
@@ -79,7 +79,7 @@ P\left( i,j \right)=Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
 \vec{\pi}\left(t+1\right)=\vec{\pi}\left(0\right)\mathbf{P}^{t+1}
 \\]
 下面我们通过一个例子，来说明马尔科夫链的状态转移过程  
->假设状态空间为{下雨，天晴，多云}，并且天气变化符合马尔科夫过程。因此，明天的天气仅仅依赖今天的天气。假设：P(Rain tomorrow | Rain today)=0.5，P(Sunny tomorrow | Rain today)=0.25，P(Cloudy tomorrow | Rain today)=0.25，则状态转移矩阵的第一行为(0.5, 0.25, 0.25)，假设转移矩阵的剩余元素如下
+>假设状态空间为$\{下雨，天晴，多云\}$，并且天气变化符合马尔科夫过程。因此，明天的天气仅仅依赖今天的天气。假设：$P\left(Rain tomorrow \middle| Rain today\right)=0.5$，$P\left(Sunny tomorrow \middle| Rain today \right)=0.25$，$P\left(Cloudy tomorrow \middle| Rain today\right)=0.25$，则状态转移矩阵的第一行为$\left(0.5, 0.25, 0.25\right)$，假设转移矩阵的剩余元素如下
 >\\[
 >\mathbf{P}=
 >\begin{bmatrix}
@@ -87,7 +87,7 @@ P\left( i,j \right)=Pr\left(X_{t+1}=s_j \mid X_t=s_i \right)
 >5 & 0 & 0.5 \\\\
 >5 & 0.25 & 0.5
 >\end{bmatrix}
->\\[
+>\\]
 >假设今天是天晴，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 0 & 1 & 0 \end{pmatrix}$，则7天后的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$相反，如果假设今天下雨，即$\vec{\pi}\left(0\right)=\begin{pmatrix} 1 & 0 & 0 \end{pmatrix}$，那么7天的天气情况为$$\vec{\pi}\left(7\right)=\vec{\pi}\left(0\right)\mathbf{P}^7=\begin{pmatrix}0.4 & 0.2 &  0.4\end{pmatrix}$$由此可见，经过足够时间的转移，期望天气与城市天气是独立的。换句话说，该天气转移的马尔科夫链达到了一个**稳态分布(stationary distribution)**。  
 正如上面的例子所示，马尔科夫链会达到一个稳态分布$\vec{\pi}^*$，此时的概率向量值与初始条件的是独立的。稳态分布满足以下条件$$\vec{\pi}^* = \vec{\pi}^* \mathbf{P}$$
 
