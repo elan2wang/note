@@ -8,7 +8,7 @@ categories: python, analytic
 Cryptocurrency's option market continue to grow this year. The open interest of the coming monthly expiry BTC option is around $1 billion.
 ![btc option open interest by expiry](/note/images/skew_btc_options_oi_by_expiry_k_prev_day.png)
 
-In the traditional financial world, it's very difficult (costy) for individual to acess the market data, nevertheless to say analyze and trade option in a way of institutional user. But the crypto market is open for everyboday, we can easily subcribe to realtime market data and trade programatically with open API provided by all crypto exchanges. So in my next series post, I'll try to build a platform for crypto option analysis and trading.
+In the traditional financial world, it's very difficult (costy) for individual to acess the market data, nevertheless to say analyze and trade option systematically. But the crypto market is open for everyboday, we can easily subcribe to realtime market data and trade programatically with open API provided by all crypto exchanges. So in my next series post, I'll try to build a platform for crypto option analysis and trading.
 
 ## Choose Database
 As a first step, I'll try to use Python to subscribe realtime market data and persist into local disk (to the cloud in the later post), so it can be used for analytic research. To store the data, we need to find out a proper database, which should have below characteristics:
