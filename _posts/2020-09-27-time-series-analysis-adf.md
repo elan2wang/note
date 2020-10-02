@@ -15,16 +15,16 @@ V\left(X\right) = E[\left(X - E[X]\right)^2] = E[X^2] - E[X]^2
 
 ### Covariance
 \\[
-\sigma\left(X, Y\right) = E[\left(X - E[X] \right)\left(Y - E[Y]\right)] = E[XY] - E[X]E[Y]
+cov\left(X, Y\right) = E[\left(X - E[X] \right)\left(Y - E[Y]\right)] = E[XY] - E[X]E[Y]
 \\]
 \\[
-\sigma\left(X, X\right) = V\left(X\right)
+cov\left(X, X\right) = V\left(X\right)
 \\]
 
 ### Correlation
 Corrlation is normalized Covariance, whose value range is [-1, 1]. 
 \\[
-\rho\left(X, Y\right) = \frac{\sigma\left(X, Y\right)}{\sqrt{V\left(X\right)}\sqrt{V\left(Y\right)}} = \frac{E[XY] - E[X]E[Y]}{\sqrt{V\left(E[X^2] - E[X]^2\right)}\sqrt{V\left(E[Y^2] - E[Y]^2\right)}}
+\rho\left(X, Y\right) = \frac{cov\left(X, Y\right)}{\sqrt{V\left(X\right)}\sqrt{V\left(Y\right)}} = \frac{E[XY] - E[X]E[Y]}{\sqrt{E[X^2] - E[X]^2}\sqrt{E[Y^2] - E[Y]^2}}
 \\]
 
 ## Hypothesis Testing
