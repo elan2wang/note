@@ -12,6 +12,7 @@ body {
 	color:#000000;
 	line-height: 2em;
 	text-align: justify;
+	max-width: 1000px;
 	font-family:Courier, monospace,Verdana,sans-serif;
 }
 

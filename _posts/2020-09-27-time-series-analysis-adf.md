@@ -22,7 +22,7 @@ cov\left(X, X\right) = V\left(X\right)
 \\]
 
 #### Correlation
-Corrlation is normalized Covariance, whose value range is [-1, 1]. 
+[Corrlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) is a normalized Covariance, whose value range is [-1, 1]. A value of +1 is total positive linear correlation, 0 is no linear correlation, and −1 is total negative linear correlation
 \\[
 \rho\left(X, Y\right) = \frac{cov\left(X, Y\right)}{\sqrt{V\left(X\right)}\sqrt{V\left(Y\right)}} = \frac{E[XY] - E[X]E[Y]}{\sqrt{E[X^2] - E[X]^2}\sqrt{E[Y^2] - E[Y]^2}}
 \\]
