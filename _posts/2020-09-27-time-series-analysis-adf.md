@@ -9,19 +9,19 @@ ADF - Augmented Dickey Fuller test is unit root test for stationarity. Unit root
 ## Statistic Basic
 
 ### Variance
-\\[
-V\left(X\right) = E[\left(X - E[X]\right)^2] = E[X^2] - E[X]^2 = Cov\left(X, X\right)
-\\]
+$
+var\left(X\right) = E[\left(X - E[X]\right)^2] = E[X^2] - E[X]^2 = \sigma\left(X, X\right)
+$
 
 ### Covariance
-\\[
+$
 \sigma\left(X, Y\right) = E[\left(X - E[X] \right)\left(Y - E[Y]\right)] = E[XY] - E[X]E[Y]
-\\]
+$
 ### Correlation
+$
+\rho\left(X, Y\right) = \frac{\sigma\left(X, Y\right)}{\sqrt{V\left(X\right)}\sqrt{V\left(Y\right)}} = \frac{E[XY] - E[X]E[Y]}{\sqrt{V\left(E[X^2] - E[X]^2\right)}\sqrt{V\left(E[Y^2] - E[Y]^2\right)}}
+$
 
-\\[
-\rho\left(X, Y\right) = \frac{\sigma\left(X, Y\right)}{\sqrt{X}\sqrt{Y}}
-\\]
 ## Hypothesis Testing
 
 ### Null Hypothesis
