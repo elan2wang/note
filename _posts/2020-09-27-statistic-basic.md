@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Time Series Analysis - ADF
-tags: ADF 
-categories: python, statistic
+title: Statistic Basic
+tags: variance covariance correlation autocorrelation hypothesis-test
+categories: statistic
 ---
-ADF - Augmented Dickey Fuller test is unit root test for stationarity. Unit roots can cause unpredicatable results in time series anlysis. 
 
 ### Statistic Basic
 
@@ -27,8 +26,8 @@ cov\left(X, X\right) = V\left(X\right)
 \rho\left(X, Y\right) = \frac{cov\left(X, Y\right)}{\sqrt{V\left(X\right)}\sqrt{V\left(Y\right)}} = \frac{E[XY] - E[X]E[Y]}{\sqrt{E[X^2] - E[X]^2}\sqrt{E[Y^2] - E[Y]^2}}
 \\]
 
-### Autocorrelation 
-
+#### Autocorrelation 
+Autocorrelation, also known as serial correlation, is the correlation of a signal with a delayed copy of itself as a function of delay.
 
 ### Hypothesis Testing
 
@@ -36,10 +35,10 @@ cov\left(X, X\right) = V\left(X\right)
 The [null hypothesis](https://www.statisticshowto.com/probability-and-statistics/null-hypothesis/), $H_0$ is the commonly accepted fact; it is the opposite of the alternate hypothesis. Researchers work to reject, nullify or disprove the null hypothesis. Researchers come up with an alternate hypothesis, one that they think explains a phenomenon, and then work to reject the null hypothesis.
 
 #### Unit Root
-A [unit root](https://www.statisticshowto.com/unit-root/)(also called a unit root process or a difference stationary process) test is a stochastic trend in a time series, sometimes called a "random walk with drift"; If a time series has a unit root, it shows a systematic pattern that is unpredictable.
+A [unit root](https://www.statisticshowto.com/unit-root/) (also called a unit root process or a difference stationary process) test is a stochastic trend in a time series, sometimes called a "random walk with drift"; If a time series has a unit root, it shows a systematic pattern that is unpredictable.
 
 #### P-Value
-A [p value](https://www.statisticshowto.com/p-value/) is used in hypothesis testing to help support or reject [null hypothesis](https://www.statisticshowto.com/probability-and-statistics/null-hypothesis/). The p value is the evidence against a null hypothesis. The smaller the p-value, the stronger the evidence that you should reject null hypothesis. 
+A [p value](https://www.statisticshowto.com/p-value/) is used in hypothesis testing to help support or reject null hypothesis. The p value is the evidence against a null hypothesis. The smaller the p-value, the stronger the evidence that you should reject null hypothesis. 
 
 #### Likelihood-Ratio Test
 The [Likelihood-Ratio test](https://www.statisticshowto.com/likelihood-ratio-tests/) (sometimes called the likelihood-ratio [chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test)) is a hypothesis test that helps you choose the "best" model between two nested models.
