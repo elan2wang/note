@@ -49,7 +49,14 @@ The [Likelihood-Ratio test](https://www.statisticshowto.com/likelihood-ratio-tes
 The [quantile-quantile (q-q) plot](https://www.itl.nist.gov/div898/handbook/eda/section3/qqplot.htm) is a graphical technique for determining if two data sets come from populations with a common distribution.  
 A q-q plot is a plot of the quantiles of the first data set against the quantiles of the second data set. By a quantile, we mean the fraction (or percent) of points below the given value. That is, the 0.3 (or 30%) quantile is the point at which 30% percent of the data fall below and 70% fall above that value.  
 A 45-degree reference line is also plotted. If the two sets come from a population with the same distribution, the points should fall approximately along this reference line. The greater the departure from this reference line, the greater the evidence for the conclusion that the two data sets have come from populations with different distributions.  
-![QQ Plot sample](/note/images/qqplot.gif)
+
+##### Q-Q Plot Samples
+![QQ plot 1](/note/images/qqplot-sample-1.jpeg)  
+![QQ plot 2](/note/images/qqplot-sample-2.png)  
+![QQ plot 3](/note/images/qqplot-sample-3.png)  
+![QQ plot 4](/note/images/qqplot-sample-4.png)  
+![QQ plot 1](/note/images/qqplot-sample-5.png)  
+
 
 **Reference**
 * [Calculus How To](https://calculushowto.com/)
