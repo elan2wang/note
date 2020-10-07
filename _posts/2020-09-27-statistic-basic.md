@@ -48,7 +48,7 @@ The [Likelihood-Ratio test](https://www.statisticshowto.com/likelihood-ratio-tes
 #### Quantile-Quantile Plot
 [Q Q Plots (Quantile-Quantile plots)](https://www.statisticshowto.com/q-q-plots/) are plots of two quantiles against each other. A quantile is a fraction where certain values fall below that quantile. For example, the median is a quantile where 50% of the data fall below that point and 50% lie above it. The purpose of Q Q plots is to find out if two sets of data come from the same distribution. A 45 degree angle is plotted on the Q Q plot; if the two data sets come from a common distribution, the points will fall on that reference line.
 
-##### Q-Q Plot Samples
+##### [Q-Q Plot Samples](https://medium.com/towards-artificial-intelligence/q-q-plots-explained-5aa8495426c0)
 ![QQ plot 1](/note/images/qqplot-sample-1.jpeg)  
 ![QQ plot 2](/note/images/qqplot-sample-2.png)  
 ![QQ plot 3](/note/images/qqplot-sample-3.png)  
