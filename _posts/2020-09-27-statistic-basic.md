@@ -26,7 +26,7 @@ cov\left(X, X\right) = V\left(X\right)
 \rho\left(X, Y\right) = \frac{cov\left(X, Y\right)}{\sqrt{V\left(X\right)}\sqrt{V\left(Y\right)}} = \frac{E[XY] - E[X]E[Y]}{\sqrt{E[X^2] - E[X]^2}\sqrt{E[Y^2] - E[Y]^2}}
 \\]
 
-#### Autocorrelation 
+#### Autocorrelation
 Autocorrelation, also known as serial correlation, is the correlation of a signal with a delayed copy of itself as a function of delay.
 
 ### Hypothesis Testing
