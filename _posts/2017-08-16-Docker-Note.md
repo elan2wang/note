@@ -2,7 +2,7 @@
 layout: post
 title: Docker note
 tags: docker
-categories: docker
+categories: Docker
 ---
 
 1. Useful commands

@@ -2,7 +2,7 @@
 layout: post
 title: Mac Tex Tips
 tags: latex
-categories: tex
+categories: Tex
 ---
 
 ### 中文字体配置

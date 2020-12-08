@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode merge sorted lists
 tags: leetcode
-categories: leetcode
+categories: Leetcode
 ---
 #### [题目描述]
 <http://oj.leetcode.com/problems/merge-two-sorted-lists/>  

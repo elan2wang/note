@@ -2,7 +2,7 @@
 layout: post
 title: 装机日志
 tags: vpc, docker
-categories: linux
+categories: Linux
 ---
 
 yum upgrade

@@ -2,7 +2,7 @@
 layout: post
 title: GraphViz
 tags: dot, graphviz, visualization
-categories: visualization
+categories: Viz
 ---
 
 ### Open Source Project

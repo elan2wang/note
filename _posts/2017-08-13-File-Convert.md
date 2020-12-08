@@ -2,7 +2,7 @@
 layout: post
 title: File Encoding Convert
 tags: Encoding
-categories: unix
+categories: Linux
 ---
 
 # File Encoding Convert

@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode Reverse Linked List II
 tags: leetcode
-categories: leetcode
+categories: Leetcode
 ---
 #### [题目描述]
 <http://oj.leetcode.com/problems/reverse-linked-list-ii/>

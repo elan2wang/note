@@ -2,7 +2,7 @@
 layout: post
 title: 相似度计算共识
 tags: 相似度评分
-categories: 机器学习
+categories: ML
 ---
 
 本文章是在阅读[《集体智慧编程》](http://book.douban.com/subject/3056375/)过程中记录的一些对我有用的信息。  

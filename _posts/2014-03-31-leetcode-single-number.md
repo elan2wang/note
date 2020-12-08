@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode single number
 tags: leetcode
-categories: leetcode
+categories: Leetcode
 ---
 #### [题目描述]
 <url>  

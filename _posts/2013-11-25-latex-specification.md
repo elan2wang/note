@@ -2,7 +2,7 @@
 layout: post
 title: Latex笔记
 tags: latex
-categories: Latex
+categories: Tex
 ---
 #### Latex Wikis
 1. 数学公式 [Mathematics](http://en.wikibooks.org/wiki/LaTeX/Mathematics)

@@ -2,7 +2,7 @@
 layout: post
 title: JDBC连接池的并发设计
 tags: concurrency jdbc connection-pool
-categories: java
+categories: Java
 ---
 Apache Tomcat 7系列的版本中使用了JDBC Connection Pool替代传统的commons-dbcp作为新的数据库连接池。其中很重要的一个原因是，commons-dbcp是单线程的，为了保证线程安全它必须将整个线程池上锁，并且它在对高并发的支持方面表现很差。JDBC Connection Pool一个很重要的新特性就是它对高并发环境和多核/多处理器系统的支持。下面将通过对JDBC Connection Pool的源码分析，深入理解其连接池设计的思想以及对高并发的解决方法。
 ### 连接池的存储设计

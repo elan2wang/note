@@ -2,7 +2,7 @@
 layout: post
 titile: Java Specification
 tags: java
-categories: java
+categories: Java
 ---
 
 1. ResourceBundle和Properties比较  

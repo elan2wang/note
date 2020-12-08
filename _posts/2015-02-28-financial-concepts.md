@@ -2,7 +2,7 @@
 layout: post
 title: Financial Concepts
 tags: financial
-categories: financial
+categories: Financial
 ---
 
 - [Credit Default Swaq](http://en.wikipedia.org/wiki/Credit_default_swap) - 信用违约掉期

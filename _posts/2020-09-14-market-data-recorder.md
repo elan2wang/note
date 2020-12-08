@@ -2,7 +2,7 @@
 layout: post
 title: Cryptocurrency Option - Market Data Recording
 tags: cryptocurrency option parquet pandas
-categories: python, analytic
+categories: Python Analytic
 ---
 
 Cryptocurrency's option market continue to grow this year. The open interest of the coming monthly expiry BTC option is around $1 billion.

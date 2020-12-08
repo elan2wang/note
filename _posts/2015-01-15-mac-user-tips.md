@@ -2,7 +2,7 @@
 layout: post
 title: Mac user tips
 tags: mac
-categories: mac
+categories: Mac
 ---
 1. Change Launchpad grid size  
 ><code>defaults write com.apple.dock springboard-rows -int 6</code>  

@@ -2,7 +2,7 @@
 layout: post
 title: Storyline visualization
 tags: visualization
-categories: Machine Learning
+categories: ML
 ---
 ### Reference
 1. [Mosek Package](http://www.mosek.com)

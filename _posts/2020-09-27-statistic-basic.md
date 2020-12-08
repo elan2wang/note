@@ -2,7 +2,7 @@
 layout: post
 title: Statistic Basic
 tags: variance covariance correlation autocorrelation hypothesis-test
-categories: statistic
+categories: Statistic
 ---
 
 ### Statistic Basic

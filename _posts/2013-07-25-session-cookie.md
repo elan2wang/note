@@ -2,7 +2,7 @@
 layout: post
 title: http协议分析－Cookie和Session
 tags: http
-categories: HTTP
+categories: Http
 ---
 **Cookie机制：**通过检查客户身上的“通行证”来确定客户身份，Cookie信息存储在客户端浏览器。  
 **Session机制：**通过检查服务器上的“客户明细表”来确认客户身份，Session信息存储在服务器端。  

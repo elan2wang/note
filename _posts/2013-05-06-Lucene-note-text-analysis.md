@@ -2,7 +2,7 @@
 layout: post
 title: Lucene源码分析(1)—文本处理
 tags: Lucene analysis
-categories: JAVA
+categories: Java
 ---
 本文主要分析[Lucene](http://lucene.apache.org/)源码中关于文本处理的部分，该功能封装在[analysis](http://www.docjar.com/docs/api/org/apache/lucene/analysis/package-index.html)包中。本文并不涉及Lucene的使用方法介绍。
 ![lucene logo](/note/images/lucene_logo.png)

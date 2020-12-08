@@ -2,7 +2,7 @@
 layout: post
 title: nginx configuration
 tags: nginx
-categories: http
+categories: Http
 ---
 ==== **First Step** ====
 - [Beginner's Guide](http://nginx.org/en/docs/beginners_guide.html)  

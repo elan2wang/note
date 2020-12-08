@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode median of two sorted arrays
 tags: leetcode
-categories: leetcode
+categories: Leetcode
 ---
 #### [题目描述]
 <http://oj.leetcode.com/problems/median-of-two-sorted-arrays>  

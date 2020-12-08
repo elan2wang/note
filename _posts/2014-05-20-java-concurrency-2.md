@@ -2,7 +2,7 @@
 layout: post
 title: Java Concurrent Programming[2] - Practice
 tags: concurrency java
-categories: java
+categories: Java
 ---
 ## 1. 进程与线程
 ### 1.1. 进程

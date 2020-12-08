@@ -2,7 +2,7 @@
 layout: post
 title: Java Low Latency
 tags: ZeroGC JIT Lock-free
-categories: Java, ZeroGC
+categories: Java ZeroGC
 ---
 
 # Zero GC

@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode Remove Nth Node From End of List
 tags: leetcode
-categories: leetcode
+categories: Leetcode
 ---
 #### [题目描述]
 <http://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/>

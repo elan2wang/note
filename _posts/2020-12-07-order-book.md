@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Zero GC Implementation of Order Book Construction
+title: Order Book
 tags: order book
-categories: Java, ZeroGC
+categories: Java ZeroGC
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: High Frequency Trading System Architecture
 tags: HFT, Architecture
-categories: trading
+categories: Trading
 ---
 
 # Architecture 

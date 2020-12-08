@@ -2,7 +2,7 @@
 layout: post
 title: Spring相关技术
 tags: spring
-categories: java
+categories: Java
 ---
 ### 1. 注解相关
 1. @Component,@Repository,@Service,@Controller  
