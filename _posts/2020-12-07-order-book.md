@@ -4,7 +4,7 @@ title: Order Book
 tags: book
 categories: Java ZeroGC
 ---
-Order book is the most basic but also important part of electronic trading. Different parties (exchange match engine, broker order book, prop trading, market maker, etc.) could have their own consideration. This post mainly focus on the efficiency of order book construction. How to ensure constant time of:
+Order book is the most basic but also important part of electronic trading. Different parties (exchange match engine, algo trading engine) could have their own consideration. This post mainly focus on the efficiency of order book construction for Algo trading. How to ensure constant time of:
 * accepting new order
 * updating price of an existing order
 * updating quantity of an existing order
