@@ -40,8 +40,7 @@ A [unit root](https://www.statisticshowto.com/unit-root/) (also called a unit ro
 #### P-Value
 A [p value](https://www.statisticshowto.com/p-value/) is used in hypothesis testing to help support or reject null hypothesis. The p value is the evidence against a null hypothesis. The smaller the p-value, the stronger the evidence that you should reject null hypothesis. 
 
-#### Likelihood-Ratio Test
-The [Likelihood-Ratio test](https://www.statisticshowto.com/likelihood-ratio-tests/) (sometimes called the likelihood-ratio [chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test)) is a hypothesis test that helps you choose the "best" model between two nested models.
+#### Likelihood-Ratio TestThe [Likelihood-Ratio test](https://www.statisticshowto.com/likelihood-ratio-tests/) (sometimes called the likelihood-ratio [chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test)) is a hypothesis test that helps you choose the "best" model between two nested models.
 
 ### Plot
 
